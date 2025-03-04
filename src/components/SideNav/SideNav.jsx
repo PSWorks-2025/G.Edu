@@ -8,7 +8,7 @@ function SideNav({ activeTab, setActiveTab }) {
     { id: 'MyLearningPlan', label: 'My Learning Plan', icon: 'fa-book' },
     { id: 'Assignment', label: 'Assignment', icon: 'fa-tasks' },
     { id: 'SmartReview', label: 'Smart Review', icon: 'fa-sync' },
-    { id: 'AIAssistant', label: 'AI Assistant', icon: 'fa-robot' },
+    { id: 'AITutor', label: 'AI Tutor', icon: 'fa-robot' },
     { id: 'Notebook', label: 'Notebook', icon: 'fa-book-open' },
     { id: 'LearningResources', label: 'Learning Resources', icon: 'fa-graduation-cap' },
     { id: 'HallOfFame', label: 'Hall of Fame', icon: 'fa-trophy' },

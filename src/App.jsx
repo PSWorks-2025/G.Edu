@@ -11,7 +11,7 @@ import Home from "./pages/Home/Home";
 import MyLearningPlan from "./pages/MyLearningPlan/MyLearningPlan";
 import Assignment from "./pages/Assignment/Assignment";
 import SmartReview from "./pages/SmartReview/SmartReview";
-import AIAssistant from "./pages/AIAssistant/AIAssistant";
+import AITutor from "./pages/AITutor/AITutor";
 import Notebook from "./pages/Notebook/Notebook";
 import LearningResources from "./pages/LearningResources/LearningResources";
 import HallOfFame from "./pages/HallOfFame/HallOfFame";
@@ -36,7 +36,7 @@ function App() {
                 <Route path="/my-learning-plan" element={<MyLearningPlan />} />
                 <Route path="/assignment" element={<Assignment />} />
                 <Route path="/smart-review" element={<SmartReview />} />
-                <Route path="/ai-assistant" element={<AIAssistant />} />
+                <Route path="/ai-tutor" element={<AITutor />} />
                 <Route path="/notebook" element={<Notebook />} />
                 <Route
                   path="/learning-resources"
