@@ -1,5 +1,5 @@
-import React from "react";
-import "./MyLearningPlan.css";
+import React from 'react';
+import './MyLearningPlan.css';
 
 const MyLearningPlan = () => {
   return (

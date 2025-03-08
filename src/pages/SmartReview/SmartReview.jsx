@@ -1,5 +1,5 @@
-import React from "react";
-import "./SmartReview.css";
+import React from 'react';
+import './SmartReview.css';
 
 const SmartReview = () => {
   return (

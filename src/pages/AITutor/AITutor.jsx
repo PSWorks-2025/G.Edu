@@ -1,5 +1,5 @@
-import React from "react";
-import "./AITutor.css";
+import React from 'react';
+import './AITutor.css';
 
 const AITutor = () => {
   return (

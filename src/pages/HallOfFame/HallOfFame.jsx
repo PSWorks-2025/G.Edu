@@ -1,5 +1,5 @@
-import React from "react";
-import "./HallOfFame.css";
+import React from 'react';
+import './HallOfFame.css';
 
 const HallOfFame = () => {
   return (

@@ -1,19 +1,9 @@
-import { auth, db, str } from "./firebaseConfig";
-import {
-  getDoc,
-  doc,
-  query,
-  onSnapshot,
-  updateDoc,
-  setDoc,
-} from "firebase/firestore";
-import {
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
-import { uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import React, { useState, useRef } from "react";
+import { auth, db, str } from './firebaseConfig';
+import { getDoc, doc, query, onSnapshot, updateDoc, setDoc } from 'firebase/firestore';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
+import { uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import React, { useState, useRef } from 'react';
+
 // Authentication
 export const signIn = async (email, password) => {
   try {
@@ -30,7 +20,7 @@ export const signUp = async (email, password, name) => {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
     const userId = auth.currentUser.uid;
-    await setDoc(doc(db, "users", userId), {
+    await setDoc(doc(db, 'users', userId), {
       email: email,
       name: name,
       progress: [],
@@ -45,7 +35,7 @@ export const signUp = async (email, password, name) => {
 export const signOutUser = async () => {
   try {
     await signOut(auth);
-    navigation("/login");
+    navigation('/login');
   } catch (error) {
     console.warn(error);
   }

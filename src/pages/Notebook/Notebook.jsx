@@ -1,5 +1,5 @@
-import React from "react";
-import "./Notebook.css";
+import React from 'react';
+import './Notebook.css';
 
 const Notebook = () => {
   return (

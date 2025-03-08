@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./TopBar.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './TopBar.css';
 
 const TopBar = () => {
   const [showSettings, setShowSettings] = useState(false);
 
   return (
-    <header className="TopBar">
+    <div className="top-bar">
       <div className="logo-container">
         {/* TODO: Add logo */}
         <h1>SAT Classroom</h1>
@@ -19,12 +19,10 @@ const TopBar = () => {
         </button>
       </div>
 
+      <button onClick={() => {}}>New note</button>
+
       <div className="settings-container">
-        <div
-          className="settings-button"
-          onMouseEnter={() => setShowSettings(true)}
-          onMouseLeave={() => setShowSettings(false)}
-        >
+        <div className="settings-button" onMouseEnter={() => setShowSettings(true)} onMouseLeave={() => setShowSettings(false)}>
           <span>John Doe</span>
           {/* TODO: Add profile picture */}
           <i className="fa fa-caret-down"></i>
@@ -55,7 +53,7 @@ const TopBar = () => {
           )}
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

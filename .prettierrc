@@ -1,0 +1,5 @@
+{
+  "note!important": "the default print width for this is 80, but you can set it to 500 if you dont want it to wrap",
+  "singleQuote": true,
+  "printWidth": 5000
+}
