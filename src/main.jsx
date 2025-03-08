@@ -1,12 +1,12 @@
-import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App.jsx';
-import Login from './pages/Authentication/login';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import SignUp from './pages/Authentication/signUp';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import Login from "./pages/Authentication/login";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import SignUp from "./pages/Authentication/signUp";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
       <Routes>
@@ -15,5 +15,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/*" element={<App />} /> {/* Catch-all route for App */}
       </Routes>
     </Router>
-  </StrictMode>
+  </StrictMode>,
 );

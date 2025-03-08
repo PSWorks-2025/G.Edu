@@ -1,12 +1,12 @@
 import React from "react";
-import './SmartReview.css'
+import "./SmartReview.css";
 
 const SmartReview = () => {
-    return(
-        <div className="page">
-            <h1>SmartReview Page</h1>
-        </div>
-    )
-}
+  return (
+    <div className="page">
+      <h1>SmartReview Page</h1>
+    </div>
+  );
+};
 
 export default SmartReview;
