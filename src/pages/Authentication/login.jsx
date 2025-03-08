@@ -35,12 +35,22 @@ function Login() {
         <form action="">
           <h1>Login</h1>
           <div className="input-box">
-            <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email" required />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              placeholder="Email"
+              required
+            />
             <MdAlternateEmail className="icon" />
           </div>
 
           <div className="input-box">
-            <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" required />
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              placeholder="Password"
+              required
+            />
             <FaLock className="icon" />
           </div>
 

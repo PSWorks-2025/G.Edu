@@ -21,17 +21,32 @@ function SignUp() {
         <form action="">
           <h1>Sign up</h1>
           <div className="input-box">
-            <input onChange={(e) => setUsername(e.target.value)} type="text" placeholder="Username" required />
+            <input
+              onChange={(e) => setUsername(e.target.value)}
+              type="text"
+              placeholder="Username"
+              required
+            />
             <FaUser className="icon" />
           </div>
 
           <div className="input-box">
-            <input onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Email" required />
+            <input
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              placeholder="Email"
+              required
+            />
             <MdAlternateEmail className="icon" />
           </div>
 
           <div className="input-box">
-            <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" required />
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              placeholder="Password"
+              required
+            />
             <FaLock className="icon" />
           </div>
 
