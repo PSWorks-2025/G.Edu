@@ -11,7 +11,7 @@ export const signIn = async (email, password) => {
             return True
         }
     } catch (error) {
-        console.warn(error);
+        console.warn(error)
     }
 };
 

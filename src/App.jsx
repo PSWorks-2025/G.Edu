@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import {
   Routes,
   Route,
+  useLocation
 } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import MyLearningPlan from './pages/MyLearningPlan/MyLearningPlan';
@@ -17,13 +18,31 @@ import SideNav from './components/SideNav/SideNav';
 import TopBar from './components/TopBar/TopBar';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('Home');
+  const [activeTab, setActiveTab] = useState('');
+  const location = useLocation()
+
+  useEffect(() => {
+    const currentPath = location.pathname; 
+    console.log(currentPath);
+    
+    const pathToTab = {
+      '/home': 'Home',
+      '/my-learning-plan': 'MyLearningPlan',
+      '/assignment': 'Assignment',
+      '/smart-review': 'SmartReview',
+      '/ai-tutor': 'AITutor',
+      '/notebook': 'Notebook',
+      '/learning-resources': 'LearningResources',
+      '/hall-of-fame': 'HallOfFame',
+      '/notification': 'Notification',
+    };
+    setActiveTab(pathToTab[currentPath] || 'Home');
+  }, []);
   
   return (
     <>
-      <h1>Hi</h1>
       <div className="app">
-        <TopBar />
+        {/* <TopBar /> */}
         <div className="content-container">
           <SideNav activeTab={activeTab} setActiveTab={setActiveTab} />
           <main className="main-content">
