@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
+import { get_AI_tutor_response } from '../../utils/api_calls';
 Date.prototype.time = function () {
   const hh = this.getHours();
   const min = this.getMinutes();
@@ -37,7 +39,11 @@ const ChatMessage = ({ message }) => {
 
   return (
     <div className={`message ${messageClass}`}>
-      <p>{text}</p>
+      {userType === 'AI' ? (
+        <ReactMarkdown>{text}</ReactMarkdown> // This renders formatted text
+      ) : (
+        <p>{text}</p>
+      )}
       <div>{time}</div>
     </div>
   );
@@ -51,14 +57,22 @@ const ChatInput = ({ messages, setMessages }) => {
     e.preventDefault();
     setMessages(
       messages.concat([
-        { 
+        {
           id: Date.now(),
           createdAt: new Date(),
           text: formValue,
-          userType: 'Student'
+          userType: 'Student',
         },
       ])
     );
+    const aiResponseText = await get_AI_tutor_response(formValue);
+    const aiMessage = {
+      id: Date.now() + 1,
+      createdAt: new Date(),
+      text: aiResponseText,
+      userType: 'AI',
+    };
+    setMessages((prevMessages) => [...prevMessages, aiMessage]);
     setFormValue('');
   };
 
