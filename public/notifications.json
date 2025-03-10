@@ -1,0 +1,82 @@
+[
+  {
+    "notification_id": 1,
+    "title": "New Assignment Available",
+    "message": "A new math assignment has been posted. Check it out before the deadline!",
+    "timestamp": "2025-03-10T12:30:00Z",
+    "class_id": [1],
+    "other_student_ids": []
+  },
+  {
+    "notification_id": 2,
+    "title": "Upcoming Due Date",
+    "message": "Reminder: Your physics assignment is due in 2 days. Make sure to submit on time!",
+    "timestamp": "2025-03-11T08:00:00Z",
+    "class_id": [2],
+    "other_student_ids": [5, 8]
+  },
+  {
+    "notification_id": 3,
+    "title": "New Learning Material Added",
+    "message": "A new resource on algebraic expressions has been uploaded. Start learning now!",
+    "timestamp": "2025-03-12T14:45:00Z",
+    "class_id": [1, 3],
+    "other_student_ids": []
+  },
+  {
+    "notification_id": 4,
+    "title": "Class Schedule Updated",
+    "message": "Your chemistry class schedule has been updated. Check the new time in the calendar.",
+    "timestamp": "2025-03-13T10:15:00Z",
+    "class_id": [3],
+    "other_student_ids": [1, 6]
+  },
+  {
+    "notification_id": 5,
+    "title": "New Exercise Available",
+    "message": "Test your probability skills with the latest challenge!",
+    "timestamp": "2025-03-14T09:30:00Z",
+    "class_id": [],
+    "other_student_ids": [2, 4, 9, 13]
+  },
+  {
+    "notification_id": 6,
+    "title": "Exam Reminder",
+    "message": "Your final math exam is scheduled for next week. Review the study guide now!",
+    "timestamp": "2025-03-15T17:00:00Z",
+    "class_id": [2, 3],
+    "other_student_ids": []
+  },
+  {
+    "notification_id": 7,
+    "title": "Group Project Update",
+    "message": "Your group project submission deadline has been extended by 2 days.",
+    "timestamp": "2025-03-16T13:45:00Z",
+    "class_id": [1],
+    "other_student_ids": [3, 7]
+  },
+  {
+    "notification_id": 8,
+    "title": "SAT Prep Resources Available",
+    "message": "New SAT vocabulary flashcards are now ready. Improve your score with daily practice!",
+    "timestamp": "2025-03-17T18:30:00Z",
+    "class_id": [2],
+    "other_student_ids": [5, 6]
+  },
+  {
+    "notification_id": 9,
+    "title": "Assignment Feedback Posted",
+    "message": "Your assignment feedback is available. Check your performance and improve for next time!",
+    "timestamp": "2025-03-18T20:00:00Z",
+    "class_id": [3],
+    "other_student_ids": []
+  },
+  {
+    "notification_id": 10,
+    "title": "Grammar Rules Review",
+    "message": "A new document summarizing key SAT grammar rules has been uploaded. Review before the test!",
+    "timestamp": "2025-03-19T15:20:00Z",
+    "class_id": [],
+    "other_student_ids": [1, 4, 8]
+  }
+]
