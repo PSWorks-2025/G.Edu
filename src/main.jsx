@@ -13,5 +13,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/*" element={<App />} /> {/* Catch-all route for App */}
       </Routes>
     </Router>
-  </StrictMode>
+  </StrictMode>,
 );
