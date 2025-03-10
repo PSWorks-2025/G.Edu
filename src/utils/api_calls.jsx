@@ -10,15 +10,16 @@ export const get_AI_tutor_response = async (word) => {
 
   const prompt = `
 SAT Tutor: Explain the word **${word}**.
-## 1. Definition
-## 2. Synonyms
-## 3. SAT Usage (How it's tested in Word-in-Context questions)
-## 4. Example Sentences (2-3 in SAT-style)
-## 5. Common Confusions (if applicable)
-## 6. SAT Word-in-Context Questions (4 questions):
+## 1. Definition: (give every wordform of **${word}**, explain each one, e.g. *to be* (verb) : *am, is, are, was, were, been, being*)
+## 2. Synonyms: (like Definition, give every wordform of every synonyms and explain, e.g. **survive** (verb) : *exist, live, subsist, breathe*)
+## 3. SAT Usage: (how it's tested in Word-in-Context questions)
+## 4. Example Sentences: (2-3 in SAT-style)
+## 5. Common Confusions: (if applicable)
+## 6. SAT Word-in-Context: Questions (4 questions):
  - **Q1-3**: Provide answers & explanations.
  - **Q4**: Ask the student to answer, then explain.
-Format response in Markdown
+Format response in Markdown.
+Do not bold the headings, e.g. "##1. Definition" not "##**1. Definition**".
 `;
 
   try {

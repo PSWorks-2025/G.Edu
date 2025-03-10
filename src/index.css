@@ -1,4 +1,33 @@
 @import 'tailwindcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl font-semibold;
+  }
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+  h3 {
+    @apply text-xl font-semibold;
+  }
+  ul{
+    @apply list-disc list-inside pl-4;
+  }
+  ul ul{
+    @apply list-[circle];
+  }
+  li{
+    @apply mb-4;
+  }
+  blockquote {
+    @apply border-l-4 border-gray-300 pl-4 my-4 italic;
+  }
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
