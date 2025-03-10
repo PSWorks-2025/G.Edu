@@ -1,5 +1,5 @@
-{
-  "student_data": {
+[
+  {
     "student_id": 1,
     "student_study_goal": {
       "target_score": 1480,
@@ -110,7 +110,7 @@
         }
       }
     ],
-    "notebook": [
+    "student_notebook": [
       {
         "note_id": 1,
         "title": "Algebra Exam Review",
@@ -146,6 +146,70 @@
         "created_at": "2025-02-05",
         "areas": ["Math"]
       }
+    ],
+    "student_assignments": [
+      {
+        "assignment_id": 1,
+        "status": "Upcoming",
+        "submissions": 0,
+        "first_score": null,
+        "all_scores": {}
+      },
+      {
+        "assignment_id": 3,
+        "status": "To do",
+        "submissions": 1,
+        "first_score": 75,
+        "all_scores": {
+          "1": 75
+        }
+      },
+      {
+        "assignment_id": 4,
+        "status": "Completed",
+        "submissions": 2,
+        "first_score": 80,
+        "all_scores": {
+          "1": 80,
+          "2": 90
+        }
+      },
+      {
+        "assignment_id": 7,
+        "status": "Overdue",
+        "submissions": 0,
+        "first_score": null,
+        "all_scores": {}
+      },
+      {
+        "assignment_id": 10,
+        "status": "Upcoming",
+        "submissions": 0,
+        "first_score": null,
+        "all_scores": {}
+      }
+    ],
+    "student_notifications": [
+      {
+        "notification_id": 1,
+        "is_read": false
+      },
+      {
+        "notification_id": 3,
+        "is_read": true
+      },
+      {
+        "notification_id": 4,
+        "is_read": false
+      },
+      {
+        "notification_id": 7,
+        "is_read": true
+      },
+      {
+        "notification_id": 10,
+        "is_read": false
+      }
     ]
   }
-}
+]
