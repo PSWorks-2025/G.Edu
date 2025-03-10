@@ -2,7 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { primaryColors } from '../primaryColor/Colors';
 import TopBar from '../TopBar/TopBar';
+import { signOutUser } from '../../services/service';
+import { useNavigate } from 'react-router-dom';
+
 function SideNav({ activeTab, setActiveTab }) {
+  const navigate = useNavigate();
+  const handle_sign_out = async()=>{
+    await signOutUser();
+    navigate("/");
+    alert("You have successfully logged out.");
+}
   const navItems = [
     { id: 'Home', label: 'Home', icon: 'home-outline',path:'/home' },
     { id: 'MyLearningPlan', label: 'My Learning Plan', icon: 'calendar-outline',path:"/my-learning-plan" },
@@ -46,7 +55,7 @@ function SideNav({ activeTab, setActiveTab }) {
 
             
             {/* Log out button */}
-          <button className='flex items-center px-4 cursor-pointer absolute bottom-10'>
+          <button className='flex items-center px-4 cursor-pointer absolute bottom-10' onClick={handle_sign_out}>
             <ion-icon style={{fontSize:20, color:primaryColors.gray}} name="log-out-outline"></ion-icon>
             <span style={{color:primaryColors.gray,marginLeft:10}}>Logout</span>
           </button>
