@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
-import { LuSendHorizontal } from "react-icons/lu";
+import { LuSendHorizontal } from 'react-icons/lu';
 import ReactMarkdown from 'react-markdown';
 import threeDotsGif from '../../assets/three_dots.gif';
 
 import { get_AI_tutor_response } from '../../utils/api_calls.jsx';
-
 
 Date.prototype.time = function () {
   const hh = this.getHours();
@@ -44,13 +43,7 @@ const ChatMessage = ({ message }) => {
     </div>
   ) : (
     <div className={`message ${messageClass}`}>
-      {
-        userType === 'AI' ? (
-          <ReactMarkdown>{text}</ReactMarkdown>
-        ) : (
-          <p>{text}</p>
-        )
-      }
+      {userType === 'AI' ? <ReactMarkdown>{text}</ReactMarkdown> : <p>{text}</p>}
       <div>{createdAt.time()}</div>
     </div>
   );
@@ -62,15 +55,14 @@ const ChatInput = ({ setMessages }) => {
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    if(!formValue || isResponding) {
+    if (!formValue || isResponding) {
+      const chatBox = document.getElementById('AI-chat-box');
+      chatBox.classList.remove('shake');
 
-      const chatBox = document.getElementById("AI-chat-box"); 
-      chatBox.classList.remove("shake"); 
+      // trigger a DOM reflow
+      void chatBox.offsetWidth;
 
-      // trigger a DOM reflow 
-      void chatBox.offsetWidth; 
-
-      chatBox.classList.add("shake");
+      chatBox.classList.add('shake');
       return;
     }
     setMessages((prevMessages) => [
@@ -107,8 +99,11 @@ const ChatInput = ({ setMessages }) => {
         placeholder="Aa"
         className="chat-input"
       />
-      <button className={`send-button ${(!formValue || isResponding) ? 'disabled' : ''}`} type="submit">
-        <LuSendHorizontal className='text-white text-xl' />
+      <button
+        className={`send-button ${!formValue || isResponding ? 'disabled' : ''}`}
+        type="submit"
+      >
+        <LuSendHorizontal className="text-white text-xl" />
       </button>
     </form>
   );

@@ -1,50 +1,47 @@
-import React, { useState, useRef, useEffect } from "react";
-import "./notification.css";
+import React, { useState, useRef, useEffect } from 'react';
+import './notification.css';
 
 function Notification() {
   const [notifications] = useState([
     {
-      title: "Design Conference",
-      time: "Today 3 PM",
+      title: 'Design Conference',
+      time: 'Today 3 PM',
       description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
+        'Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum.',
     },
     {
-      title: "Design Conference",
-      time: "Today 2 PM",
+      title: 'Design Conference',
+      time: 'Today 2 PM',
       description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
+        'Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum.',
     },
     {
-      title: "Design Conference",
-      time: "Yesterday 11 AM",
+      title: 'Design Conference',
+      time: 'Yesterday 11 AM',
       description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
+        'Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum.',
     },
     {
-      title: "Design Conference",
-      time: "2 days ago",
+      title: 'Design Conference',
+      time: '2 days ago',
       description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
-    }
+        'Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum.',
+    },
   ]);
 
   const [timeOpen, setTimeOpen] = useState(false);
-  const [timeSelected, setTimeSelected] = useState("Last 7 days");
-  const timeOptions = ["Last 7 days", "Last 30 days", "Last 3 months"];
+  const [timeSelected, setTimeSelected] = useState('Last 7 days');
+  const timeOptions = ['Last 7 days', 'Last 30 days', 'Last 3 months'];
   const timeFilterRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(e) {
-      if (
-        timeFilterRef.current &&
-        !timeFilterRef.current.contains(e.target)
-      ) {
+      if (timeFilterRef.current && !timeFilterRef.current.contains(e.target)) {
         setTimeOpen(false);
       }
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const toggleTimeDropdown = () => {
@@ -57,8 +54,8 @@ function Notification() {
   };
 
   const [sortOpen, setSortOpen] = useState(false);
-  const [sortSelected, setSortSelected] = useState("Name");
-  const sortOptions = ["Name", "Time"];
+  const [sortSelected, setSortSelected] = useState('Name');
+  const sortOptions = ['Name', 'Time'];
   const sortRef = useRef(null);
 
   useEffect(() => {
@@ -67,8 +64,8 @@ function Notification() {
         setSortOpen(false);
       }
     }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const toggleSortDropdown = () => {
@@ -96,9 +93,7 @@ function Notification() {
                 {timeOptions.map((option) => (
                   <div
                     key={option}
-                    className={`time-filter-item ${
-                      option === timeSelected ? "active" : ""
-                    }`}
+                    className={`time-filter-item ${option === timeSelected ? 'active' : ''}`}
                     onClick={() => selectTimeOption(option)}
                   >
                     {option}
@@ -124,9 +119,7 @@ function Notification() {
                 {sortOptions.map((option) => (
                   <div
                     key={option}
-                    className={`sort-item ${
-                      option === sortSelected ? "active" : ""
-                    }`}
+                    className={`sort-item ${option === sortSelected ? 'active' : ''}`}
                     onClick={() => selectSortOption(option)}
                   >
                     {option}
