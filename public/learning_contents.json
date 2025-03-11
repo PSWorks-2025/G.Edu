@@ -1,0 +1,150 @@
+{
+  "learning_contents": [
+    {
+      "learning_content_id": 1,
+      "title": "Understanding SAT Question Types",
+      "description": "A comprehensive guide covering key verbal and math question types on the SAT.",
+      "type": "Document",
+      "areas": ["Verbal", "Math"],
+      "sub_areas": {
+        "Verbal": ["Information and Ideas", "Craft and Structure"],
+        "Math": ["Advanced Math"]
+      }
+    },
+    {
+      "learning_content_id": 2,
+      "title": "Mastering SAT Reading Strategies",
+      "description": "Effective techniques to approach SAT reading passages with confidence.",
+      "type": "Document",
+      "areas": ["Verbal"],
+      "sub_areas": {}
+    },
+    {
+      "learning_content_id": 3,
+      "title": "Essential SAT Vocabulary List",
+      "description": "A list of high-frequency words that commonly appear in SAT exams.",
+      "type": "Document",
+      "areas": ["Vocab"],
+      "sub_areas": {}
+    },
+    {
+      "learning_content_id": 4,
+      "title": "Math Practice: Mixed Problems",
+      "description": "A set of exercises covering various math concepts tested on the SAT.",
+      "type": "Exercise",
+      "areas": ["Math"],
+      "sub_areas": {}
+    },
+    {
+      "learning_content_id": 5,
+      "title": "SAT Algebra & Advanced Math Drill",
+      "description": "Targeted practice for algebra and advanced math problems.",
+      "type": "Exercise",
+      "areas": ["Math"],
+      "sub_areas": {
+        "Math": ["Algebra", "Advanced Math"]
+      }
+    },
+    {
+      "learning_content_id": 6,
+      "title": "SAT Vocabulary Flashcards Set 1",
+      "description": "Flashcards for learning and memorizing essential SAT vocabulary words.",
+      "type": "Flashcard",
+      "areas": ["Vocab"],
+      "sub_areas": {}
+    },
+    {
+      "learning_content_id": 7,
+      "title": "Key SAT Writing & Math Concepts",
+      "description": "A breakdown of essential writing and math principles for the SAT.",
+      "type": "Document",
+      "areas": ["Verbal", "Math"],
+      "sub_areas": {
+        "Verbal": ["Expression of Ideas"],
+        "Math": ["Geometry and Trigonometry"]
+      }
+    },
+    {
+      "learning_content_id": 8,
+      "title": "Data Analysis & Problem Solving",
+      "description": "Exercises focused on problem-solving and data analysis skills for the SAT.",
+      "type": "Exercise",
+      "areas": ["Math"],
+      "sub_areas": {
+        "Math": ["Problem-Solving and Data Analysis"]
+      }
+    },
+    {
+      "learning_content_id": 9,
+      "title": "SAT Vocabulary Flashcards Set 2",
+      "description": "A continuation of essential SAT vocabulary flashcards for test prep.",
+      "type": "Flashcard",
+      "areas": ["Vocab"],
+      "sub_areas": {}
+    },
+    {
+      "learning_content_id": 10,
+      "title": "Top SAT Test-Taking Tips",
+      "description": "Proven strategies to maximize efficiency and accuracy on the SAT.",
+      "type": "Document",
+      "areas": ["Tip/Other"],
+      "sub_areas": {}
+    },
+    {
+      "learning_content_id": 49,
+      "title": "Grammar Rules Flashcards",
+      "description": "Flashcards covering key grammar and standard English conventions.",
+      "type": "Flashcard",
+      "areas": ["Verbal"],
+      "sub_areas": {
+        "Verbal": ["Standard English Conventions"]
+      }
+    },
+    {
+      "learning_content_id": 50,
+      "title": "Algebra Problem Set",
+      "description": "Practice questions focusing on key algebraic concepts for the SAT.",
+      "type": "Exercise",
+      "areas": ["Math"],
+      "sub_areas": {
+        "Math": ["Algebra"]
+      }
+    },
+    {
+      "learning_content_id": 51,
+      "title": "Understanding SAT Reading Structures",
+      "description": "A guide to analyzing SAT reading passages and their structures.",
+      "type": "Document",
+      "areas": ["Verbal"],
+      "sub_areas": {
+        "Verbal": ["Craft and Structure"]
+      }
+    },
+    {
+      "learning_content_id": 52,
+      "title": "Advanced Math SAT Practice",
+      "description": "Challenging practice questions covering advanced math topics.",
+      "type": "Exercise",
+      "areas": ["Math"],
+      "sub_areas": {
+        "Math": ["Advanced Math"]
+      }
+    },
+    {
+      "learning_content_id": 53,
+      "title": "SAT Vocab Flashcards Set 3",
+      "description": "A final set of SAT vocabulary flashcards for enhanced preparation.",
+      "type": "Flashcard",
+      "areas": ["Vocab"],
+      "sub_areas": {}
+    },
+    {
+      "learning_content_id": 54,
+      "title": "SAT Preparation Guide",
+      "description": "General tips and guidance on structuring your SAT preparation.",
+      "type": "Document",
+      "areas": ["Tip/Other"],
+      "sub_areas": {}
+    }
+  ]
+}
