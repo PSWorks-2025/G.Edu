@@ -94,7 +94,7 @@ const ChatInput = ({ setMessages }) => {
         text: aiResponseText,
         userType: 'AI',
       };
-      setMessages((prevMessages) => [...prevMessages.splice(-1), aiMessage]);
+      setMessages((prevMessages) => [...prevMessages.slice(0, -1), aiMessage]);
     });
     setFormValue('');
   };
