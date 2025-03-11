@@ -15,7 +15,7 @@
     @apply text-xl font-semibold;
   }
   ul{
-    @apply list-disc pl-4;
+    @apply list-disc pl-8;
   }
   ul ul{
     @apply list-[circle];
