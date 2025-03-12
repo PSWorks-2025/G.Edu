@@ -32,11 +32,8 @@ function Notification() {
 
   useEffect(() => {
     let days = 7;
-    if (timeSelected === "Last 30 days") {
-      days = 30;
-    } else if (timeSelected === "Last 3 months") {
-      days = 90;
-    }
+    if (timeSelected === "Last 30 days") days = 30;
+    else if (timeSelected === "Last 3 months") days = 90;
     const now = new Date("2025-03-10T00:00:00Z");
     let temp = notifications.filter((notif) => {
       const notifDate = new Date(notif.timestamp);
@@ -50,6 +47,7 @@ function Notification() {
   const toggleTimeDropdown = () => {
     setTimeOpen((prev) => !prev);
   };
+
   const selectTimeOption = (option) => {
     setTimeSelected(option);
     setTimeOpen(false);
@@ -59,7 +57,6 @@ function Notification() {
     <div className="notification-page">
       <div className="notification-container">
         <h1 className="page-title">Notification</h1>
-
         <div className="notification-header">
           <div className="time-filter" ref={timeFilterRef}>
             <button className="time-filter-btn" onClick={toggleTimeDropdown}>
@@ -86,20 +83,15 @@ function Notification() {
             <input type="text" placeholder="Search" />
           </div>
         </div>
-
         <div className="notification-list">
           {filteredNotifications.map((item) => (
             <div className="notification-item" key={item.notification_id}>
               <div className="item-content">
                 <div className="circle-indicator" />
                 <div className="item-text">
-                  <div className="item-header">
-                    <div className="item-title">{item.title}</div>
-                    <div className="item-time">
-                      {new Date(item.timestamp).toLocaleString()}
-                    </div>
-                  </div>
+                  <div className="item-title">{item.title}</div>
                   <div className="item-desc">{item.message}</div>
+                  <div className="item-time">{new Date(item.timestamp).toLocaleString()}</div>
                 </div>
               </div>
             </div>
