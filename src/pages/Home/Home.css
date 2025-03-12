@@ -7,3 +7,39 @@
     font-size: 24px;
     color: #333;
   } 
+
+  /* Add these styles to your Home.css file */
+
+/* Base styles for the main dashboard content */
+.dashboard-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure the navbar (in your existing navbar component) has proper z-index */
+/* Add this to your navbar's CSS */
+
+/* For when the page is scrolling */
+body.is-scrolling .dashboard-content {
+  z-index: 1; /* Keep content below navbar during scroll */
+}
+
+/* Fix for top bar flag and counter to stay properly positioned */
+.flag-icon, .counter-display {
+  position: relative;
+  z-index: 50; /* Lower than navbar but higher than content */
+}
+
+/* If you have search input or other top elements */
+.search-input, .user-profile {
+  position: relative;
+  z-index: 101; /* Just above navbar to ensure they're clickable */
+}
+
+
+
+/* Additional fix for icons in fixed elements */
+ion-icon {
+  position: relative;
+  z-index: auto; /* Let parent element control the stacking */
+}

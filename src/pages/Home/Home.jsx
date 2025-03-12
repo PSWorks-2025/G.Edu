@@ -31,8 +31,33 @@ const Home = () => {
 
         return () => clearInterval(intervalId);
     }, [examDate]);
+
+    // Add a useEffect to manage z-index during scroll
+    React.useEffect(() => {
+        // Function to handle scroll events
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const contentElement = document.querySelector('.dashboard-content');
+            
+            if (scrollPosition > 0) {
+                // When scrolling, ensure content doesn't overlap with navbar
+                document.body.classList.add('is-scrolling');
+            } else {
+                document.body.classList.remove('is-scrolling');
+            }
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Clean up
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return(
-        <div className="mt-20">
+        <div className="dashboard-content mt-20">
             <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1>
 
             {/* Goal and Count Down */}
