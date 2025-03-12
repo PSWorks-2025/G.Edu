@@ -128,7 +128,7 @@ const Home = () => {
                 }}
                 className="ROBOTO_FONTS translate-x-[-35%]"
               >
-                {remainingTime[0]}
+                {remainingTime[0] ? remainingTime[0] : ''}
               </h2>
               <h3
                 style={{
@@ -138,7 +138,11 @@ const Home = () => {
                   marginTop: -10,
                 }}
                 className="ROBOTO_FONTS"
-              >{`${remainingTime[1]}:${remainingTime[2]}:${remainingTime[3]}`}</h3>
+              >
+                {(remainingTime[1] && remainingTime[2]) && remainingTime[3]
+                  ? `${remainingTime[1]}:${remainingTime[2]}:${remainingTime[3]}`
+                  : ''}
+              </h3>
             </div>
           </div>
 
