@@ -59,6 +59,7 @@ function Notification() {
     <div className="notification-page">
       <div className="notification-container">
         <h1 className="page-title">Notification</h1>
+
         <div className="notification-header">
           <div className="time-filter" ref={timeFilterRef}>
             <button className="time-filter-btn" onClick={toggleTimeDropdown}>
@@ -85,16 +86,22 @@ function Notification() {
             <input type="text" placeholder="Search" />
           </div>
         </div>
+
         <div className="notification-list">
           {filteredNotifications.map((item) => (
             <div className="notification-item" key={item.notification_id}>
-              <div className="item-header">
-                <div className="item-title">{item.title}</div>
-                <div className="item-time">
-                  {new Date(item.timestamp).toLocaleString()}
+              <div className="item-content">
+                <div className="circle-indicator" />
+                <div className="item-text">
+                  <div className="item-header">
+                    <div className="item-title">{item.title}</div>
+                    <div className="item-time">
+                      {new Date(item.timestamp).toLocaleString()}
+                    </div>
+                  </div>
+                  <div className="item-desc">{item.message}</div>
                 </div>
               </div>
-              <div className="item-desc">{item.message}</div>
             </div>
           ))}
         </div>
