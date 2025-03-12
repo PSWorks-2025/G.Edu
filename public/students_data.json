@@ -1,0 +1,469 @@
+[
+  {
+    "student_id": 1,
+    "ranking_score": 100,
+    "student_study_goal": {
+      "target_score": 1480,
+      "exam_date": "2025-06-01",
+      "preferred_study_start": "19:00",
+      "preferred_study_end": "22:00",
+      "current_level": "Medium",
+      "current_score": 1300
+    },
+    "student_recommended_learning_plan": {
+      "suggested_study_time": 2.5,
+      "learning_contents_ids": [4, 5, 6, 7, 8, 9, 10],
+      "completed_learning_contents_ids": [4, 9, 10]
+    },
+    "student_study_progress": {
+      "study_hours_today": 3.5,
+      "study_hours_weekly": 16.2,
+      "accuracy_overall": 0.85,
+      "accuracy_by_area": {
+        "verbal": {
+          "information_and_ideas": 0.5,
+          "craft_and_structure": 0.6,
+          "expression_of_ideas": 0.7,
+          "standard_english_conventions": 0.8
+        },
+        "maths": {
+          "algebra": 0.5,
+          "advanced_math": 0.6,
+          "geometry_and_trigonometry": 0.7,
+          "problem_solving_and_data_analysis": 0.8
+        },
+        "vocab": 0.8,
+        "tips_other": null
+      },
+      "deadlines_missed": 4,
+      "streak": 3
+    },
+    "student_smart_review": [
+      {
+        "learning_content_id": 49,
+        "last_reviewed_at": "2025-03-01",
+        "next_review_date": "2025-04-01",
+        "previous_review_count": 10,
+        "review_factor": 1.35,
+        "mastery_levels": {
+          "forget": 2,
+          "so_so": 3,
+          "remembered": 5
+        }
+      },
+      {
+        "learning_content_id": 50,
+        "last_reviewed_at": "2025-03-01",
+        "next_review_date": "2025-04-01",
+        "previous_review_count": 10,
+        "review_factor": 1.35,
+        "mastery_levels": {
+          "forget": 2,
+          "so_so": 3,
+          "remembered": 5
+        }
+      },
+      {
+        "learning_content_id": 51,
+        "last_reviewed_at": "2025-03-01",
+        "next_review_date": "2025-04-01",
+        "previous_review_count": 10,
+        "review_factor": 1.35,
+        "mastery_levels": {
+          "forget": 2,
+          "so_so": 3,
+          "remembered": 5
+        }
+      },
+      {
+        "learning_content_id": 52,
+        "last_reviewed_at": "2025-03-01",
+        "next_review_date": "2025-04-01",
+        "previous_review_count": 10,
+        "review_factor": 1.35,
+        "mastery_levels": {
+          "forget": 2,
+          "so_so": 3,
+          "remembered": 5
+        }
+      },
+      {
+        "learning_content_id": 53,
+        "last_reviewed_at": "2025-03-01",
+        "next_review_date": "2025-04-01",
+        "previous_review_count": 10,
+        "review_factor": 1.35,
+        "mastery_levels": {
+          "forget": 2,
+          "so_so": 3,
+          "remembered": 5
+        }
+      },
+      {
+        "learning_content_id": 54,
+        "last_reviewed_at": "2025-03-01",
+        "next_review_date": "2025-04-01",
+        "previous_review_count": 10,
+        "review_factor": 1.35,
+        "mastery_levels": {
+          "forget": 2,
+          "so_so": 3,
+          "remembered": 5
+        }
+      }
+    ],
+    "student_notebook": [
+      {
+        "note_id": 1,
+        "title": "Algebra Exam Review",
+        "content": "Reviewed algebra formulas and common mistakes.",
+        "created_at": "2025-02-20",
+        "areas": ["Math"]
+      },
+      {
+        "note_id": 2,
+        "title": "Essay Writing Notes",
+        "content": "Key points on structuring a strong SAT essay.",
+        "created_at": "2025-02-18",
+        "areas": ["Verbal"]
+      },
+      {
+        "note_id": 3,
+        "title": "Verbal Quiz Tips",
+        "content": "Remember to analyze tone and author's intent.",
+        "created_at": "2025-02-15",
+        "areas": ["Verbal", "Tips/Other"]
+      },
+      {
+        "note_id": 4,
+        "title": "SAT Full Test Summary",
+        "content": "Timing strategy and pacing practice notes.",
+        "created_at": "2025-02-10",
+        "areas": ["Verbal", "Math", "Vocab"]
+      },
+      {
+        "note_id": 5,
+        "title": "Data Analysis Strategies",
+        "content": "Look for trends and relationships in graphs.",
+        "created_at": "2025-02-05",
+        "areas": ["Math"]
+      }
+    ],
+    "student_assignments": [
+      {
+        "assignment_id": 1,
+        "status": "Upcoming",
+        "submissions": 0,
+        "first_score": null,
+        "all_scores": {}
+      },
+      {
+        "assignment_id": 3,
+        "status": "To do",
+        "submissions": 1,
+        "first_score": 75,
+        "all_scores": {
+          "1": 75
+        }
+      },
+      {
+        "assignment_id": 4,
+        "status": "Completed",
+        "submissions": 2,
+        "first_score": 80,
+        "all_scores": {
+          "1": 80,
+          "2": 90
+        }
+      },
+      {
+        "assignment_id": 7,
+        "status": "Overdue",
+        "submissions": 0,
+        "first_score": null,
+        "all_scores": {}
+      },
+      {
+        "assignment_id": 10,
+        "status": "Upcoming",
+        "submissions": 0,
+        "first_score": null,
+        "all_scores": {}
+      }
+    ],
+    "student_notifications": [
+      {
+        "notification_id": 1,
+        "is_read": false
+      },
+      {
+        "notification_id": 3,
+        "is_read": true
+      },
+      {
+        "notification_id": 4,
+        "is_read": false
+      },
+      {
+        "notification_id": 7,
+        "is_read": true
+      },
+      {
+        "notification_id": 10,
+        "is_read": false
+      }
+    ]
+  },
+  {
+    "student_id": 2,
+    "ranking_score": 135,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 3.5,
+      "study_hours_weekly": 16.2,
+      "accuracy_overall": 0.85,
+      "accuracy_by_area": {},
+      "deadlines_missed": 4,
+      "streak": 3
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 3,
+    "ranking_score": 120,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 2.8,
+      "study_hours_weekly": 14.5,
+      "accuracy_overall": 0.78,
+      "accuracy_by_area": {},
+      "deadlines_missed": 2,
+      "streak": 5
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 4,
+    "ranking_score": 90,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 1.5,
+      "study_hours_weekly": 10.2,
+      "accuracy_overall": 0.65,
+      "accuracy_by_area": {},
+      "deadlines_missed": 6,
+      "streak": 2
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 5,
+    "ranking_score": 145,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 4.1,
+      "study_hours_weekly": 18.3,
+      "accuracy_overall": 0.92,
+      "accuracy_by_area": {},
+      "deadlines_missed": 1,
+      "streak": 7
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 6,
+    "ranking_score": 80,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 1.2,
+      "study_hours_weekly": 9.8,
+      "accuracy_overall": 0.6,
+      "accuracy_by_area": {},
+      "deadlines_missed": 5,
+      "streak": 1
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 7,
+    "ranking_score": 110,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 3.0,
+      "study_hours_weekly": 12.7,
+      "accuracy_overall": 0.74,
+      "accuracy_by_area": {},
+      "deadlines_missed": 3,
+      "streak": 4
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 8,
+    "ranking_score": 95,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 2.2,
+      "study_hours_weekly": 11.1,
+      "accuracy_overall": 0.68,
+      "accuracy_by_area": {},
+      "deadlines_missed": 4,
+      "streak": 2
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 9,
+    "ranking_score": 130,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 3.7,
+      "study_hours_weekly": 16.8,
+      "accuracy_overall": 0.88,
+      "accuracy_by_area": {},
+      "deadlines_missed": 2,
+      "streak": 6
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 10,
+    "ranking_score": 105,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 2.9,
+      "study_hours_weekly": 13.6,
+      "accuracy_overall": 0.7,
+      "accuracy_by_area": {},
+      "deadlines_missed": 3,
+      "streak": 4
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 11,
+    "ranking_score": 125,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 3.3,
+      "study_hours_weekly": 15.4,
+      "accuracy_overall": 0.82,
+      "accuracy_by_area": {},
+      "deadlines_missed": 2,
+      "streak": 5
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 12,
+    "ranking_score": 60,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 0.8,
+      "study_hours_weekly": 7.5,
+      "accuracy_overall": 0.55,
+      "accuracy_by_area": {},
+      "deadlines_missed": 7,
+      "streak": 1
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 13,
+    "ranking_score": 140,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 4.3,
+      "study_hours_weekly": 19.2,
+      "accuracy_overall": 0.95,
+      "accuracy_by_area": {},
+      "deadlines_missed": 1,
+      "streak": 8
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 14,
+    "ranking_score": 85,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 1.7,
+      "study_hours_weekly": 10.8,
+      "accuracy_overall": 0.62,
+      "accuracy_by_area": {},
+      "deadlines_missed": 5,
+      "streak": 2
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  },
+  {
+    "student_id": 15,
+    "ranking_score": 115,
+    "student_study_goal": {},
+    "student_recommended_learning_plan": {},
+    "student_study_progress": {
+      "study_hours_today": 3.1,
+      "study_hours_weekly": 14.0,
+      "accuracy_overall": 0.75,
+      "accuracy_by_area": {},
+      "deadlines_missed": 3,
+      "streak": 4
+    },
+    "student_smart_review": [],
+    "student_notebook": [],
+    "student_assignments": [],
+    "student_notifications": []
+  }
+]
