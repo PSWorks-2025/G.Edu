@@ -21,7 +21,7 @@
 
 /* For when the page is scrolling */
 body.is-scrolling .dashboard-content {
-  z-index: 1; /* Keep content below navbar during scroll */
+  z-index: 101; /* Keep content below navbar during scroll */
 }
 
 /* Fix for top bar flag and counter to stay properly positioned */
