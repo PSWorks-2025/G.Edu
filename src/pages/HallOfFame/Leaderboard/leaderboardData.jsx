@@ -53,10 +53,10 @@ const getStudentRankingDataById = async (studentsID) => {
         streak: student_data.student_study_progress.streak,
         deadline_missed: student_data.student_study_progress.deadlines_missed,
       };
-    })
+    }),
   );
   const sortedStudentRankingData = await studentRankingData.sort(
-    (studentA, studentB) => studentB.ranking_score - studentA.ranking_score
+    (studentA, studentB) => studentB.ranking_score - studentA.ranking_score,
   );
   return sortedStudentRankingData;
 };
@@ -89,10 +89,10 @@ export const getStudentRankingData = async () => {
         streak: student_data.student_study_progress.streak,
         deadline_missed: student_data.student_study_progress.deadlines_missed,
       };
-    })
+    }),
   );
   const sortedStudentRankingData = await studentRankingData.sort(
-    (studentA, studentB) => studentB.ranking_score - studentA.ranking_score
+    (studentA, studentB) => studentB.ranking_score - studentA.ranking_score,
   );
   return sortedStudentRankingData;
 };
@@ -110,8 +110,10 @@ export const getAllClassRanking = async () => {
         streak: student_data.student_study_progress.streak,
         deadline_missed: student_data.student_study_progress.deadlines_missed,
       };
-    })
+    }),
   );
-  const sortedClassesRankingData = classesRankingData.sort((studentA, studentB)=> studentB.ranking_score-studentA.ranking_score);
+  const sortedClassesRankingData = classesRankingData.sort(
+    (studentA, studentB) => studentB.ranking_score - studentA.ranking_score,
+  );
   return sortedClassesRankingData;
 };

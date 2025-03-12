@@ -19,7 +19,7 @@
     "notification_id": 3,
     "title": "New Learning Material Added",
     "message": "A new resource on algebraic expressions has been uploaded. Start learning now!",
-    "timestamp": "2025-03-12T14:45:00Z",
+    "timestamp": "2025-03-02T14:45:00Z",
     "class_id": [1, 3],
     "other_student_ids": []
   },
@@ -27,7 +27,7 @@
     "notification_id": 4,
     "title": "Class Schedule Updated",
     "message": "Your chemistry class schedule has been updated. Check the new time in the calendar.",
-    "timestamp": "2025-03-13T10:15:00Z",
+    "timestamp": "2025-03-03T10:15:00Z",
     "class_id": [3],
     "other_student_ids": [1, 6]
   },
@@ -35,7 +35,7 @@
     "notification_id": 5,
     "title": "New Exercise Available",
     "message": "Test your probability skills with the latest challenge!",
-    "timestamp": "2025-03-14T09:30:00Z",
+    "timestamp": "2025-03-04T09:30:00Z",
     "class_id": [],
     "other_student_ids": [2, 4, 9, 13]
   },
@@ -43,7 +43,7 @@
     "notification_id": 6,
     "title": "Exam Reminder",
     "message": "Your final math exam is scheduled for next week. Review the study guide now!",
-    "timestamp": "2025-03-15T17:00:00Z",
+    "timestamp": "2025-03-05T17:00:00Z",
     "class_id": [2, 3],
     "other_student_ids": []
   },

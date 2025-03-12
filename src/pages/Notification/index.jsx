@@ -20,21 +20,21 @@ function Notification() {
   }, []);
 
   useEffect(() => {
-    fetch("/notifications.json")
+    fetch('/notifications.json')
       .then((res) => res.json())
       .then((data) => {
         setNotifications(data);
       })
       .catch((error) => {
-        console.error("Error fetching notifications:", error);
+        console.error('Error fetching notifications:', error);
       });
   }, []);
 
   useEffect(() => {
     let days = 7;
-    if (timeSelected === "Last 30 days") days = 30;
-    else if (timeSelected === "Last 3 months") days = 90;
-    const now = new Date("2025-03-10T00:00:00Z");
+    if (timeSelected === 'Last 30 days') days = 30;
+    else if (timeSelected === 'Last 3 months') days = 90;
+    const now = new Date('2025-03-10T00:00:00Z');
     let temp = notifications.filter((notif) => {
       const notifDate = new Date(notif.timestamp);
       const diffInDays = (now - notifDate) / (1000 * 60 * 60 * 24);
