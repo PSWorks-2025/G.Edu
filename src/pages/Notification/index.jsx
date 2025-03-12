@@ -2,33 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import "./notification.css";
 
 function Notification() {
-  const [notifications] = useState([
-    {
-      title: "Design Conference",
-      time: "Today 3 PM",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
-    },
-    {
-      title: "Design Conference",
-      time: "Today 2 PM",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
-    },
-    {
-      title: "Design Conference",
-      time: "Yesterday 11 AM",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
-    },
-    {
-      title: "Design Conference",
-      time: "2 days ago",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. A eget est dolor enim fames augue mus. Ac risus egestas rhoncus ipsum."
-    }
-  ]);
-
+  const [notifications, setNotifications] = useState([]);
+  const [filteredNotifications, setFilteredNotifications] = useState([]);
   const [timeOpen, setTimeOpen] = useState(false);
   const [timeSelected, setTimeSelected] = useState("Last 7 days");
   const timeOptions = ["Last 7 days", "Last 30 days", "Last 3 months"];
@@ -36,10 +11,7 @@ function Notification() {
 
   useEffect(() => {
     function handleClickOutside(e) {
-      if (
-        timeFilterRef.current &&
-        !timeFilterRef.current.contains(e.target)
-      ) {
+      if (timeFilterRef.current && !timeFilterRef.current.contains(e.target)) {
         setTimeOpen(false);
       }
     }
@@ -47,44 +19,46 @@ function Notification() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    fetch("/notifications.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setNotifications(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching notifications:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    let days = 7;
+    if (timeSelected === "Last 30 days") {
+      days = 30;
+    } else if (timeSelected === "Last 3 months") {
+      days = 90;
+    }
+    const now = new Date("2025-03-10T00:00:00Z");
+    let temp = notifications.filter((notif) => {
+      const notifDate = new Date(notif.timestamp);
+      const diffInDays = (now - notifDate) / (1000 * 60 * 60 * 24);
+      return diffInDays >= 0 && diffInDays <= days;
+    });
+    temp = temp.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    setFilteredNotifications(temp);
+  }, [timeSelected, notifications]);
+
   const toggleTimeDropdown = () => {
     setTimeOpen((prev) => !prev);
   };
-
   const selectTimeOption = (option) => {
     setTimeSelected(option);
     setTimeOpen(false);
-  };
-
-  const [sortOpen, setSortOpen] = useState(false);
-  const [sortSelected, setSortSelected] = useState("Name");
-  const sortOptions = ["Name", "Time"];
-  const sortRef = useRef(null);
-
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (sortRef.current && !sortRef.current.contains(e.target)) {
-        setSortOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const toggleSortDropdown = () => {
-    setSortOpen((prev) => !prev);
-  };
-
-  const selectSortOption = (option) => {
-    setSortSelected(option);
-    setSortOpen(false);
   };
 
   return (
     <div className="notification-page">
       <div className="notification-container">
         <h1 className="page-title">Notification</h1>
-
         <div className="notification-header">
           <div className="time-filter" ref={timeFilterRef}>
             <button className="time-filter-btn" onClick={toggleTimeDropdown}>
@@ -96,9 +70,7 @@ function Notification() {
                 {timeOptions.map((option) => (
                   <div
                     key={option}
-                    className={`time-filter-item ${
-                      option === timeSelected ? "active" : ""
-                    }`}
+                    className={`time-filter-item ${option === timeSelected ? "active" : ""}`}
                     onClick={() => selectTimeOption(option)}
                   >
                     {option}
@@ -108,44 +80,21 @@ function Notification() {
               </div>
             )}
           </div>
-
           <div className="search-box">
             <i className="search-icon" />
             <input type="text" placeholder="Search" />
           </div>
-
-          <div className="sort-dropdown" ref={sortRef}>
-            <button className="sort-btn" onClick={toggleSortDropdown}>
-              {sortSelected}
-              <span className="arrow-down" />
-            </button>
-            {sortOpen && (
-              <div className="sort-menu">
-                {sortOptions.map((option) => (
-                  <div
-                    key={option}
-                    className={`sort-item ${
-                      option === sortSelected ? "active" : ""
-                    }`}
-                    onClick={() => selectSortOption(option)}
-                  >
-                    {option}
-                    {option === sortSelected && <span className="check-icon">✔</span>}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
         </div>
-
         <div className="notification-list">
-          {notifications.map((item, index) => (
-            <div className="notification-item" key={index}>
+          {filteredNotifications.map((item) => (
+            <div className="notification-item" key={item.notification_id}>
               <div className="item-header">
                 <div className="item-title">{item.title}</div>
-                <div className="item-time">{item.time}</div>
+                <div className="item-time">
+                  {new Date(item.timestamp).toLocaleString()}
+                </div>
               </div>
-              <div className="item-desc">{item.description}</div>
+              <div className="item-desc">{item.message}</div>
             </div>
           ))}
         </div>
