@@ -7,8 +7,7 @@
     "parent_email": "psworks.tech@gmail.com",
     "current_score": 1300,
     "target_score": 1450,
-    "password": "123456",
-    "score": 100
+    "password": "123456"
   },
   {
     "student_id": 2,
@@ -18,8 +17,7 @@
     "parent_email": "phamfamily@example.com",
     "current_score": 1200,
     "target_score": 1400,
-    "password": "091512",
-    "score": 150
+    "password": "091512"
   },
   {
     "student_id": 3,
@@ -29,8 +27,7 @@
     "parent_email": "tranparents@example.com",
     "current_score": 1350,
     "target_score": 1500,
-    "password": "154823",
-    "score": 75
+    "password": "154823"
   },
   {
     "student_id": 4,
@@ -40,8 +37,7 @@
     "parent_email": "lefamily@example.com",
     "current_score": 1100,
     "target_score": 1350,
-    "password": "075930",
-    "score": 180
+    "password": "075930"
   },
   {
     "student_id": 5,
@@ -51,8 +47,7 @@
     "parent_email": "vufamily@example.com",
     "current_score": 1450,
     "target_score": 1550,
-    "password": "221045",
-    "score": 90
+    "password": "221045"
   },
   {
     "student_id": 6,
@@ -62,8 +57,7 @@
     "parent_email": "buifamily@example.com",
     "current_score": 1250,
     "target_score": 1400,
-    "password": "084512",
-    "score": 120
+    "password": "084512"
   },
   {
     "student_id": 7,
@@ -73,8 +67,7 @@
     "parent_email": "dofamily@example.com",
     "current_score": 1320,
     "target_score": 1480,
-    "password": "191024",
-    "score": 60
+    "password": "191024"
   },
   {
     "student_id": 8,
@@ -84,8 +77,7 @@
     "parent_email": "hoangfamily@example.com",
     "current_score": 1380,
     "target_score": 1520,
-    "password": "223015",
-    "score": 165
+    "password": "223015"
   },
   {
     "student_id": 9,
@@ -95,8 +87,7 @@
     "parent_email": "nguyenfamily@example.com",
     "current_score": 1150,
     "target_score": 1370,
-    "password": "032650",
-    "score": 45
+    "password": "032650"
   },
   {
     "student_id": 10,
@@ -106,8 +97,7 @@
     "parent_email": "tranhome@example.com",
     "current_score": 1400,
     "target_score": 1550,
-    "password": "170849",
-    "score": 135
+    "password": "170849"
   },
   {
     "student_id": 11,
@@ -117,8 +107,7 @@
     "parent_email": "phamparents@example.com",
     "current_score": 1230,
     "target_score": 1400,
-    "password": "064412",
-    "score": 85
+    "password": "064412"
   },
   {
     "student_id": 12,
@@ -128,8 +117,7 @@
     "parent_email": "lefamilyhome@example.com",
     "current_score": 1340,
     "target_score": 1490,
-    "password": "145218",
-    "score": 110
+    "password": "145218"
   },
   {
     "student_id": 13,
@@ -139,8 +127,7 @@
     "parent_email": "vufamilyhome@example.com",
     "current_score": 1420,
     "target_score": 1580,
-    "password": "202845",
-    "score": 55
+    "password": "202845"
   },
   {
     "student_id": 14,
@@ -150,8 +137,7 @@
     "parent_email": "nguyenparents@example.com",
     "current_score": 1280,
     "target_score": 1450,
-    "password": "105932",
-    "score": 175
+    "password": "105932"
   },
   {
     "student_id": 15,
@@ -161,7 +147,6 @@
     "parent_email": "dangparents@example.com",
     "current_score": 1500,
     "target_score": 1600,
-    "password": "233059",
-    "score": 30
+    "password": "233059"
   }
 ]
