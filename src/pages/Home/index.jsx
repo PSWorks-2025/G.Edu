@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Home.css';
 import { primaryColors } from '../../globalComponents/primaryColor/Colors';
 import StudyTime from '../../globalComponents/study time/StudyTime';
@@ -8,6 +8,7 @@ import { PageTitle } from '../../globalComponents2/Typography';
 import PrimaryButton from '../../globalComponents2/buttons';
 import Card1 from '../../globalComponents2/Card1';
 import Card2 from '../../globalComponents2/Card2';
+import Tabs from '../../globalComponents2/Tabs';
 
 const Home = () => {
   const examDate = '30/07/2025';
@@ -35,8 +36,40 @@ const Home = () => {
 
     return () => clearInterval(intervalId);
   }, [examDate]);
+  const [selectedTab, setSelectedTab] = useState('overview');
+
+  const tabs = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'settings', label: 'Settings' },
+  ];
+
   return (
     <div className="mt-20">
+      {/* Reusable Tabs Component */}
+      <Tabs
+        tabs={tabs}
+        selectedTab={selectedTab}
+        onTabChange={setSelectedTab}
+        tabClassName="border-b pb-2"
+        activeTabClassName="bg-blue-600 text-white"
+        inactiveTabClassName="bg-gray-300 text-gray-800"
+      />
+
+      {/* Tab Content */}
+      <div className="mt-4">
+        {selectedTab === 'overview' ? (
+          <div>
+            <h2 className="text-xl font-bold">User Overview</h2>
+            <p className="text-gray-700 mt-2">Welcome to your profile overview.</p>
+          </div>
+        ) : (
+          <div>
+            <h2 className="text-xl font-bold">Settings</h2>
+            <p className="text-gray-700 mt-2">Adjust your account settings here.</p>
+          </div>
+        )}
+      </div>
+
       {/* <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1> */}
       <Card1
         title="Name"
@@ -44,7 +77,6 @@ const Home = () => {
         deadline="12/2/2012"
         alertText="Due soon"
         link="/home"
-
       />
 
       {/* Another example without deadline and alert */}
