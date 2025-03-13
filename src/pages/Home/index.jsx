@@ -4,6 +4,10 @@ import { primaryColors } from '../../globalComponents/primaryColor/Colors';
 import StudyTime from '../../globalComponents/study time/StudyTime';
 import Deadline from '../../globalComponents/deadlines/deadline';
 import Suggestions from '../../globalComponents/suggestions/Suggestions';
+import { PageTitle } from '../../globalComponents2/Typography';
+import PrimaryButton from '../../globalComponents2/buttons';
+import Card1 from '../../globalComponents2/Card1';
+import Card2 from '../../globalComponents2/Card2';
 
 const Home = () => {
   const examDate = '30/07/2025';
@@ -33,8 +37,27 @@ const Home = () => {
   }, [examDate]);
   return (
     <div className="mt-20">
-      <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1>
+      {/* <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1> */}
+      <Card1
+        title="Name"
+        description="Lorem ipsum dolor sit"
+        deadline="12/2/2012"
+        alertText="Due soon"
+        link="/home"
 
+      />
+
+      {/* Another example without deadline and alert */}
+      <Card1 title="Task B" description="Another task description" />
+      <Card2
+        title="Article Title"
+        subtitle="Short description of the content"
+        date="12/12/2021"
+        link="/home"
+      />
+
+      <PrimaryButton onClick={() => alert('Button Clicked!')}>Learn now</PrimaryButton>
+      <PageTitle>Dashboard</PageTitle>
       {/* Goal and Count Down */}
       <div className="flex flex-row justify-between">
         {/* goal */}
