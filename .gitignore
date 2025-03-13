@@ -7,7 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
 dist
 dist-ssr
 *.local
@@ -23,6 +22,12 @@ dist-ssr
 *.sln
 *.sw?
 
+
 # dotenv environment variables file
 .env
 .env.test
+.env.local
+
+# Packages
+node_modules
+package-lock.json
