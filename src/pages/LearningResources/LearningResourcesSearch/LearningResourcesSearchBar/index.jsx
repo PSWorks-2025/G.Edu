@@ -22,9 +22,9 @@ const LearningResourcesSearchBar = ({ searchText, setSearchText }) => {
           id="search"
           type="text"
           placeholder="Search"
-          className="outline-0 w-full"
+          className="outline-0 w-full bg-transparent"
           value={searchText}
-          onChange={(text) => setSearchText(text.value)}
+          onChange={(inputText) => setSearchText(inputText.target.value)}
         />
       </label>
     </>
