@@ -20,7 +20,7 @@ const LearningResourcesList = ({ searchText, filteredExerciseType, filteredLevel
       {filteredResources.length > 0 ? (
         filteredResources.map((resource, index) => (
           <LearningResourcesListItem
-            key={String(resource.id) + '_' + index}
+            key={`${resource.id}_${index}`}
             title={highlightText(resource.title, searchText)}
             description={highlightText(resource.description, searchText)}
             deadline={resource.deadline}
@@ -29,7 +29,7 @@ const LearningResourcesList = ({ searchText, filteredExerciseType, filteredLevel
           />
         ))
       ) : (
-        <p className="ROBOTO_FONTS text-center mt-6 w-full">No resources found</p>
+        <p className="ROBOTO_FONTS text-center mt-6 w-full">No resources found.</p>
       )}
     </div>
   );

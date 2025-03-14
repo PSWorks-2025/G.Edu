@@ -1,16 +1,18 @@
 import React from 'react';
 import ReviewCard from './ReviewCard';
 
-const ReviewDisplaySection = ({ title, items, onItemClick, emptyMessage }) => {
+const ReviewDisplaySection = ({ title, items, onItemClick }) => {
   return (
-    <div className="mb-8">
-      <h2 className="text-xl font-semibold mb-4">{title}</h2>
+    <>
+      <h2 className="pl-3 ROBOTO_FONTS text-xl font-semibold -mb-2">{title}</h2>
       {items.length > 0 ? (
-        items.map((item) => <ReviewCard key={item.id} item={item} onClick={onItemClick} />)
+        items.map((item, index) => (
+          <ReviewCard key={`${item.id}_${index}`} item={item} onClick={onItemClick} />
+        ))
       ) : (
-        <p className="text-gray-500">{emptyMessage}</p>
+        <p className="ROBOTO_FONTS text-center mt-6 w-full">No review set available.</p>
       )}
-    </div>
+    </>
   );
 };
 

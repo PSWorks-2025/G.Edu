@@ -36,7 +36,7 @@ const SmartReview = () => {
   const reviewSetItems = studentData.student_smart_review
     .map(({ learning_content_id, next_review_date, mastery_levels }) => {
       const content = learningContents.find(
-        ({ learning_content_id: id }) => id === learning_content_id,
+        ({ learning_content_id: id }) => id === learning_content_id
       );
       return (
         content && {
@@ -48,25 +48,29 @@ const SmartReview = () => {
           level: getLevel(),
           nextReviewDate: new Date(next_review_date),
           mastery: mastery_levels,
+          imageSrc: content.image_url,
         }
       );
     })
     .filter(Boolean);
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-6">Smart Review</h1>
+    <div className="mt-16">
+      <h1 className="font-extrabold NUNITO_SANS text-4xl mb-6">Smart Review</h1>
 
-      <ReviewDisplaySection
-        title="Your Review Set"
-        items={reviewSetItems}
-        onItemClick={setSelectedReview}
-        emptyMessage="No review set available."
-      />
+      <div className="relative overflow-hidden">
+        <div className="mt-10 bg-[#fbfbfb] w-full px-7 py-7 rounded-lg">
+          <ReviewDisplaySection
+            title="Review Now"
+            items={reviewSetItems}
+            onItemClick={setSelectedReview}
+          />
+        </div>
 
-      {selectedReview && (
-        <DetailView review={selectedReview} onClose={() => setSelectedReview(null)} />
-      )}
+        {selectedReview && (
+          <DetailView review={selectedReview} onClose={() => setSelectedReview(null)} />
+        )}
+      </div>
     </div>
   );
 };

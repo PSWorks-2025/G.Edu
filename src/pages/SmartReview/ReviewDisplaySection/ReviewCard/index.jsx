@@ -1,60 +1,27 @@
 import React from 'react';
-import LevelRadioButton from './LevelRadioButton';
-import AreaRadioButton from './AreaRadioButton';
+import LevelRadioButtonGroup from './LevelRadioButtonGroup';
+import AreaRadioButtonGroup from './AreaRadioButtonGroup';
 
 const ReviewCard = ({ item, onClick }) => {
   return (
     <div
-      className="flex items-start space-x-4 mb-8 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors"
+      className="
+      mt-6 bg-[#f5f5f5] w-full px-2.25 py-2.25 h-38 rounded-lg flex items-center cursor-pointer transition-colors"
       onClick={() => onClick(item)}
     >
-      <div className="w-24 h-24 bg-gray-300 flex-shrink-0"></div>
-      <div className="flex-1">
-        <h3 className="font-semibold text-lg">{item.title}</h3>
-        <p className="text-sm text-gray-600 mb-2">{item.description}</p>
+      <div className="mx-0.75 my-0.75 w-32 h-32 flex items-center justify-center">
+        <img src={item.imageSrc} alt="icon" className="bg-gray-300 w-32 h-32 rounded-lg" />
+      </div>
 
-        <div className="mb-2">
-          <p className="text-sm mb-1">Level:</p>
-          <div className="flex space-x-2">
-            <LevelRadioButton
-              level="Foundation"
-              selected={item.level === 'Foundation'}
-              itemId={item.id}
-            />
-            <LevelRadioButton level="Medium" selected={item.level === 'Medium'} itemId={item.id} />
-            <LevelRadioButton
-              level="Advanced"
-              selected={item.level === 'Advanced'}
-              itemId={item.id}
-            />
-            <LevelRadioButton
-              level="Exam-ready"
-              selected={item.level === 'Exam-ready'}
-              itemId={item.id}
-            />
-          </div>
+      <div className="ROBOTO_FONTS w-full h-full ml-3 flex flex-col justify-between">
+        <div>
+          <h3 className="text-lg font-bold mb-1">{item.title}</h3>
+          <p className="text-sm text-gray-500">{item.description}</p>
         </div>
 
-        <div>
-          <p className="text-sm mb-1">Area:</p>
-          <div className="flex space-x-2">
-            <AreaRadioButton
-              area="Verbal"
-              selected={item.areas.includes('Verbal')}
-              itemId={item.id}
-            />
-            <AreaRadioButton area="Math" selected={item.areas.includes('Math')} itemId={item.id} />
-            <AreaRadioButton
-              area="Vocab"
-              selected={item.areas.includes('Vocab')}
-              itemId={item.id}
-            />
-            <AreaRadioButton
-              area="Tip/Other"
-              selected={item.areas.includes('Tip/Other')}
-              itemId={item.id}
-            />
-          </div>
+        <div className="text-md flex flex-col space-y-2">
+          <LevelRadioButtonGroup level={item.level} itemId={item.id} />
+          <AreaRadioButtonGroup areas={item.areas} itemId={item.id} />
         </div>
       </div>
     </div>
