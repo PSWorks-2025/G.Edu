@@ -1,19 +1,21 @@
-import React from "react";
-import "./Home.css";
-import { primaryColors } from "../../components/primaryColor/Colors";
-import StudyTime from "../../components/study time/StudyTime";
-import Deadline from "../../components/deadlines/deadline";
-import Suggestions from "../../components/suggestions/Suggestions";
+import React from 'react';
+import './Home.css';
+import { primaryColors } from './primaryColor/Colors';
+import StudyTime from './StudyTime';
+import Deadline from './DeadlinesList';
+import Suggestions from './SuggestionList';
+import DeadlineCard from './DeadlinesList/DeadlineCard';
+import DeadlineList from './DeadlinesList';
 
 const Home = () => {
-  const examDate = "30/07/2025";
+  const examDate = '30/07/2025';
   const [remainingTime, setRemainingTime] = React.useState([]);
   const [showAllSuggestions, setShowAllSuggestions] = React.useState(false);
 
   React.useEffect(() => {
     const calculateRemainingTime = (examDate) => {
       const now = new Date();
-      const exam = new Date(examDate.split("/").reverse().join("/"));
+      const exam = new Date(examDate.split('/').reverse().join('/'));
       const timeDifference = exam - now;
 
       const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -43,16 +45,16 @@ const Home = () => {
       const scrollPosition = window.scrollY;
 
       if (scrollPosition > 0) {
-        document.body.classList.add("is-scrolling");
+        document.body.classList.add('is-scrolling');
       } else {
-        document.body.classList.remove("is-scrolling");
+        document.body.classList.remove('is-scrolling');
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -102,9 +104,9 @@ const Home = () => {
               width: 60,
               height: 60,
               borderRadius: 100,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             <ion-icon
@@ -140,9 +142,9 @@ const Home = () => {
               style={{
                 width: 122,
                 height: 84,
-                backgroundColor: "#F0F0F0",
-                alignContent: "center",
-                justifyItems: "center",
+                backgroundColor: '#F0F0F0',
+                alignContent: 'center',
+                justifyItems: 'center',
               }}
             >
               <h2
@@ -201,9 +203,9 @@ const Home = () => {
               width: 60,
               height: 60,
               borderRadius: 100,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             <ion-icon
@@ -218,22 +220,7 @@ const Home = () => {
       <StudyTime />
 
       {/* Deadlines */}
-      <div
-        className="mt-6"
-        style={{
-          backgroundColor: primaryColors.white,
-          padding: 15,
-          borderRadius: 14,
-        }}
-      >
-        <h2 className="ROBOTO_FONTS" style={{ fontSize: 20, fontWeight: 500 }}>
-          Upcoming deadlines
-        </h2>
-        <div className="mt-4">
-          {/* ul deadline.map li */}
-          <Deadline />
-        </div>
-      </div>
+      <DeadlineList />
 
       {/* Material Suggestions */}
       <div
@@ -259,7 +246,7 @@ const Home = () => {
             style={{ color: primaryColors.blue, fontSize: 16, fontWeight: 400 }}
             className="ROBOTO_FONTS"
           >
-            {showAllSuggestions ? "Show less" : "See more >"}
+            {showAllSuggestions ? 'Show less' : 'See more >'}
           </button>
         </div>
         <div className="mt-4">

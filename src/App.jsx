@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import {
-  Routes,
-  Route,
-  useLocation
-} from 'react-router-dom';
-import Home from './pages/Home/Home';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Home from './pages/Home/';
 import MyLearningPlan from './pages/MyLearningPlan/MyLearningPlan';
 import Assignment from './pages/Assignment/Assignment';
 import SmartReview from './pages/SmartReview/SmartReview';
@@ -19,12 +15,12 @@ import TopBar from './components/TopBar/TopBar';
 
 function App() {
   const [activeTab, setActiveTab] = useState('');
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    const currentPath = location.pathname; 
+    const currentPath = location.pathname;
     console.log(currentPath);
-    
+
     const pathToTab = {
       '/home': 'Home',
       '/my-learning-plan': 'MyLearningPlan',
@@ -38,7 +34,7 @@ function App() {
     };
     setActiveTab(pathToTab[currentPath] || 'Home');
   }, []);
-  
+
   return (
     <>
       <div className="app">
@@ -53,7 +49,10 @@ function App() {
               <Route path="/smart-review" element={<SmartReview />} />
               <Route path="/ai-tutor" element={<AITutor />} />
               <Route path="/notebook" element={<Notebook />} />
-              <Route path="/learning-resources" element={<LearningResources />} />
+              <Route
+                path="/learning-resources"
+                element={<LearningResources />}
+              />
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/notification" element={<Notification />} />
             </Routes>
