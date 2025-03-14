@@ -59,7 +59,7 @@ const SmartReview = () => {
       <h1 className="font-extrabold NUNITO_SANS text-4xl mb-6">Smart Review</h1>
 
       <div className="relative overflow-hidden">
-        <div className="mt-10 bg-[#fbfbfb] w-full px-7 py-7 rounded-lg">
+        <div className="bg-[#fbfbfb] w-full px-7 py-7 rounded-lg">
           <ReviewDisplaySection
             title="Review Now"
             items={reviewSetItems}
