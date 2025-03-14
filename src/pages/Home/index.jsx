@@ -1,13 +1,17 @@
 import React from 'react';
 import './Home.css';
-import { primaryColors } from '../../globalComponents/primaryColor/Colors';
-import StudyTime from '../../globalComponents/study time/StudyTime';
-import Deadline from '../../globalComponents/deadlines/deadline';
-import Suggestions from '../../globalComponents/suggestions/Suggestions';
+import { primaryColors } from '../../utils/primaryColor/Colors';
+import StudyTime from './StudyTime';
+import Deadline from './DeadlinesList';
+import Suggestions from './SuggestionList';
+import DeadlineCard from './DeadlinesList/DeadlineCard';
+import DeadlineList from './DeadlinesList';
+import SuggestionsList from './SuggestionList';
 
 const Home = () => {
   const examDate = '30/07/2025';
   const [remainingTime, setRemainingTime] = React.useState([]);
+  const [showAllSuggestions, setShowAllSuggestions] = React.useState(false);
 
   React.useEffect(() => {
     const calculateRemainingTime = (examDate) => {
@@ -31,8 +35,28 @@ const Home = () => {
 
     return () => clearInterval(intervalId);
   }, [examDate]);
+
+  // Add a useEffect to manage z-index during scroll
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > 0) {
+        document.body.classList.add('is-scrolling');
+      } else {
+        document.body.classList.remove('is-scrolling');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="mt-20">
+    <div className="dashboard-content mt-20">
       <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1>
 
       {/* Goal and Count Down */}
@@ -128,7 +152,7 @@ const Home = () => {
                 }}
                 className="ROBOTO_FONTS translate-x-[-35%]"
               >
-                {remainingTime[0] ? remainingTime[0] : ''}
+                {remainingTime[0]}
               </h2>
               <h3
                 style={{
@@ -139,9 +163,8 @@ const Home = () => {
                 }}
                 className="ROBOTO_FONTS"
               >
-                {(remainingTime[1] && remainingTime[2]) && remainingTime[3]
-                  ? `${remainingTime[1]}:${remainingTime[2]}:${remainingTime[3]}`
-                  : ''}
+                <span>{remainingTime[1]}:</span>
+                {remainingTime[2]}:{remainingTime[3]}
               </h3>
             </div>
           </div>
@@ -194,22 +217,7 @@ const Home = () => {
       <StudyTime />
 
       {/* Deadlines */}
-      <div
-        className="mt-6"
-        style={{
-          backgroundColor: primaryColors.white,
-          padding: 15,
-          borderRadius: 14,
-        }}
-      >
-        <h2 className="ROBOTO_FONTS" style={{ fontSize: 20, fontWeight: 500 }}>
-          Upcoming deadlines
-        </h2>
-        <div className="mt-4">
-          {/* ul deadline.map li */}
-          <Deadline />
-        </div>
-      </div>
+      <DeadlineList />
 
       {/* Material Suggestions */}
       <div
@@ -227,16 +235,17 @@ const Home = () => {
           <h2 className="ROBOTO_FONTS" style={{ fontSize: 18, fontWeight: 500 }}>
             Material suggestions
           </h2>
-          <h2
+          <button
+            onClick={() => setShowAllSuggestions(!showAllSuggestions)}
             style={{ color: primaryColors.blue, fontSize: 16, fontWeight: 400 }}
             className="ROBOTO_FONTS"
           >
-            See more {'>'}
-          </h2>
+            {showAllSuggestions ? 'Show less' : 'See more >'}
+          </button>
         </div>
         <div className="mt-4">
           {/* ul suggestions.map li  data limit 6*/}
-          <Suggestions />
+          <SuggestionsList showAll={showAllSuggestions} />
         </div>
       </div>
     </div>

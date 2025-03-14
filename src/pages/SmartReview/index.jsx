@@ -36,7 +36,7 @@ const SmartReview = () => {
   const reviewSetItems = studentData.student_smart_review
     .map(({ learning_content_id, next_review_date, mastery_levels }) => {
       const content = learningContents.find(
-        ({ learning_content_id: id }) => id === learning_content_id
+        ({ learning_content_id: id }) => id === learning_content_id,
       );
       return (
         content && {

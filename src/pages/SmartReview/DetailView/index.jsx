@@ -18,7 +18,9 @@ const DetailView = ({ review, onClose }) => {
       <div className="flex flex-col md:flex-row mb-6 h-57.25">
         <div className="rounded-lg overflow-hidden w-57 h-full">
           <div className="w-57 h-35.75 bg-gray-300 p-2 ">
-            <span className="float-right bg-white px-2 py-1.5 rounded-sm text-sm text-gray-400">12/12/2021</span>
+            <span className="float-right bg-white px-2 py-1.5 rounded-sm text-sm text-gray-400">
+              12/12/2021
+            </span>
           </div>
           <div className="bg-white w-57 h-full p-4">
             <h3 className="text-xl mb-1">Lorem ipsum dolor sit</h3>

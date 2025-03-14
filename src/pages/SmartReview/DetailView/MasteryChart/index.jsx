@@ -10,9 +10,17 @@ const MasteryChart = ({ mastery }) => {
   return (
     <div className="bg-white p-6 rounded-lg w-132">
       <div className="flex h-48 mb-2">
-        <MasteryBar maxValue={max([forget, soSo, remembered])} value={forget} color="bg-[#e5484d]" />
+        <MasteryBar
+          maxValue={max([forget, soSo, remembered])}
+          value={forget}
+          color="bg-[#e5484d]"
+        />
         <MasteryBar maxValue={max([forget, soSo, remembered])} value={soSo} color="bg-[#4880ff]" />
-        <MasteryBar maxValue={max([forget, soSo, remembered])} value={remembered} color="bg-[#30a46c]" />
+        <MasteryBar
+          maxValue={max([forget, soSo, remembered])}
+          value={remembered}
+          color="bg-[#30a46c]"
+        />
       </div>
 
       <div className="flex">
