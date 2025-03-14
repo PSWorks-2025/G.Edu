@@ -1,56 +1,36 @@
 import React from 'react';
 import LearningResourcesListItem from './LearningResourcesListItem';
 
+import highlightText from '../../../utils/highlightText';
+
 const learningResources = await fetch('/learning_contents.json').then((res) => res.json());
 
-String.prototype.splice = function(idx, rem, str) {
-  return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
-};
-
-const hightlightText = (text, searchText) => {
-  const searchTextLower = searchText.toLowerCase();
-  const textLower = text.toLowerCase();
-
-  const arr = textLower.split(searchTextLower);
-
-  let result = text.substr(0, arr[0].length);
-  let sumIndex = arr[0].length;
-  for (let i = 1; i < arr.length; i++) {
-    result += `<span class="bg-yellow-300">${text.substr(
-      sumIndex,
-      searchText.length
-    )}</span>`;
-    result += text.substr(sumIndex + searchText.length, arr[i].length);
-    sumIndex += searchText.length + arr[i].length;
-  }
-  return result;
-};
-
 const LearningResourcesList = ({ searchText, filteredExerciseType, filteredLevel }) => {
+  const filteredResources = learningResources.filter((resource) => {
+    const isExerciseTypeMatch =
+      filteredExerciseType === 'All types' || resource.type === filteredExerciseType;
+    const isLevelMatch = filteredLevel === 'All levels' || resource.level === filteredLevel;
+    const isSearchTextMatch = resource.title.toLowerCase().includes(searchText.toLowerCase());
+    return isExerciseTypeMatch && isLevelMatch && isSearchTextMatch;
+  });
+
   return (
     <div className="mt-10 bg-[#fbfbfb] w-full px-7 pb-7 pt-6 rounded-lg">
       <h2 className="NUNITO_SANS text-2xl">Recommendations</h2>
-      {learningResources.map((resource, index) => {
-        if (
-          (filteredExerciseType === 'All types' || resource.type === filteredExerciseType) &&
-          (filteredLevel === 'All levels' || resource.level === filteredLevel) &&
-          (searchText === '' ||
-            resource.title.toLowerCase().includes(searchText.toLowerCase()) ||
-            resource.description.toLowerCase().includes(searchText.toLowerCase()))
-        ) {
-          return (
-            <LearningResourcesListItem
-              key={String(resource.id) + '_' + index}
-              title={hightlightText(resource.title, searchText)}
-              description={hightlightText(resource.description, searchText)}
-              deadline={resource.deadline}
-              imageSrc={resource.detail_content.image}
-              href={resource.detail_content.link}
-            />
-          );
-        }
-        return null;
-      })}
+      {filteredResources.length > 0 ? (
+        filteredResources.map((resource, index) => (
+          <LearningResourcesListItem
+            key={String(resource.id) + '_' + index}
+            title={highlightText(resource.title, searchText)}
+            description={highlightText(resource.description, searchText)}
+            deadline={resource.deadline}
+            imageSrc={resource.detail_content.image}
+            href={resource.detail_content.link}
+          />
+        ))
+      ) : (
+        <p className="ROBOTO_FONTS text-center mt-6 w-full">No resources found</p>
+      )}
     </div>
   );
 };
