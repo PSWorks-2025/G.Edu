@@ -21,6 +21,14 @@ const CardOverview = ({ title, subtitle, date, link }) => {
         <SubtleText>{subtitle}</SubtleText>
       </div>
     </div>
+    <div
+  style={styles.card}
+  onClick={() => {
+    console.log('Clicked card, link =', link);
+    navigate(link);
+  }}
+>
+</div>
   );
 };
 
