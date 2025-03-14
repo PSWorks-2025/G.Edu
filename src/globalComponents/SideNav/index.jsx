@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { primaryColors } from '../primaryColor/Colors';
+import { primaryColors } from '../../utils/primaryColor/Colors';
 import TopBar from '../TopBar';
 function SideNav({ activeTab, setActiveTab }) {
   const navItems = [

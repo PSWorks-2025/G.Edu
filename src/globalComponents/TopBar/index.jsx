@@ -1,5 +1,5 @@
 import React from 'react';
-import { primaryColors } from '../primaryColor/Colors';
+import { primaryColors } from '../../utils/primaryColor/Colors';
 
 function TopBar() {
   return (
