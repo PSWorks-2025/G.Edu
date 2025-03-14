@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Clipboard } from 'lucide-react'; // Icon library
 import { ComponentTitle, SubtleText } from './Typography';
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useNavigate } from 'react-router-dom'; // For navigation
 
-const Card1 = ({ title, description, deadline, alertText, link }) => { // Added link
+const CardOverviewDeadline = ({ title, description, deadline, alertText, link }) => {
+  // Added link
   const navigate = useNavigate(); // Hook for navigation
 
   return (
@@ -62,12 +63,12 @@ const styles = {
   },
 };
 
-Card1.propTypes = {
+CardOverviewDeadline.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   deadline: PropTypes.string,
   alertText: PropTypes.string,
-  link: PropTypes.string.isRequired, 
+  link: PropTypes.string.isRequired,
 };
 
-export default Card1;
+export default CardOverviewDeadline;

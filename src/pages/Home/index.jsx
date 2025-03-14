@@ -1,14 +1,14 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import { primaryColors } from '../../globalComponents/primaryColor/Colors';
 import StudyTime from '../../globalComponents/study time/StudyTime';
 import Deadline from '../../globalComponents/deadlines/deadline';
 import Suggestions from '../../globalComponents/suggestions/Suggestions';
 import { PageTitle } from '../../globalComponents2/Typography';
-import PrimaryButton from '../../globalComponents2/buttons';
-import Card1 from '../../globalComponents2/Card1';
-import Card2 from '../../globalComponents2/Card2';
+import PrimaryButton from '../../globalComponents2/Buttons';
 import Tabs from '../../globalComponents2/Tabs';
+import CardOverviewDeadline from '../../globalComponents2/CardOverviewDeadline';
+import CardOverview from '../../globalComponents2/CardOverview';
 
 const Home = () => {
   const examDate = '30/07/2025';
@@ -71,7 +71,7 @@ const Home = () => {
       </div>
 
       {/* <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1> */}
-      <Card1
+      <CardOverviewDeadline
         title="Name"
         description="Lorem ipsum dolor sit"
         deadline="12/2/2012"
@@ -80,8 +80,8 @@ const Home = () => {
       />
 
       {/* Another example without deadline and alert */}
-      <Card1 title="Task B" description="Another task description" />
-      <Card2
+      <CardOverviewDeadline title="Task B" description="Another task description" />
+      <CardOverview
         title="Article Title"
         subtitle="Short description of the content"
         date="12/12/2021"
