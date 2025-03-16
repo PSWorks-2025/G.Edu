@@ -4,7 +4,7 @@ import PrimaryButton from '../globalComponents2/Buttons';
 import Tabs from '../globalComponents2/Tabs';
 import CardOverview from '../globalComponents2/CardOverview';
 import CardList from '../globalComponents2/CardList';
-import CardThumbnail from '../globalComponents2/CardThumbnail';
+import CardWithImage from '../globalComponents2/CardWithImage';
 import ChatbotBox from '../globalComponents/ChatbotBox';
 import CardDetail from '../globalComponents2/CardDetailComponent';
 
@@ -102,12 +102,12 @@ const Test = () => {
 
       {/* Another example without deadline and alert */}
       {/* <CardOverviewDeadline title="Task B" description="Another task description" /> */}
-      <CardThumbnail
+      <CardWithImage
         title="Article Title"
         subtitle="Short description of the content"
         date="12/12/2021"
-        link="/home"
       />
+      <br />
       <CardList cardData={reviewSecatItems} title="Cards" width="50rem" />
       {/* <CardDetail /> */}
 

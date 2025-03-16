@@ -1,11 +1,11 @@
 import React from 'react';
 import CardOverview from './CardOverview';
-import { Link } from 'react-router-dom';
+import { ComponentTitle, RegularText } from './Typography';
 
 const CardList = ({ cardData, title, width }) => {
   return (
     <div className="bg-[#fbfbfb] px-7 pb-7 pt-6 rounded-lg" style={{ width: width }}>
-      <h2 className="NUNITO_SANS text-2xl">{title}</h2>
+      <ComponentTitle>{title}</ComponentTitle>
       {cardData.length > 0 ? (
         cardData.map((card, index) => (
           <CardOverview
@@ -17,7 +17,9 @@ const CardList = ({ cardData, title, width }) => {
           />
         ))
       ) : (
-        <p className="ROBOTO_FONTS text-center mt-6 w-full">No resources found.</p>
+        <div className="flex justify-center w-full mt-6">
+          <RegularText>No resources found.</RegularText>
+        </div>
       )}
     </div>
   );

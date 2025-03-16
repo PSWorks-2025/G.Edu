@@ -31,14 +31,12 @@ const typography = {
     fontWeight: 400,
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
-    color: '#646464',
   },
   subtleText: {
     fontSize: '0.875rem',
     fontWeight: 400,
     lineHeight: '1.375rem',
     fontFamily: "'Roboto', sans-serif",
-    color: '#646464',
   },
 };
 

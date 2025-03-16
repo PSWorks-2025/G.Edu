@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DetailView from './DetailView';
 import ReviewDisplaySection from './ReviewDisplaySection';
 import { random } from 'lodash';
+import { PageTitle } from '../../globalComponents2/Typography';
 
 const SmartReview = () => {
   const [learningContents, setLearningContents] = useState([]);
@@ -55,7 +56,7 @@ const SmartReview = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-6">Smart Review</h1>
+      <PageTitle className="mb-6">Smart Review</PageTitle>
 
       <ReviewDisplaySection
         title="Your Review Set"

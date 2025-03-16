@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import { LuSendHorizontal } from 'react-icons/lu';
 import ReactMarkdown from 'react-markdown';
+import remarkBreaks from 'remark-breaks';
+import rehypeGFM from 'remark-gfm';
 import threeDotsGif from '../../assets/three_dots.gif';
 
 import { get_AI_tutor_response } from '../../utils/api_calls.jsx';
@@ -43,8 +45,16 @@ const ChatMessage = ({ message }) => {
     </div>
   ) : (
     <div className={`message ${messageClass}`}>
-      {userType === 'AI' ? <ReactMarkdown>{text}</ReactMarkdown> : <p>{text}</p>}
-      <div>{createdAt.time()}</div>
+      {userType === 'AI' ? (
+        <div className='-mt-6'>
+          <ReactMarkdown rehypePlugins={[rehypeGFM]} remarkPlugins={[remarkBreaks]}>
+            {text}
+          </ReactMarkdown>
+        </div>
+      ) : (
+        <paragraph>{text}</paragraph>
+      )}
+      <div className="time">{createdAt.time()}</div>
     </div>
   );
 };

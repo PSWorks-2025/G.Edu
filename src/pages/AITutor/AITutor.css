@@ -3,21 +3,23 @@
 }
 
 .message h1 {
-  font-size: var(--text-3xl);
+  font-size: var(--text-2xl);
   line-height: var(--tw-leading, var(--text-3xl--line-height));
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
 }
 
 .message h2 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-2xl--line-height));
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
+  margin-bottom: calc(var(--spacing) * 4);
+  margin-top: calc(var(--spacing) * 8);
 }
 
 .message h3 {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-xl--line-height));
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
@@ -26,24 +28,31 @@
 .message ul {
   list-style-type: disc;
   padding-left: calc(var(--spacing) * 8);
+  margin-bottom: calc(var(--spacing) * 6);
 }
 
-.message ul ul{
-  list-style-type: circle;
+.message ol {
+  list-style-type: disc;
   padding-left: calc(var(--spacing) * 8);
+  margin-bottom: calc(var(--spacing) * 6);
 }
 
-.message li{
-  margin-bottom: calc(var(--spacing) * 4);
+.message li {
+  margin-block: calc(var(--spacing) * 2);
 }
 
-.message blockquote{
+.message blockquote {
   border-left-style: var(--tw-border-style);
-  border-left-width: 4px;
+  border-left-width: 3px;
   border-color: var(--color-gray-300);
+  color: var(--color-gray-500);
   padding-left: calc(var(--spacing) * 4);
   margin-block: calc(var(--spacing) * 4);
   font-style: italic;
+}
+
+.message p {
+  margin-block: calc(var(--spacing) * 3);
 }
 
 .chat-box {
@@ -61,11 +70,11 @@
   margin: 0.3rem 0;
 }
 
-.message p {
+.message paragraph {
   margin: 0;
 }
 
-.message div {
+.message .time {
   margin: 0;
   font-size: 0.65rem;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Clipboard } from 'lucide-react'; // Icon library
+import { Clipboard, Subtitles } from 'lucide-react'; // Icon library
 import { ComponentTitle, SubtleText } from './Typography';
 import { useNavigate } from 'react-router-dom'; // For navigation
 import { LuFile } from 'react-icons/lu';
@@ -9,32 +9,30 @@ const CardOverview = ({ title, description, deadline, alertText, id }) => {
   // Added link
   const navigate = useNavigate(); // Hook for navigation
 
-
   return (
     <div
       onClick={() => navigate(`/card-detail?id=${id}`)}
-      className={`mt-6 bg-[#f5f5f5] w-full px-4 py-2 ${deadline ? 'h-24' : 'h-16'} rounded-lg flex items-center`}
+      className={`mt-6 cursor-pointer bg-[#f5f5f5] w-full px-4 py-4 ${
+        deadline ? 'h-26' : 'h-18'
+      } rounded-lg flex items-center`}
     >
-      <div className="mt-2 w-7 h-full">
+      <div className="w-7 h-full">
         <div className="bg-[#fbfbfb] w-full h-7 rounded-full flex items-center justify-center">
           <LuFile />
         </div>
       </div>
       <div className="ROBOTO_FONTS w-full h-full ml-3 flex flex-col justify-between">
         <div>
-          <h3 className="text-lg font-bold" dangerouslySetInnerHTML={{ __html: title }}></h3>
-          <p
-            className="text-sm text-gray-500"
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></p>
+          <ComponentTitle>{title}</ComponentTitle>
+          <SubtleText className='text-[#646464]'>{description}</SubtleText>
         </div>
-        {deadline && <p className="text-sm text-gray-500">Deadline: {deadline}</p>}
+        {deadline && <SubtleText>Deadline: {deadline}</SubtleText>}
       </div>
       {alertText && (
-        <div className="mt-2 h-full">
-          <div className="bg-[#FFCDCE] w-max px-2 py-1 text-[#641723] text-sm rounded-lg text-center">
+        <div className="h-full">
+          <SubtleText className="bg-[#FFCDCE] text-[#641723] w-max px-2 py-1 text-sm rounded-lg text-center">
             {alertText}
-          </div>
+          </SubtleText>
         </div>
       )}
     </div>

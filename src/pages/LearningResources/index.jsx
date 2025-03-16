@@ -6,6 +6,8 @@ import { useState } from 'react';
 import LearningResourcesList from './LearningResourcesList';
 import LearningResourcesSearch from './LearningResourcesSearch';
 
+import { PageTitle } from '../../globalComponents2/Typography';
+
 const LearningResources = () => {
   const [filteredExerciseType, setFilteredExerciseType] = useState('All types');
   const [filteredLevel, setFilteredLevel] = useState('All levels');
@@ -13,7 +15,8 @@ const LearningResources = () => {
 
   return (
     <div className="mt-16">
-      <h1 className="font-extrabold NUNITO_SANS text-4xl mb-6">Learning Resources</h1>
+      <PageTitle className="mb-6">Learning Resources</PageTitle>
+      
       <LearningResourcesSearch
         searchText={searchText}
         setSearchText={setSearchText}
