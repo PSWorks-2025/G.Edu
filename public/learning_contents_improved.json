@@ -1,0 +1,447 @@
+{
+  "L-1": {
+    "title": "Understanding SAT Question Types",
+    "description": "A comprehensive guide covering key verbal and math question types on the SAT.",
+    "type": "Document",
+    "areas": ["Verbal", "Math"],
+    "sub_areas": {
+      "Verbal": ["Information and Ideas", "Craft and Structure"],
+      "Math": ["Advanced Math"]
+    },
+    "detail_content": {
+      "text": "This document covers essential strategies for mastering SAT reading comprehension.",
+      "image": "https://example.com/images/sat_reading_strategies.png",
+      "file_ref": "https://example.com/files/sat_reading_guide.pdf",
+      "link": "https://example.com/resources/sat-strategies"
+    }
+  },
+  "L-2": {
+    "title": "Mastering SAT Reading Strategies",
+    "description": "Effective techniques to approach SAT reading passages with confidence.",
+    "type": "Document",
+    "areas": ["Verbal"],
+    "sub_areas": {},
+    "detail_content": {
+      "text": "This document provides essential strategies for tackling SAT reading passages, including time management tips, active reading techniques, and common question types with sample answers.",
+      "image": "https://example.com/images/sat_reading_strategies.png",
+      "file_ref": "https://example.com/files/mastering_sat_reading.pdf",
+      "link": "https://example.com/sat-reading-strategies"
+    }
+  },
+  "L-3": {
+    "title": "Essential SAT Vocabulary List",
+    "description": "A list of high-frequency words that commonly appear in SAT exams.",
+    "type": "Document",
+    "areas": ["Vocab"],
+    "sub_areas": {},
+    "detail_content": {
+      "text": "This document contains a curated list of high-frequency SAT vocabulary words, along with their definitions and example sentences to help students improve their reading and writing scores.",
+      "image": "https://example.com/images/sat_vocabulary_list.png",
+      "file_ref": "https://example.com/files/essential_sat_vocab.pdf",
+      "link": "https://example.com/sat-vocabulary"
+    }
+  },
+  "L-4": {
+    "title": "Math Practice: Mixed Problems",
+    "description": "A set of exercises covering various math concepts tested on the SAT.",
+    "type": "Exercise",
+    "areas": ["Math"],
+    "sub_areas": {},
+    "detail_content": [
+      {
+        "id": 1,
+        "question": "What is the value of x if 2x + 5 = 15?",
+        "question_img": null,
+        "options": ["3", "5", "7", "10"],
+        "answer": "B"
+      },
+      {
+        "id": 2,
+        "question": "Which of the following is a prime number?",
+        "question_img": null,
+        "options": ["14", "21", "37", "40"],
+        "answer": "C"
+      },
+      {
+        "id": 3,
+        "question": "If a triangle has sides of length 3, 4, and 5, what type of triangle is it?",
+        "question_img": null,
+        "options": ["Equilateral", "Isosceles", "Right", "Scalene"],
+        "answer": "C"
+      },
+      {
+        "id": 4,
+        "question": "Solve for y: 3y - 7 = 2y + 5",
+        "question_img": null,
+        "options": ["7", "10", "12", "5"],
+        "answer": "A"
+      },
+      {
+        "id": 5,
+        "question": "What is the area of a circle with radius 6?",
+        "question_img": null,
+        "options": ["12π", "24π", "36π", "48π"],
+        "answer": "C"
+      }
+    ]
+  },
+  "L-5": {
+    "title": "SAT Algebra & Advanced Math Drill",
+    "description": "Targeted practice for algebra and advanced math problems.",
+    "type": "Exercise",
+    "areas": ["Math"],
+    "sub_areas": {
+      "Math": ["Algebra", "Advanced Math"]
+    },
+    "detail_content": [
+      {
+        "id": 1,
+        "question": "Solve for x: 4x - 3 = 13",
+        "question_img": null,
+        "options": ["2", "3", "4", "5"],
+        "answer": "D"
+      },
+      {
+        "id": 2,
+        "question": "What is the sum of the roots of the quadratic equation x² - 5x + 6 = 0?",
+        "question_img": null,
+        "options": ["2", "3", "5", "6"],
+        "answer": "C"
+      },
+      {
+        "id": 3,
+        "question": "If f(x) = 2x² - 3x + 1, find f(2)",
+        "question_img": null,
+        "options": ["3", "5", "7", "9"],
+        "answer": "B"
+      },
+      {
+        "id": 4,
+        "question": "What is the vertex of the parabola y = x² - 4x + 3?",
+        "question_img": null,
+        "options": ["(2, -1)", "(1, -2)", "(3, 0)", "(4, 1)"],
+        "answer": "A"
+      },
+      {
+        "id": 5,
+        "question": "If log₂x = 3, what is the value of x?",
+        "question_img": null,
+        "options": ["6", "8", "9", "12"],
+        "answer": "B"
+      }
+    ]
+  },
+  "L-6": {
+    "title": "SAT Vocabulary Flashcards Set 1",
+    "description": "Flashcards for learning and memorizing essential SAT vocabulary words.",
+    "type": "Flashcard",
+    "areas": ["Vocab"],
+    "sub_areas": {},
+    "detail_content": [
+      {
+        "prompt": "Abate",
+        "information": "To reduce in amount, degree, or severity."
+      },
+      {
+        "prompt": "Cacophony",
+        "information": "Harsh, jarring noise."
+      },
+      {
+        "prompt": "Enervate",
+        "information": "To reduce in strength."
+      },
+      {
+        "prompt": "Garrulous",
+        "information": "Excessively talkative."
+      },
+      {
+        "prompt": "Meticulous",
+        "information": "Extremely careful and precise."
+      }
+    ]
+  },
+  "L-7": {
+    "title": "Key SAT Writing & Math Concepts",
+    "description": "A breakdown of essential writing and math principles for the SAT.",
+    "type": "Document",
+    "areas": ["Verbal", "Math"],
+    "sub_areas": {
+      "Verbal": ["Expression of Ideas"],
+      "Math": ["Geometry and Trigonometry"]
+    },
+    "detail_content": {
+      "text": "This document covers fundamental SAT writing and math concepts, including grammar rules, algebra, and problem-solving strategies to boost test performance.",
+      "image": "https://example.com/images/sat_writing_math.png",
+      "file_ref": "https://example.com/files/sat_writing_math_guide.pdf",
+      "link": "https://example.com/sat-writing-math"
+    }
+  },
+  "L-8": {
+    "title": "Data Analysis & Problem Solving",
+    "description": "Exercises focused on problem-solving and data analysis skills for the SAT.",
+    "type": "Exercise",
+    "areas": ["Math"],
+    "sub_areas": {
+      "Math": ["Problem-Solving and Data Analysis"]
+    },
+    "detail_content": [
+      {
+        "id": 1,
+        "question": "A survey of 100 students found that 60% prefer coffee over tea. How many students prefer coffee?",
+        "question_img": null,
+        "options": ["40", "50", "60", "70"],
+        "answer": "C"
+      },
+      {
+        "id": 2,
+        "question": "The median of the data set {3, 7, 8, 12, 15} is:",
+        "question_img": null,
+        "options": ["7", "8", "10", "12"],
+        "answer": "B"
+      },
+      {
+        "id": 3,
+        "question": "If the mean of five numbers is 20 and four of the numbers are 18, 22, 19, and 21, what is the missing number?",
+        "question_img": null,
+        "options": ["20", "22", "24", "26"],
+        "answer": "C"
+      },
+      {
+        "id": 4,
+        "question": "A store's revenue increased by 25% from $8000 last month. What is the new revenue?",
+        "question_img": null,
+        "options": ["$9000", "$10000", "$11000", "$12000"],
+        "answer": "B"
+      },
+      {
+        "id": 5,
+        "question": "If a dataset has a standard deviation of 5, what happens if each value in the set is multiplied by 2?",
+        "question_img": null,
+        "options": ["Remains 5", "Becomes 10", "Becomes 15", "Becomes 20"],
+        "answer": "B"
+      }
+    ]
+  },
+  "L-9": {
+    "title": "SAT Vocabulary Flashcards Set 2",
+    "description": "A continuation of essential SAT vocabulary flashcards for test prep.",
+    "type": "Flashcard",
+    "areas": ["Vocab"],
+    "sub_areas": {},
+    "detail_content": [
+      {
+        "prompt": "Aberration",
+        "information": "A deviation from what is normal or expected."
+      },
+      {
+        "prompt": "Benevolent",
+        "information": "Well-meaning and kindly."
+      },
+      {
+        "prompt": "Disparate",
+        "information": "Fundamentally different; entirely unlike."
+      },
+      {
+        "prompt": "Esoteric",
+        "information": "Intended for or understood by only a small group."
+      },
+      {
+        "prompt": "Juxtaposition",
+        "information": "The fact of two things being seen or placed close together with contrasting effect."
+      }
+    ]
+  },
+  "L-10": {
+    "title": "Top SAT Test-Taking Tips",
+    "description": "Proven strategies to maximize efficiency and accuracy on the SAT.",
+    "type": "Document",
+    "areas": ["Tip/Other"],
+    "sub_areas": {},
+    "detail_content": {
+      "text": "This document provides expert-backed SAT test-taking strategies, including time management, question prioritization, and elimination techniques to improve accuracy and confidence.",
+      "image": "https://example.com/images/sat_test_tips.png",
+      "file_ref": "https://example.com/files/sat_test_tips.pdf",
+      "link": "https://example.com/sat-test-tips"
+    }
+  },
+  "L-49": {
+    "title": "Grammar Rules Flashcards",
+    "description": "Flashcards covering key grammar and standard English conventions.",
+    "type": "Flashcard",
+    "areas": ["Verbal"],
+    "sub_areas": {
+      "Verbal": ["Standard English Conventions"]
+    },
+    "detail_content": [
+      {
+        "prompt": "Subject-Verb Agreement",
+        "information": "Subjects and verbs must agree in number (singular vs. plural)."
+      },
+      {
+        "prompt": "Comma Splices",
+        "information": "A comma alone cannot join two independent clauses; use a conjunction or semicolon."
+      },
+      {
+        "prompt": "Pronoun-Antecedent Agreement",
+        "information": "A pronoun must agree with its antecedent in number and gender."
+      },
+      {
+        "prompt": "Parallel Structure",
+        "information": "Elements in a list or comparison must be in the same grammatical form."
+      },
+      {
+        "prompt": "Misplaced Modifiers",
+        "information": "Modifiers should be placed next to the word they modify to avoid confusion."
+      }
+    ]
+  },
+  "L-50": {
+    "title": "Algebra Problem Set",
+    "description": "Practice questions focusing on key algebraic concepts for the SAT.",
+    "type": "Exercise",
+    "areas": ["Math"],
+    "sub_areas": {
+      "Math": ["Algebra"]
+    },
+    "detail_content": [
+      {
+        "id": 1,
+        "question": "Solve for x: 2x + 4 = 10",
+        "question_img": null,
+        "options": ["2", "3", "4", "5"],
+        "answer": "B"
+      },
+      {
+        "id": 2,
+        "question": "Factorize: x² - 5x + 6",
+        "question_img": null,
+        "options": ["(x-2)(x-3)", "(x+2)(x+3)", "(x-1)(x-6)", "(x+1)(x-6)"],
+        "answer": "A"
+      },
+      {
+        "id": 3,
+        "question": "Find the slope of the line passing through (1, 2) and (4, 8).",
+        "question_img": null,
+        "options": ["1", "2", "3", "4"],
+        "answer": "B"
+      },
+      {
+        "id": 4,
+        "question": "Solve: 3x² - 12 = 0",
+        "question_img": null,
+        "options": ["2", "-2", "±2", "4"],
+        "answer": "C"
+      },
+      {
+        "id": 5,
+        "question": "What is the y-intercept of the equation y = 3x + 5?",
+        "question_img": null,
+        "options": ["3", "5", "-3", "-5"],
+        "answer": "B"
+      }
+    ]
+  },
+  "L-51": {
+    "title": "Understanding SAT Reading Structures",
+    "description": "A guide to analyzing SAT reading passages and their structures.",
+    "type": "Document",
+    "areas": ["Verbal"],
+    "sub_areas": {
+      "Verbal": ["Craft and Structure"]
+    },
+    "detail_content": {
+      "text": "This document explains the different passage structures in the SAT Reading section, including narrative, argumentative, and informational texts, with strategies for identifying main ideas and key details.",
+      "image": "https://example.com/images/sat_reading_structures.png",
+      "file_ref": "https://example.com/files/sat_reading_structures.pdf",
+      "link": "https://example.com/sat-reading-structures"
+    }
+  },
+  "L-52": {
+    "title": "Advanced Math SAT Practice",
+    "description": "Challenging practice questions covering advanced math topics.",
+    "type": "Exercise",
+    "areas": ["Math"],
+    "sub_areas": {
+      "Math": ["Advanced Math"]
+    },
+    "detail_content": [
+      {
+        "id": 1,
+        "question": "If 2^x = 32, what is the value of x?",
+        "question_img": null,
+        "options": ["3", "4", "5", "6"],
+        "answer": "C"
+      },
+      {
+        "id": 2,
+        "question": "Evaluate the determinant of the matrix [[3, 2], [1, 4]].",
+        "question_img": null,
+        "options": ["10", "12", "9", "8"],
+        "answer": "A"
+      },
+      {
+        "id": 3,
+        "question": "The sum of the infinite geometric series 8 + 4 + 2 + ... is:",
+        "question_img": null,
+        "options": ["12", "14", "16", "20"],
+        "answer": "C"
+      },
+      {
+        "id": 4,
+        "question": "If f(x) = x³ - 3x² + 2x, find f(2).",
+        "question_img": null,
+        "options": ["0", "1", "2", "3"],
+        "answer": "A"
+      },
+      {
+        "id": 5,
+        "question": "Find the derivative of f(x) = 5x² - 3x + 7.",
+        "question_img": null,
+        "options": ["10x - 3", "5x - 3", "10x + 3", "5x + 3"],
+        "answer": "A"
+      }
+    ]
+  },
+  "L-53": {
+    "title": "SAT Vocab Flashcards Set 3",
+    "description": "A final set of SAT vocabulary flashcards for enhanced preparation.",
+    "type": "Flashcard",
+    "areas": ["Vocab"],
+    "sub_areas": {},
+    "detail_content": [
+      {
+        "prompt": "Quixotic",
+        "information": "Exceedingly idealistic; unrealistic and impractical."
+      },
+      {
+        "prompt": "Ubiquitous",
+        "information": "Present or existing everywhere."
+      },
+      {
+        "prompt": "Ostentatious",
+        "information": "Characterized by vulgar or pretentious display."
+      },
+      {
+        "prompt": "Placate",
+        "information": "To make someone less angry or hostile."
+      },
+      {
+        "prompt": "Sycophant",
+        "information": "A person who acts obsequiously toward someone important in order to gain advantage."
+      }
+    ]
+  },
+  "L-54": {
+    "title": "SAT Preparation Guide",
+    "description": "General tips and guidance on structuring your SAT preparation.",
+    "type": "Document",
+    "areas": ["Tip/Other"],
+    "sub_areas": {},
+    "detail_content": {
+      "text": "This guide provides a structured approach to preparing for the SAT, including study schedules, recommended resources, and test-day strategies to optimize performance.",
+      "image": "https://example.com/images/sat_preparation_guide.png",
+      "file_ref": "https://example.com/files/sat_preparation_guide.pdf",
+      "link": "https://example.com/sat-preparation-guide"
+    }
+  }
+}

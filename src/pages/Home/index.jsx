@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
 import { primaryColors } from '../../utils/primaryColor/Colors';
 import StudyTime from './StudyTime';
@@ -7,11 +7,17 @@ import Suggestions from './SuggestionList';
 import DeadlineCard from './DeadlinesList/DeadlineCard';
 import DeadlineList from './DeadlinesList';
 import SuggestionsList from './SuggestionList';
+import CardList from '../../globalComponents/CardList';
 
 const Home = () => {
   const examDate = '30/07/2025';
   const [remainingTime, setRemainingTime] = React.useState([]);
   const [showAllSuggestions, setShowAllSuggestions] = React.useState(false);
+  
+  const data = []
+  useEffect(()=> {
+    // fetch(/)
+  })
 
   React.useEffect(() => {
     const calculateRemainingTime = (examDate) => {
@@ -56,7 +62,9 @@ const Home = () => {
   }, []);
 
   return (
+    
     <div className="dashboard-content mt-20">
+      {data && <CardList />}
       <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1>
 
       {/* Goal and Count Down */}

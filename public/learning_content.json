@@ -1,0 +1,49 @@
+{
+  "L-4": {
+    "alertText": "due soon",
+    "deadline": "2025-03-18T00:00:00.000Z",
+    "id": "L-4",
+    "title": "Math Practice: Mixed Problems",
+    "description": "A set of exercises covering various math concepts tested on the SAT.",
+    "type": "Exercise",
+    "areas": ["Math", "Reading"],
+    "sub_areas": ["sub area 1", "sub area 2"],
+    "detail_content": [
+      {
+        "id": 1,
+        "question": "What is the value of x if 2x + 5 = 15?",
+        "question_img": null,
+        "options": ["3", "5", "7", "10"],
+        "answer": "B"
+      },
+      {
+        "id": 2,
+        "question": "Which of the following is a prime number?",
+        "question_img": null,
+        "options": ["14", "21", "37", "40"],
+        "answer": "C"
+      },
+      {
+        "id": 3,
+        "question": "If a triangle has sides of length 3, 4, and 5, what type of triangle is it?",
+        "question_img": null,
+        "options": ["Equilateral", "Isosceles", "Right", "Scalene"],
+        "answer": "C"
+      },
+      {
+        "id": 4,
+        "question": "Solve for y: 3y - 7 = 2y + 5",
+        "question_img": null,
+        "options": ["7", "10", "12", "5"],
+        "answer": "A"
+      },
+      {
+        "id": 5,
+        "question": "What is the area of a circle with radius 6?",
+        "question_img": null,
+        "options": ["12π", "24π", "36π", "48π"],
+        "answer": "C"
+      }
+    ]
+  }
+}
