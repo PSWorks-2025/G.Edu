@@ -1,11 +1,12 @@
 import React from 'react';
 import './AITutor.css';
 import ChatbotBox from '../../globalComponents/ChatbotBox';
+import { PageTitle } from '../../globalComponents2/Typography';
 
 const AITutor = () => {
   return (
-    <div className="page">
-      <h1>AI Tutor Page</h1>
+    <div className="mt-10">
+      <PageTitle>AI Tutor</PageTitle>
       <ChatbotBox />
     </div>
   );
