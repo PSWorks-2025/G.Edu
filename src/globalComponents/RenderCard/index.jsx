@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import CardContext from '../../utils/context/cardContext';
-import CardOverview1 from './CardOverview';
+import CardOverview from './CardOverview';
 
 const RenderCard = ({
   id,
@@ -16,13 +16,14 @@ const RenderCard = ({
   const { cardLookupTable, setCardLookupTable } = useContext(CardContext);
 
   useEffect(() => {
+    console.log(id, cardLookupTable);
     setCardLookupTable((prevTable) => ({
       ...prevTable,
       [id]: { title, description, deadline, alertText, areas, subAreas, detailContent },
     }));
   }, [id, title, description, deadline, alertText, areas, subAreas, detailContent]);
 
-  return <CardOverview1 id={id} />;
+  return <CardOverview id={id} />;
 };
 
 RenderCard.propTypes = {

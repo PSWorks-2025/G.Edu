@@ -1,5 +1,8 @@
 {
   "L-1": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-1",
     "title": "Understanding SAT Question Types",
     "description": "A comprehensive guide covering key verbal and math question types on the SAT.",
     "type": "Document",
@@ -16,6 +19,9 @@
     }
   },
   "L-2": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-2",
     "title": "Mastering SAT Reading Strategies",
     "description": "Effective techniques to approach SAT reading passages with confidence.",
     "type": "Document",
@@ -29,6 +35,9 @@
     }
   },
   "L-3": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-3",
     "title": "Essential SAT Vocabulary List",
     "description": "A list of high-frequency words that commonly appear in SAT exams.",
     "type": "Document",
@@ -42,6 +51,9 @@
     }
   },
   "L-4": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-4",
     "title": "Math Practice: Mixed Problems",
     "description": "A set of exercises covering various math concepts tested on the SAT.",
     "type": "Exercise",
@@ -80,12 +92,15 @@
         "id": 5,
         "question": "What is the area of a circle with radius 6?",
         "question_img": null,
-        "options": ["12π", "24π", "36π", "48π"],
+        "options": ["12\u03c0", "24\u03c0", "36\u03c0", "48\u03c0"],
         "answer": "C"
       }
     ]
   },
   "L-5": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-5",
     "title": "SAT Algebra & Advanced Math Drill",
     "description": "Targeted practice for algebra and advanced math problems.",
     "type": "Exercise",
@@ -103,28 +118,28 @@
       },
       {
         "id": 2,
-        "question": "What is the sum of the roots of the quadratic equation x² - 5x + 6 = 0?",
+        "question": "What is the sum of the roots of the quadratic equation x\u00b2 - 5x + 6 = 0?",
         "question_img": null,
         "options": ["2", "3", "5", "6"],
         "answer": "C"
       },
       {
         "id": 3,
-        "question": "If f(x) = 2x² - 3x + 1, find f(2)",
+        "question": "If f(x) = 2x\u00b2 - 3x + 1, find f(2)",
         "question_img": null,
         "options": ["3", "5", "7", "9"],
         "answer": "B"
       },
       {
         "id": 4,
-        "question": "What is the vertex of the parabola y = x² - 4x + 3?",
+        "question": "What is the vertex of the parabola y = x\u00b2 - 4x + 3?",
         "question_img": null,
         "options": ["(2, -1)", "(1, -2)", "(3, 0)", "(4, 1)"],
         "answer": "A"
       },
       {
         "id": 5,
-        "question": "If log₂x = 3, what is the value of x?",
+        "question": "If log\u2082x = 3, what is the value of x?",
         "question_img": null,
         "options": ["6", "8", "9", "12"],
         "answer": "B"
@@ -132,6 +147,9 @@
     ]
   },
   "L-6": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-6",
     "title": "SAT Vocabulary Flashcards Set 1",
     "description": "Flashcards for learning and memorizing essential SAT vocabulary words.",
     "type": "Flashcard",
@@ -161,6 +179,9 @@
     ]
   },
   "L-7": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-7",
     "title": "Key SAT Writing & Math Concepts",
     "description": "A breakdown of essential writing and math principles for the SAT.",
     "type": "Document",
@@ -177,6 +198,9 @@
     }
   },
   "L-8": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-8",
     "title": "Data Analysis & Problem Solving",
     "description": "Exercises focused on problem-solving and data analysis skills for the SAT.",
     "type": "Exercise",
@@ -223,6 +247,9 @@
     ]
   },
   "L-9": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-9",
     "title": "SAT Vocabulary Flashcards Set 2",
     "description": "A continuation of essential SAT vocabulary flashcards for test prep.",
     "type": "Flashcard",
@@ -252,6 +279,9 @@
     ]
   },
   "L-10": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-10",
     "title": "Top SAT Test-Taking Tips",
     "description": "Proven strategies to maximize efficiency and accuracy on the SAT.",
     "type": "Document",
@@ -265,6 +295,9 @@
     }
   },
   "L-49": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-49",
     "title": "Grammar Rules Flashcards",
     "description": "Flashcards covering key grammar and standard English conventions.",
     "type": "Flashcard",
@@ -296,6 +329,9 @@
     ]
   },
   "L-50": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-50",
     "title": "Algebra Problem Set",
     "description": "Practice questions focusing on key algebraic concepts for the SAT.",
     "type": "Exercise",
@@ -313,7 +349,7 @@
       },
       {
         "id": 2,
-        "question": "Factorize: x² - 5x + 6",
+        "question": "Factorize: x\u00b2 - 5x + 6",
         "question_img": null,
         "options": ["(x-2)(x-3)", "(x+2)(x+3)", "(x-1)(x-6)", "(x+1)(x-6)"],
         "answer": "A"
@@ -327,9 +363,9 @@
       },
       {
         "id": 4,
-        "question": "Solve: 3x² - 12 = 0",
+        "question": "Solve: 3x\u00b2 - 12 = 0",
         "question_img": null,
-        "options": ["2", "-2", "±2", "4"],
+        "options": ["2", "-2", "\u00b12", "4"],
         "answer": "C"
       },
       {
@@ -342,6 +378,9 @@
     ]
   },
   "L-51": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-51",
     "title": "Understanding SAT Reading Structures",
     "description": "A guide to analyzing SAT reading passages and their structures.",
     "type": "Document",
@@ -357,6 +396,9 @@
     }
   },
   "L-52": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-52",
     "title": "Advanced Math SAT Practice",
     "description": "Challenging practice questions covering advanced math topics.",
     "type": "Exercise",
@@ -388,14 +430,14 @@
       },
       {
         "id": 4,
-        "question": "If f(x) = x³ - 3x² + 2x, find f(2).",
+        "question": "If f(x) = x\u00b3 - 3x\u00b2 + 2x, find f(2).",
         "question_img": null,
         "options": ["0", "1", "2", "3"],
         "answer": "A"
       },
       {
         "id": 5,
-        "question": "Find the derivative of f(x) = 5x² - 3x + 7.",
+        "question": "Find the derivative of f(x) = 5x\u00b2 - 3x + 7.",
         "question_img": null,
         "options": ["10x - 3", "5x - 3", "10x + 3", "5x + 3"],
         "answer": "A"
@@ -403,6 +445,9 @@
     ]
   },
   "L-53": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-53",
     "title": "SAT Vocab Flashcards Set 3",
     "description": "A final set of SAT vocabulary flashcards for enhanced preparation.",
     "type": "Flashcard",
@@ -432,6 +477,9 @@
     ]
   },
   "L-54": {
+    "alertText": null,
+    "deadline": null,
+    "id": "L-54",
     "title": "SAT Preparation Guide",
     "description": "General tips and guidance on structuring your SAT preparation.",
     "type": "Document",

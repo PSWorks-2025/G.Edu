@@ -16,5 +16,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Routes>
       </Router>
     </CardContextProvider>
-  </StrictMode>
+  </StrictMode>,
 );

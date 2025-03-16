@@ -6,7 +6,7 @@ const CardDetailComponent = ({ id }) => {
   const { cardLookupTable } = useContext(CardContext);
   const { title, description, deadline, areas, subAreas, detailContent } =
     cardLookupTable[id] || {};
-  console.log(cardLookupTable, id);
+  console.log(cardLookupTable[id], id);
   return (
     <div className="bg-[#f5f5f5] z-50 overflow-y-auto ">
       <div className="flex flex-col md:flex-row mb-6 h-57.25">
@@ -17,18 +17,19 @@ const CardDetailComponent = ({ id }) => {
           <div className="h-full">
             <p className=" text-xl text-gray-700 overflow-hidden max-h-18 mb-4">{title}</p>
             <p className="text-gray-700 overflow-hidden max-h-18 mb-4">{description}</p>
-            <p className="mb-4">
-              Review again on:{' '}
-              {deadline
-                ? new Date(deadline).toLocaleDateString(undefined, {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })
-                : 'No deadline'}
-            </p>
+            {deadline && (
+              <p className="mb-4">
+                Review again on:{' '}
+                {new Date(deadline).toLocaleDateString(undefined, {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}{' '}
+              </p>
+            )}
+
             <p className="mb-4">{areas}</p>
-            <p className="mb-4">{subAreas}</p>
+            <p className="mb-4">{Object.entries(subAreas)}</p>
           </div>
 
           <button

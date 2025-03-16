@@ -12,6 +12,7 @@ import HallOfFame from './pages/HallOfFame/';
 import Notification from './pages/Notification/';
 import SideNav from './globalComponents/SideNav/';
 import TopBar from './globalComponents/TopBar/';
+import CardDetail from './globalComponents/RenderCard/RenderCardDetail';
 
 function App() {
   const [activeTab, setActiveTab] = useState('');
@@ -19,7 +20,6 @@ function App() {
 
   useEffect(() => {
     const currentPath = location.pathname;
-    console.log(currentPath);
 
     const pathToTab = {
       '/home': 'Home',
@@ -52,6 +52,7 @@ function App() {
               <Route path="/learning-resources" element={<LearningResources />} />
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/notification" element={<Notification />} />
+              <Route path="/card-detail" element={<CardDetail />} />
             </Routes>
           </main>
         </div>

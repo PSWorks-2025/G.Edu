@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'; // For navigation
 import { LuFile } from 'react-icons/lu';
 import CardContext from '../../../utils/context/cardContext';
 
-const CardOverview1 = ({ id }) => {
+const CardOverview = ({ id }) => {
   // Added link
   const navigate = useNavigate(); // Hook for navigation
   const { cardLookupTable } = useContext(CardContext);
@@ -104,4 +104,4 @@ const styles = {
 //   link: PropTypes.string.isRequired,
 // };
 
-export default CardOverview1;
+export default CardOverview;

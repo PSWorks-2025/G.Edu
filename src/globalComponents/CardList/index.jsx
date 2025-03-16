@@ -28,8 +28,8 @@ const CardList = ({ cardData = [], title, width }) => {
               deadline={card.deadline}
               alertText={card.alertText}
               areas={card.areas}
-              subAreas={card.subAreas}
-              detailContent={card.detailContent}
+              subAreas={card.sub_areas}
+              detailContent={card.detail_content}
             />
           ))}
         </>

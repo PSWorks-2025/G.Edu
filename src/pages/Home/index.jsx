@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 import './Home.css';
 import { primaryColors } from '../../utils/primaryColor/Colors';
 import StudyTime from './StudyTime';
-import Deadline from './DeadlinesList';
-import Suggestions from './SuggestionList';
-import DeadlineCard from './DeadlinesList/DeadlineCard';
 import DeadlineList from './DeadlinesList';
 import SuggestionsList from './SuggestionList';
 import CardList from '../../globalComponents/CardList';
@@ -13,11 +10,20 @@ const Home = () => {
   const examDate = '30/07/2025';
   const [remainingTime, setRemainingTime] = React.useState([]);
   const [showAllSuggestions, setShowAllSuggestions] = React.useState(false);
-  
-  const data = []
-  useEffect(()=> {
-    // fetch(/)
-  })
+
+  const [data, setData] = React.useState({});
+  useEffect(() => {
+    fetch('/learning_contents_improved.json')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => setData(data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
+  useEffect(() => {
+    console.log(Object.values(data));
+  }, [data]);
 
   React.useEffect(() => {
     const calculateRemainingTime = (examDate) => {
@@ -62,9 +68,8 @@ const Home = () => {
   }, []);
 
   return (
-    
     <div className="dashboard-content mt-20">
-      {data && <CardList />}
+      {data ? <CardList cardData={Object.values(data)} /> : <div>Nope</div>}
       <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1>
 
       {/* Goal and Count Down */}
