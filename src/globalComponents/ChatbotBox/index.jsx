@@ -9,7 +9,7 @@ import threeDotsGif from '../../assets/three_dots.gif';
 import { get_AI_tutor_response } from '../../utils/api_calls.jsx';
 
 import { FaPaperPlane, FaFileImage, FaPaperclip, FaMicrophone } from 'react-icons/fa6';
-// import geminiLogo from '../../assets/geminiLogo.webp';
+import geminiLogo from '../../assets/geminiLogo.webp';
 
 import { IoEllipsisVerticalSharp } from 'react-icons/io5';
 
@@ -58,7 +58,7 @@ const ChatMessage = ({ message }) => {
       <div className="flex mr-5 ">
         <img
           className="mt-auto rounded-full bg-gray-100 p-0.5"
-          src={''}
+          src={geminiLogo}
           width={38}
           alt="pfp"
         />
@@ -73,7 +73,7 @@ const ChatMessage = ({ message }) => {
         <div className="flex mr-5">
           <img
             className="mt-auto rounded-full bg-gray-100 p-0.5"
-            src={''}
+            src={geminiLogo}
             width={38}
             alt="pfp"
           />
@@ -96,7 +96,7 @@ const ChatMessage = ({ message }) => {
           <paragraph>{text}</paragraph>
         )}
         <div className="text-xs text-right flex items-center justify-end">
-          <p>{createdAt.time()}</p>
+          <div>{createdAt.time()}</div>
           <button
             className={`ml-2 p-1 rounded-md transition-colors ${
               userType === 'AI' ? 'hover:bg-[#dfdfdf]' : 'hover:bg-[#549ef8]'
