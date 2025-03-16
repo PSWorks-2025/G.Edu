@@ -1,68 +1,89 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Clipboard } from 'lucide-react'; // Icon library
 import { ComponentTitle, SubtleText } from './Typography';
 import { useNavigate } from 'react-router-dom'; // For navigation
+import { LuFile } from 'react-icons/lu';
 
-const CardOverview = ({ title, subtitle, date, link }) => {
+const CardOverview = ({ title, description, deadline, alertText, id }) => {
+  // Added link
   const navigate = useNavigate(); // Hook for navigation
 
+
   return (
-    <div style={styles.card} onClick={() => navigate(link)}>
-      {/* Image Section */}
-      <div style={styles.image}>
-        <div style={styles.dateBadge}>
-          <SubtleText>{date}</SubtleText>
+    <div
+      onClick={() => navigate(`/card-detail?id=${id}`)}
+      className={`mt-6 bg-[#f5f5f5] w-full px-4 py-2 ${deadline ? 'h-24' : 'h-16'} rounded-lg flex items-center`}
+    >
+      <div className="mt-2 w-7 h-full">
+        <div className="bg-[#fbfbfb] w-full h-7 rounded-full flex items-center justify-center">
+          <LuFile />
         </div>
       </div>
-
-      {/* Text Content */}
-      <div style={styles.content}>
-        <ComponentTitle>{title}</ComponentTitle>
-        <SubtleText>{subtitle}</SubtleText>
+      <div className="ROBOTO_FONTS w-full h-full ml-3 flex flex-col justify-between">
+        <div>
+          <h3 className="text-lg font-bold" dangerouslySetInnerHTML={{ __html: title }}></h3>
+          <p
+            className="text-sm text-gray-500"
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></p>
+        </div>
+        {deadline && <p className="text-sm text-gray-500">Deadline: {deadline}</p>}
       </div>
+      {alertText && (
+        <div className="mt-2 h-full">
+          <div className="bg-[#FFCDCE] w-max px-2 py-1 text-[#641723] text-sm rounded-lg text-center">
+            {alertText}
+          </div>
+        </div>
+      )}
     </div>
-    
   );
 };
 
-const styles = {
-  card: {
-    width: '14.25rem',
-    height: '14.25rem',
-    borderRadius: '12px',
-    overflow: 'hidden',
-    backgroundColor: '#fff',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-    fontFamily: "'Roboto', sans-serif",
-    cursor: 'pointer',
-    transition: 'transform 0.2s ease-in-out',
-  },
-  image: {
-    backgroundColor: '#c4bcbc',
-    height: '120px',
-    position: 'relative',
-  },
-  dateBadge: {
-    position: 'absolute',
-    top: '8px',
-    right: '8px',
-    backgroundColor: '#fff',
-    padding: '4px 8px',
-    borderRadius: '4px',
-    fontSize: '0.75rem',
-    fontWeight: '500',
-    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.2)',
-  },
-  content: {
-    padding: '12px',
-  },
-};
+// const styles = {
+//   card: {
+//     display: 'flex',
+//     justifyContent: 'space-between',
+//     alignItems: 'center',
+//     backgroundColor: '#f9f9f9',
+//     padding: '16px 20px',
+//     borderRadius: '12px',
+//     boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+//     maxWidth: '800px',
+//     margin: '10px auto',
+//     position: 'relative', // Ensure relative positioning for alert
+//     cursor: 'pointer', // Improves UX
+//     transition: 'transform 0.2s ease-in-out', // Smooth effect
+//   },
+//   leftSection: {
+//     display: 'flex',
+//     alignItems: 'center',
+//   },
+//   icon: {
+//     marginRight: '12px',
+//     color: '#666',
+//   },
+//   alert: {
+//     backgroundColor: '#FFCDCE',
+//     color: '#641723',
+//     padding: '6px 12px',
+//     borderRadius: '8px',
+//     fontSize: '0.875rem',
+//     fontFamily: "'Roboto', sans-serif",
+//     fontWeight: 'regular',
+//     position: 'absolute',
+//     top: '16px',
+//     right: '10px',
+//   },
+// };
 
-CardOverview.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired, // URL for navigation
-};
+// CardOverviewDeadline.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   description: PropTypes.string.isRequired,
+//   deadline: PropTypes.string,
+//   alertText: PropTypes.string,
+//   link: PropTypes.string.isRequired,
+// };
 
 export default CardOverview;

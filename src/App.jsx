@@ -10,6 +10,7 @@ import Notebook from './pages/Notebook/';
 import LearningResources from './pages/LearningResources/';
 import HallOfFame from './pages/HallOfFame/';
 import Notification from './pages/Notification/';
+import CardDetail from './pages/CardDetail';
 import SideNav from './globalComponents/SideNav/';
 import TopBar from './globalComponents/TopBar/';
 
@@ -33,7 +34,7 @@ function App() {
       '/notification': 'Notification',
     };
     setActiveTab(pathToTab[currentPath] || 'Home');
-  }, []);
+  }, [location.pathname]);
 
   return (
     <>
@@ -52,6 +53,7 @@ function App() {
               <Route path="/learning-resources" element={<LearningResources />} />
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/notification" element={<Notification />} />
+              <Route path="/card-detail" element={<CardDetail />} />
             </Routes>
           </main>
         </div>

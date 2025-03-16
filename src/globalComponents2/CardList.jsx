@@ -2,55 +2,34 @@ import React from 'react';
 import CardOverview from './CardOverview';
 import { Link } from 'react-router-dom';
 
-const cardData = [
-  {
-    id: 1,
-    title: 'Card 1',
-    subtitle: 'Overview của Card 1',
-    date: '2025-03-14',
-  },
-  {
-    id: 2,
-    title: 'Card 2',
-    subtitle: 'Overview của Card 2',
-    date: '2025-03-15',
-  },
-  {
-    id: 3,
-    title: 'Card 3',
-    subtitle: 'Overview của Card 3',
-    date: '2025-03-16',
-  },
-];
-
-const CardList = () => {
+const CardList = ({ cardData, title, width }) => {
   return (
-    <div style={styles.container}>
-      {cardData.map((card) => (
-        <Link 
-          key={card.id} 
-          to={`/card-detail/${card.id}`} 
-          style={{ textDecoration: 'none' }}
-        >
+    <div className="bg-[#fbfbfb] px-7 pb-7 pt-6 rounded-lg" style={{ width: width }}>
+      <h2 className="NUNITO_SANS text-2xl">{title}</h2>
+      {cardData.length > 0 ? (
+        cardData.map((card, index) => (
           <CardOverview
+            key={`${card.id}_${index}`}
             title={card.title}
-            subtitle={card.subtitle}
-            date={card.date}
-            link={`/card-detail/${card.id}`}
+            description={card.description}
+            deadline={card.deadline}
+            id={card.id}
           />
-        </Link>
-      ))}
+        ))
+      ) : (
+        <p className="ROBOTO_FONTS text-center mt-6 w-full">No resources found.</p>
+      )}
     </div>
   );
 };
 
-const styles = {
-  container: {
-    display: 'flex',
-    gap: '1rem',
-    flexWrap: 'wrap',
-    padding: '1rem',
-  },
-};
+// const styles = {
+//   container: {
+//     display: 'flex',
+//     gap: '1rem',
+//     flexWrap: 'wrap',
+//     padding: '1rem',
+//   },
+// };
 
 export default CardList;
