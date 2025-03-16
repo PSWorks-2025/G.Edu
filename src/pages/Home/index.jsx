@@ -11,15 +11,15 @@ const Home = () => {
   const [remainingTime, setRemainingTime] = React.useState([]);
   const [showAllSuggestions, setShowAllSuggestions] = React.useState(false);
 
-  const [data, setData] = React.useState({});
-  useEffect(() => {
-    fetch('/learning_contents_improved.json')
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => setData(data))
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
+  // const [data, setData] = React.useState({});
+  // useEffect(() => {
+  //   fetch('/learning_contents_improved.json')
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((data) => setData(data))
+  //     .catch((error) => console.error('Error fetching data:', error));
+  // }, []);
 
   useEffect(() => {
     console.log(Object.values(data));
@@ -69,7 +69,7 @@ const Home = () => {
 
   return (
     <div className="dashboard-content mt-20">
-      {data ? <CardList cardData={Object.values(data)} /> : <div>Nope</div>}
+      {/* {data ? <CardList cardData={Object.values(data)} /> : <div>Nope</div>} */}
       <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1>
 
       {/* Goal and Count Down */}
