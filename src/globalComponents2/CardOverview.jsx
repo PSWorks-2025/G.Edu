@@ -21,6 +21,7 @@ const CardOverview = ({ title, subtitle, date, link }) => {
         <SubtleText>{subtitle}</SubtleText>
       </div>
     </div>
+    
   );
 };
 
