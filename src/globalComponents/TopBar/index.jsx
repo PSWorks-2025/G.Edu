@@ -1,7 +1,7 @@
 import React from 'react';
 import { primaryColors } from '../../utils/primaryColor/Colors';
 
-function TopBar() {
+function TopBar({enableTakeNote,toggleNotebook}) {
   return (
     <div
       style={{ backgroundColor: primaryColors.white }}
@@ -46,10 +46,11 @@ function TopBar() {
             paddingRight: 8,
             borderRadius: 10,
           }}
+          onClick={()=>toggleNotebook()}
         >
           <ion-icon
             style={{ fontSize: 20, color: primaryColors.white }}
-            name="reader-outline"
+            name={enableTakeNote ? "create-outline" : "reader-outline"}
           ></ion-icon>
         </div>
 

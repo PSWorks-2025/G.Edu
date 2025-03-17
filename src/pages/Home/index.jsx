@@ -21,9 +21,9 @@ const Home = () => {
   //     .catch((error) => console.error('Error fetching data:', error));
   // }, []);
 
-  useEffect(() => {
-    console.log(Object.values(data));
-  }, [data]);
+  // useEffect(() => {
+  //   console.log(Object.values(data));
+  // }, [data]);
 
   React.useEffect(() => {
     const calculateRemainingTime = (examDate) => {

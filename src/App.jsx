@@ -13,14 +13,16 @@ import Notification from './pages/Notification/';
 import SideNav from './globalComponents/SideNav/';
 import TopBar from './globalComponents/TopBar/';
 import CardDetail from './globalComponents/RenderCard/RenderCardDetail';
+import NotebookContent from './pages/Notebook/NoteContent';
 
 function App() {
   const [activeTab, setActiveTab] = useState('');
   const location = useLocation();
+  const [enableTakeNote,setEnableTakeNote]=useState(false)
 
   useEffect(() => {
-    const currentPath = location.pathname;
-
+    const currentPath = location.pathname; 
+    
     const pathToTab = {
       '/home': 'Home',
       '/my-learning-plan': 'MyLearningPlan',
@@ -32,15 +34,25 @@ function App() {
       '/hall-of-fame': 'HallOfFame',
       '/notification': 'Notification',
     };
-    setActiveTab(pathToTab[currentPath] || 'Home');
-  }, []);
+
+    if (currentPath.startsWith('/notebook/')) {
+      setActiveTab('Notebook');
+    } else {
+      setActiveTab(pathToTab[currentPath] || 'Home');
+    }
+  }, [location.pathname]);
+
+  const toggleNotebook = ()=>{
+    setEnableTakeNote(!enableTakeNote)
+    console.log(enableTakeNote)
+  }
 
   return (
     <>
       <div className="app">
         {/* <TopBar /> */}
         <div className="content-container">
-          <SideNav activeTab={activeTab} setActiveTab={setActiveTab} />
+          <SideNav activeTab={activeTab} setActiveTab={setActiveTab} enableTakeNote={enableTakeNote} toggleNotebook={toggleNotebook} />
           <main className="main-content">
             <Routes>
               <Route path="/home" element={<Home />} />
@@ -49,6 +61,7 @@ function App() {
               <Route path="/smart-review" element={<SmartReview />} />
               <Route path="/ai-tutor" element={<AITutor />} />
               <Route path="/notebook" element={<Notebook />} />
+              <Route path="/notebook/:id" element={<NotebookContent />} />
               <Route path="/learning-resources" element={<LearningResources />} />
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/notification" element={<Notification />} />
