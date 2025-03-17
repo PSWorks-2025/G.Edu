@@ -14,7 +14,7 @@ const LearningResources = () => {
   const [searchText, setSearchText] = useState('');
 
   return (
-    <div className="mt-10">
+    <div className="mt-4">
       <PageTitle>Learning Resources</PageTitle>
       
       <LearningResourcesSearch

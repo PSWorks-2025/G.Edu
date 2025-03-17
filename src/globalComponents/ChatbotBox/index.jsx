@@ -36,7 +36,7 @@ const ChatbotBox = () => {
     <div id="AI-chat-box" className="flex flex-col w-full h-144 shadow-xl bg-white rounded-xl p-6">
       <div className="flex justify-between items-center pb-4">
         <div className="ROBOTO_FONTS text-xl font-semibold">Gemini</div>
-        <button className="p-2 rounded-lg transition-colors hover:bg-[#f3f3f3]">
+        <button className="outline-none p-2 rounded-lg transition-colors hover:bg-[#f3f3f3]">
           <IoEllipsisVerticalSharp className="text-xl" />
         </button>
       </div>
@@ -98,7 +98,7 @@ const ChatMessage = ({ message }) => {
         <div className="text-xs text-right flex items-center justify-end">
           <div>{createdAt.time()}</div>
           <button
-            className={`ml-2 p-1 rounded-md transition-colors ${
+            className={`outline-none ml-2 p-1 rounded-md transition-colors ${
               userType === 'AI' ? 'hover:bg-[#dfdfdf]' : 'hover:bg-[#549ef8]'
             }`}
           >
@@ -155,7 +155,7 @@ const ChatInput = ({ setMessages }) => {
   return (
     <form onSubmit={sendMessage} className="flex w-full h-22 py-4 text-[#646464] space-x-2">
       <button
-        className={`min-w-fit h-full px-3 font-medium text-lg rounded-lg transition-colors flex items-center hover:bg-[#f3f3f3]`}
+        className="outline-none min-w-fit h-full px-3 font-medium text-lg rounded-lg transition-colors flex items-center hover:bg-[#f3f3f3]"
         type="button"
       >
         <FaMicrophone />
@@ -167,19 +167,19 @@ const ChatInput = ({ setMessages }) => {
         className="w-full h-full pl-4 outline-none border-none"
       />
       <button
-        className={`min-w-fit h-full px-3 font-medium text-lg rounded-lg transition-colors flex items-center hover:bg-[#f3f3f3]`}
+        className="outline-none min-w-fit h-full px-3 font-medium text-lg rounded-lg transition-colors flex items-center hover:bg-[#f3f3f3]"
         type="button"
       >
         <FaPaperclip />
       </button>
       <button
-        className={`min-w-fit h-full px-3 font-medium text-lg rounded-lg transition-colors flex items-center hover:bg-[#f3f3f3]`}
+        className="outline-none min-w-fit h-full px-3 font-medium text-lg rounded-lg transition-colors flex items-center hover:bg-[#f3f3f3]"
         type="button"
       >
         <FaFileImage />
       </button>
       <button
-        className={`min-w-27 h-full px-6 ROBOTO_FONTS font-medium text-white text-sm rounded-lg transition-colors flex items-center justify-between ${
+        className={`outline-none min-w-27 h-full px-6 ROBOTO_FONTS font-medium text-white text-sm rounded-lg transition-colors flex items-center justify-between ${
           !formValue || isResponding
             ? 'bg-[#c4c4c4] hover:bg-[#d3d3d3]'
             : 'bg-[#4880ff] hover:bg-[#5b6fef]'

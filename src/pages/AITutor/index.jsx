@@ -5,7 +5,7 @@ import { PageTitle } from '../../globalComponents2/Typography';
 
 const AITutor = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-4">
       <PageTitle>AI Tutor</PageTitle>
       <ChatbotBox />
     </div>
