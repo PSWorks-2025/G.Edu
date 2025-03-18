@@ -10,7 +10,13 @@ import './MyLearningPlan.css';
 import CardList from '../../globalComponents/CardList';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { cardDataVerbal, cardDataMath, cardDataVocab, cardDataTips } from './mockdata';
+import {
+  cardDataVerbal,
+  cardDataMath,
+  cardDataVocab,
+  cardDataTips,
+  exampleCardListData,
+} from './mockdata';
 // import PrimaryButton from '../../globalComponents/Button';
 
 const MyLearningPlan = () => {
@@ -18,7 +24,7 @@ const MyLearningPlan = () => {
   const [targetScore, setTargetScore] = useState('');
   const [examDate, setExamDate] = useState(new Date());
   const [studyTime, setStudyTime] = useState({ start: '00:00', end: '23:59' });
-  const [currentTabData, setCurrentTabData] = useState([])
+  const [currentTabData, setCurrentTabData] = useState([]);
   const [completionRate, setCompletionRate] = useState(69);
   const handleClick = () => {
     console.log('Save button clicked!');
@@ -36,13 +42,13 @@ const MyLearningPlan = () => {
   };
 
   useEffect(() => {
-    if (selectedTab === "verbal") {
+    if (selectedTab === 'verbal') {
       setCurrentTabData(cardDataVerbal);
-    } else if (selectedTab === "math") {
+    } else if (selectedTab === 'math') {
       setCurrentTabData(cardDataMath);
-    } else if (selectedTab === "vocab") {
+    } else if (selectedTab === 'vocab') {
       setCurrentTabData(cardDataVocab);
-    } else if (selectedTab === "tips/other") {
+    } else if (selectedTab === 'tips/other') {
       setCurrentTabData(cardDataTips);
     }
   }, [selectedTab]);
@@ -150,6 +156,7 @@ const MyLearningPlan = () => {
       <div className="mt-8">
         <Tabs selectedTab={selectedTab} tabs={tabOptions} onTabChange={handleTabChange} />
         <CardList cardData={currentTabData} title="Material Suggestion" />
+        <CardList cardData={Object.values(exampleCardListData)} title="Usage showcase" />
       </div>
     </div>
   );
