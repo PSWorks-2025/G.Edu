@@ -12,74 +12,61 @@ const Notebook = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showSearchContent, setShowSearchContent] = useState(false);
   const [defaultOrder, setDefaultOrder] = useState("topic");
-  const [activeFilter, setActiveFilter] = useState('All');
   const [filteredSortedNotes, setFilteredSortedNotes] = useState([]);
-  const [searchTitle,setSearchTitle]=useState("")
-  const [searchDescription,setSearchDescription]=useState()
-  const popupRef = useRef(null);
-  const filters = ["All", "Common Errors", "Reading", "Math", "Practice Mistakes", "Tips"];
+  const [searchText,setSearchText]=useState("")
+  const filters = [
+    { id: "All", label: "All" },
+    { id: "Common Errors", label: "Common Errors" },
+    { id: "Reading", label: "Reading" },
+    { id: "Math", label: "Math" },
+    { id: "Practice Mistakes", label: "Practice Mistakes" },
+    { id: "Tips", label: "Tips" }
+  ];
+  const [selectedTab, setSelectedTab] = useState(filters[0].id);
+  
   const mockNote = studentData[0].student_notebook;
-
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
 
   const handleNotebook = (id) => {
       navigate(`/notebook/${id}`);
   };
 
-  const toggleSearchContent = () => {
-      setShowSearchContent(!showSearchContent);
-  };
-
-  const handleClickOutside = (event) => {
-      if (popupRef.current && !popupRef.current.contains(event.target)) {
-          setShowPopup(false);
-          setShowSearchContent(false);
-      }
-  };
-
-  useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-          document.removeEventListener("mousedown", handleClickOutside);
-      };
-  }, []);
-
   useEffect(() => {
     const filterNotes = () => {
-      let notes = mockNote;
-
-      if (activeFilter !== "All") {
-        notes = notes.filter(note => note.areas.includes(activeFilter));
+      let notes = [...mockNote];
+  
+      if (selectedTab !== "All") {
+        notes = notes.filter(note => note.areas.includes(selectedTab));
+      }      
+  
+      if (searchText) {
+        notes = notes.filter(note =>
+          note.title.toLowerCase().includes(searchText.toLowerCase()) ||
+          note.content.toLowerCase().includes(searchText.toLowerCase())
+        );
       }
-
-      if (searchTitle) {
-        notes = notes.filter(note => note.title.toLowerCase().includes(searchTitle.toLowerCase()));
-      }
-
-      if (searchDescription) {
-        notes = notes.filter(note => note.content.toLowerCase().includes(searchDescription.toLowerCase()));
-      }
-
+  
       if (defaultOrder === "date_created") {
-        notes.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        notes.sort((a, b) => 
+          new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+        );
       } else if (defaultOrder === "topic") {
         notes.sort((a, b) => a.title.localeCompare(b.title));
       }
-
+  
       setFilteredSortedNotes(notes);
     };
-
+  
     filterNotes();
-  }, [activeFilter, defaultOrder, mockNote, searchTitle, searchDescription]);
+  }, [selectedTab, defaultOrder, mockNote, searchText]);
+  
 
   return (
     <div className="page">
       <PageTitle>Notebook</PageTitle>
-      <NotebookSearchBar setSearchDescription={setSearchDescription} setSearchTitle={setSearchTitle} togglePopup={togglePopup} toggleSearchContent={toggleSearchContent} popupRef={popupRef} showPopup={showPopup} showSearchContent={showSearchContent} filters={filters} defaultOrder={defaultOrder} setDefaultOrder={setDefaultOrder} activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
-      <NotebookFilterBar filters={filters} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
-      <NotebookNoteList filteredSortedNotes={filteredSortedNotes} handleNotebook={handleNotebook}/>
+      <NotebookSearchBar searchText={searchText} setSearchText={setSearchText} setDefaultOrder={setDefaultOrder} />
+      <div className='mt-2'></div>
+      <NotebookFilterBar filters={filters} selectedTab={selectedTab} setSelectedTab={setSelectedTab}/>
+      <NotebookNoteList filteredSortedNotes={filteredSortedNotes} />
     </div>
   );
 };
