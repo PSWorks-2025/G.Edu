@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'; // For navigation
 import { LuFile } from 'react-icons/lu';
 import CardContext from '../../../utils/context/cardContext';
 
-const CardOverview = ({ id,align,direct }) => {
+const CardOverview = ({ id, align, direct }) => {
   // Added link
   const navigate = useNavigate(); // Hook for navigation
   const { cardLookupTable } = useContext(CardContext);
@@ -14,9 +14,12 @@ const CardOverview = ({ id,align,direct }) => {
 
   return (
     <div
-      onClick={() => {direct ? navigate(`/${direct}/${id}`) : navigate(`/card-detail?id=${id}`)}}
-      // className={`mt-6 bg-[#f5f5f5] w-full px-4 py-2 ${deadline ? 'h-24' : 'h-16'} rounded-lg flex items-center cursor-pointer`}
-      style={{ ...styles.card, margin: align && "1rem 0" }}
+      onClick={() => {
+        direct ? navigate(`/${direct}/${id}`) : navigate(`/card-detail?id=${id}`);
+      }}
+      className="w-full"
+      // className={`mt-6 bg-[#f5f5f5] w-/full px-4 py-2 ${deadline ? 'h-24' : 'h-16'} rounded-lg flex items-center cursor-pointer`}
+      style={{ ...styles.card, margin: align ? '1rem 0' : '1rem auto' }}
     >
       <div className="mt-2 w-7 h-full">
         <div
@@ -61,8 +64,9 @@ const CardOverview = ({ id,align,direct }) => {
 
 const styles = {
   card: {
+    justifySelf: 'center',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'centrer',
     alignItems: 'center',
     backgroundColor: '#f5f5f5',
     padding: '1rem 1.25rem',
