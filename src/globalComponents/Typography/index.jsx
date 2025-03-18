@@ -31,14 +31,21 @@ const typography = {
     fontWeight: 400,
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
-    color: '#646464',
+    // color: '#646464',
   },
   subtleText: {
     fontSize: '0.875rem',
     fontWeight: 400,
     lineHeight: '1.375rem',
     fontFamily: "'Roboto', sans-serif",
-    color: '#646464',
+    // color: '#646464',
+  },
+  boldText: {
+    fontSize: '1rem',
+    fontWeight: 700,
+    lineHeight: '1.1875rem',
+    fontFamily: "'Roboto', sans-serif",
+    // color: '#646464',
   },
 };
 
@@ -65,3 +72,4 @@ export const ComponentSubTitle = createTypographyComponent('componentSubTitle', 
 export const ImportantText = createTypographyComponent('importantText', 'strong');
 export const RegularText = createTypographyComponent('regularText', 'p');
 export const SubtleText = createTypographyComponent('subtleText', 'p');
+export const BoldText = createTypographyComponent('boldText', 'p');
