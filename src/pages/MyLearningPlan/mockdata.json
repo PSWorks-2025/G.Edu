@@ -1,0 +1,234 @@
+{
+  "verbal": [
+    {
+      "id": "1",
+      "title": "Reading Comprehension",
+      "description": "Practice critical reading skills",
+      "alertText": null,
+      "deadline": "2025-04-10",
+      "type": "Document",
+      "areas": ["Verbal"],
+      "sub_areas": { "Verbal": ["Reading"] },
+      "detail_content": {
+        "text": "Develop critical reading skills for SAT.",
+        "image": "https://example.com/images/reading_comprehension.png",
+        "file_ref": "https://example.com/files/reading_comprehension.pdf",
+        "link": "https://example.com/reading-comprehension"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Sentence Completion",
+      "description": "Learn to identify context clues",
+      "alertText": null,
+      "deadline": "2025-03-28",
+      "type": "Document",
+      "areas": ["Verbal"],
+      "sub_areas": { "Verbal": ["Sentence Structure"] },
+      "detail_content": {
+        "text": "Improve your ability to complete sentences with the right words.",
+        "image": "https://example.com/images/sentence_completion.png",
+        "file_ref": "https://example.com/files/sentence_completion.pdf",
+        "link": "https://example.com/sentence-completion"
+      }
+    }
+  ],
+  "math": [
+    {
+      "id": "6",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "7",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "9",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    }
+  ],
+  "vocab": [
+    {
+      "id": "10",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "11",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "12",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "13",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    }
+  ],
+  "tips": [
+    {
+      "id": "14",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "15",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "16",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    },
+    {
+      "id": "17",
+      "title": "Algebra Fundamentals",
+      "description": "Review core algebraic concepts",
+      "alertText": null,
+      "deadline": "2025-04-02",
+      "type": "Document",
+      "areas": ["Math"],
+      "sub_areas": { "Math": ["Algebra"] },
+      "detail_content": {
+        "text": "Master algebraic fundamentals for SAT math.",
+        "image": "https://example.com/images/algebra_fundamentals.png",
+        "file_ref": "https://example.com/files/algebra_fundamentals.pdf",
+        "link": "https://example.com/algebra-fundamentals"
+      }
+    }
+  ]
+}
