@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { primaryColors } from '../../utils/primaryColor/Colors';
 import TopBar from '../TopBar';
-function SideNav({ activeTab, setActiveTab }) {
+function SideNav({ activeTab, setActiveTab, enableTakeNote, toggleNotebook }) {
   const navItems = [
     { id: 'Home', label: 'Home', icon: 'home-outline', path: '/home' },
     {
@@ -122,7 +122,7 @@ function SideNav({ activeTab, setActiveTab }) {
         </nav>
       </div>
       {/* TOP BAR!! */}
-      <TopBar />
+      <TopBar enableTakeNote={enableTakeNote} toggleNotebook={toggleNotebook} />
     </>
   );
 }
