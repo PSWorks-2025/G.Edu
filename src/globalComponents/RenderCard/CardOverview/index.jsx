@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom'; // For navigation
 import { LuFile } from 'react-icons/lu';
 import CardContext from '../../../utils/context/cardContext';
 
-const CardOverview = ({ id, align, direct, justifySelf }) => {
+const CardOverview = ({ id, align, direct, unread, justifySelf }) => {
   // Added link
   const navigate = useNavigate(); // Hook for navigation
   const { cardLookupTable } = useContext(CardContext);
-  const { title, description, deadline, alertText } = cardLookupTable[id] || {};
+  const { overviewTitle, overviewDescription, deadline, alertText } = cardLookupTable[id] || {};
 
   return (
     <div
@@ -38,10 +38,13 @@ const CardOverview = ({ id, align, direct, justifySelf }) => {
         // style={styles.leftSection}
       >
         <div>
-          <h3 className="text-lg font-bold" dangerouslySetInnerHTML={{ __html: title }}></h3>
+          <h3
+            className="text-lg font-bold"
+            dangerouslySetInnerHTML={{ __html: overviewTitle }}
+          ></h3>
           <p
             className="text-sm text-gray-500"
-            dangerouslySetInnerHTML={{ __html: description }}
+            dangerouslySetInnerHTML={{ __html: overviewDescription }}
           ></p>
         </div>
         {deadline && (
@@ -55,13 +58,18 @@ const CardOverview = ({ id, align, direct, justifySelf }) => {
           </p>
         )}
       </div>
-      {alertText && (
+      {(alertText && (
         <div className="h-full">
           <div className="bg-[#FFCDCE] w-max px-2 py-1 text-[#641723] text-sm rounded-lg text-center align-top">
             Due {alertText}
           </div>
         </div>
-      )}
+      )) ||
+        (unread && (
+          <div className="h-full">
+            <div className="bg-[#E5484D] w-3 h-3 rounded-full align-top"></div>
+          </div>
+        ))}
     </div>
   );
 };
@@ -74,7 +82,7 @@ const styles = {
     // alignItems: 'center',
     backgroundColor: '#f5f5f5',
     padding: '1rem 1.25rem',
-    borderRadius: '0.75rem',
+    borderRadius: '0  .75rem',
     boxShadow: '0 2pt 4pt rgba(0,0,0,0.1)',
     maxWidth: '800px',
     margin: '1rem auto',

@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Notebook.css';
 import NotebookSearchBar from './NotebookSearchBar';
 import NotebookFilterBar from './NotebookFilterBar';
 import NotebookNoteList from './NotebookNoteList';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { PageTitle } from '../../globalComponents/Typography';
 import studentData from '../../../public/students_data.json';
 
 const Notebook = () => {
-  const navigate = useNavigate();
-  const [showPopup, setShowPopup] = useState(false);
-  const [showSearchContent, setShowSearchContent] = useState(false);
+  // const navigate = useNavigate();
+  // const [showPopup, setShowPopup] = useState(false);
+  // const [showSearchContent, setShowSearchContent] = useState(false);
   const [defaultOrder, setDefaultOrder] = useState('topic');
   const [filteredSortedNotes, setFilteredSortedNotes] = useState([]);
   const [searchText, setSearchText] = useState('');
@@ -26,9 +26,9 @@ const Notebook = () => {
 
   const mockNote = studentData[0].student_notebook;
 
-  const handleNotebook = (id) => {
-    navigate(`/notebook/${id}`);
-  };
+  // const handleNotebook = (id) => {
+  //   navigate(`/notebook/${id}`);
+  // };
 
   useEffect(() => {
     const filterNotes = () => {
@@ -72,7 +72,7 @@ const Notebook = () => {
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       />
-      <NotebookNoteList filteredSortedNotes={filteredSortedNotes} />
+      <NotebookNoteList filteredSortedNotes={filteredSortedNotes} findText={searchText}/>
     </div>
   );
 };

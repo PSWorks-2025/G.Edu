@@ -7,6 +7,8 @@ const RenderCard = ({
   id,
   title,
   description,
+  overviewTitle,
+  overviewDescription,
   deadline,
   alertText,
   areas,
@@ -15,29 +17,59 @@ const RenderCard = ({
   align,
   direct,
   justifySelf,
+  unread,
+  type,
 }) => {
   const { cardLookupTable, setCardLookupTable } = useContext(CardContext);
 
+  cardLookupTable;
+
   useEffect(() => {
-    console.log(id, cardLookupTable);
     setCardLookupTable((prevTable) => ({
       ...prevTable,
-      [id]: { title, description, deadline, alertText, areas, subAreas, detailContent },
+      [id]: {
+        title,
+        overviewTitle,
+        overviewDescription,
+        description,
+        deadline,
+        alertText,
+        areas,
+        subAreas,
+        detailContent,
+        type,
+      },
     }));
-  }, [id, title, description, deadline, alertText, areas, subAreas, detailContent]);
+  }, [
+    id,
+    overviewTitle,
+    overviewDescription,
+    title,
+    description,
+    deadline,
+    alertText,
+    areas,
+    subAreas,
+    detailContent,
+    type,
+  ]);
 
-  return <CardOverview id={id} align={align} direct={direct} justifySelf={justifySelf} />;
+  return <CardOverview id={id} align={align} direct={direct} justifySelf={justifySelf} unread={unread} />;
 };
 
 RenderCard.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  overviewTitle: PropTypes.string.isRequired,
+  overviewDescription: PropTypes.string.isRequired,
   deadline: PropTypes.string,
   alertText: PropTypes.string,
   areas: PropTypes.array,
   subAreas: PropTypes.array,
   detailContent: PropTypes.any,
+  unread: PropTypes.bool,
+  type: PropTypes.string.isRequired,
 };
 
 export default RenderCard;

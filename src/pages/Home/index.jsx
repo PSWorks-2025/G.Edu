@@ -1,29 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { primaryColors } from '../../utils/primaryColor/Colors';
 import StudyTime from './StudyTime';
 import DeadlineList from './DeadlinesList';
 import SuggestionsList from './SuggestionList';
 import CardList from '../../globalComponents/CardList';
+import { PageTitle } from '../../globalComponents/Typography';
 
 const Home = () => {
   const examDate = '30/07/2025';
-  const [remainingTime, setRemainingTime] = React.useState([]);
-  const [showAllSuggestions, setShowAllSuggestions] = React.useState(false);
+  const [remainingTime, setRemainingTime] = useState([]);
+  // const [showAllSuggestions, setShowAllSuggestions] = React.useState(false);
 
-  // const [data, setData] = React.useState({});
-  // useEffect(() => {
-  //   fetch('/learning_contents_improved.json')
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => setData(data))
-  //     .catch((error) => console.error('Error fetching data:', error));
-  // }, []);
+  const [data, setData] = useState({});
+  useEffect(() => {
+    fetch('/learning_contents_improved.json')
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => setData(data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
 
-  // useEffect(() => {
-  //   console.log(Object.values(data));
-  // }, [data]);
+  useEffect(() => {
+    console.log(Object.values(data));
+  }, [data]);
 
   React.useEffect(() => {
     const calculateRemainingTime = (examDate) => {
@@ -68,9 +69,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="dashboard-content mt-20">
+    <div className="mt-4">
       {/* {data ? <CardList cardData={Object.values(data)} /> : <div>Nope</div>} */}
-      <h1 className="font-bold NUNITO_SANS text-[32px]">Dashboard</h1>
+      <PageTitle>Dashboard</PageTitle>
 
       {/* Goal and Count Down */}
       <div className="flex flex-row justify-between">
@@ -230,10 +231,21 @@ const Home = () => {
       <StudyTime />
 
       {/* Deadlines */}
-      <DeadlineList />
+      {/* <DeadlineList /> */}
+      <div className='mt-6'>
+        <CardList
+          title={'Upcoming deadlines'}
+          width={'100%'}
+          cardData={Object.values(data)}
+          unread={true}
+        />
+      </div>
 
       {/* Material Suggestions */}
-      <div
+      <div className='mt-6'>
+        <CardList title={"Let's cram more"} width={'100%'} cardData={Object.values(data)} />
+      </div>
+      {/* <div
         className="mt-6"
         style={{
           backgroundColor: primaryColors.white,
@@ -257,10 +269,10 @@ const Home = () => {
           </button>
         </div>
         <div className="mt-4">
-          {/* ul suggestions.map li  data limit 6*/}
+          {/* ul suggestions.map li  data limit 6
           <SuggestionsList showAll={showAllSuggestions} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

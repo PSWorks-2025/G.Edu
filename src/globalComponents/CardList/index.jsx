@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
 import RenderCard from '../RenderCard';
 
-const CardList = ({ cardData = [], title, width }) => {
+import highlightText from '../../utils/highlightText';
+
+import { ComponentTitle } from '../Typography';
+
+const CardList = ({ cardData = [], title, width, findText = '', unread }) => {
   const [showAll, setShowAll] = useState(false);
 
+  const filteredCardData = cardData.filter(
+    (data) =>
+      data.title.toLowerCase().includes(findText.toLowerCase()) ||
+      data.description.toLowerCase().includes(findText.toLowerCase())
+  );
+
   const initialVisible = 3;
-  const visibleCards = showAll ? cardData : cardData.slice(0, initialVisible);
+  const visibleCards = showAll ? filteredCardData : filteredCardData.slice(0, initialVisible);
 
   return (
     <div className="bg-[#fbfbfb] px-7 pb-7 pt-6 rounded-lg" style={{ width }}>
       <div className="flex flex-row justify-between">
-        <h2 className="NUNITO_SANS text-2xl">{title}</h2>
-        {cardData.length > initialVisible && (
+        <ComponentTitle>{title}</ComponentTitle>
+        {filteredCardData.length > initialVisible && (
           <button onClick={() => setShowAll(!showAll)} className="text-blue-500 hover:underline">
             {showAll ? 'See Less' : 'See More'}
           </button>
         )}
       </div>
-      {cardData.length > 0 ? (
+      {filteredCardData.length > 0 ? (
         <>
           {visibleCards.map((card, index) => (
             <RenderCard
@@ -25,11 +35,15 @@ const CardList = ({ cardData = [], title, width }) => {
               id={card.id}
               title={card.title}
               description={card.description}
+              overviewTitle={highlightText(card.title, findText)}
+              overviewDescription={highlightText(card.description, findText)}
               deadline={card.deadline}
               alertText={card.alertText}
               areas={card.areas}
               subAreas={card.sub_areas}
               detailContent={card.detail_content}
+              unread={unread}
+              type={card.type}
             />
           ))}
         </>
