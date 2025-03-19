@@ -37,7 +37,7 @@ const MyLearningPlan = () => {
     <>
       <PageTitle>My Learning Plan</PageTitle>
       <ComponentTitle>Plan Your Success</ComponentTitle>
-      <div className="bg-white rounded-lg py-4 px-4 mt-2 mb-8">
+      <div className="bg-[#fbfbfb] rounded-lg py-4 px-4 mt-2 mb-8">
         <div className="flex flex-row justify-around gap-4 mt-4">
           <TargetScore
             value={data.targetScore}

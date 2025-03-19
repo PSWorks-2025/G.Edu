@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'; // For navigation
 import { LuFile } from 'react-icons/lu';
 import CardContext from '../../../utils/context/cardContext';
 
-const CardOverview = ({ id, align, direct,justifySelf }) => {
+const CardOverview = ({ id, align, direct, justifySelf }) => {
   // Added link
   const navigate = useNavigate(); // Hook for navigation
   const { cardLookupTable } = useContext(CardContext);
@@ -19,7 +19,11 @@ const CardOverview = ({ id, align, direct,justifySelf }) => {
       }}
       className="w-full"
       // className={`mt-6 bg-[#f5f5f5] w-/full px-4 py-2 ${deadline ? 'h-24' : 'h-16'} rounded-lg flex items-center cursor-pointer`}
-      style={{ ...styles.card, margin: align ? '1rem 0' : '1rem auto',justifySelf: justifySelf ? "" : "unset" }}
+      style={{
+        ...styles.card,
+        margin: align ? '1rem 0' : '1rem auto',
+        justifySelf: justifySelf ? '' : 'unset',
+      }}
     >
       <div className="mx-2 w-7 h-full self-center">
         <div
@@ -64,7 +68,7 @@ const CardOverview = ({ id, align, direct,justifySelf }) => {
 
 const styles = {
   card: {
-    justifySelf: 'center', 
+    justifySelf: 'center',
     display: 'flex',
     // justifyContent: 'centrer',
     // alignItems: 'center',

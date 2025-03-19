@@ -6,15 +6,15 @@ const NotebookNoteList = ({
   handleNotebook,
   align = true,
   direct = 'notebook',
-  justifySelf=false
+  justifySelf = false,
 }) => {
   return (
-    <div className="flex flex-col bg-white  pl-[24px] pr-[24px] pt-[10px] pb-[10px] w-[820px]">
+    <div className="flex flex-col bg-[#fbfbfb] rounded-lg pl-[24px] pr-[24px] py-8 w-full">
       {filteredSortedNotes.map((item) => (
         <div
           key={item.note_id}
           onClick={() => handleNotebook(item.note_id)}
-          className="cursor-pointer hover:opacity-90 transition"
+          className="cursor-pointer hover:opacity-90 transition justify-items-center"
         >
           <RenderCard
             id={item.note_id}
