@@ -30,7 +30,7 @@ const LearningResources = () => {
         { value: 'Document', label: 'Document' },
         { value: 'Exercise', label: 'Exercise' },
         { value: 'Flashcard', label: 'Flashcard' },
-        { value: 'Flashcard', label: 'Flashcard' },
+        // { value: 'Flashcard', label: 'Flashcard' },
       ],
     },
     {

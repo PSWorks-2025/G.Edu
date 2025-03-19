@@ -17,7 +17,7 @@ const NotebookSearchBar = ({ searchText, setSearchText, setDefaultOrder }) => {
     <>
       <div className="flex flex-row items-center">
         {/* Filter Group */}
-        <FilterGroup height={40} widthOfEachFilter={120} OptionGroups={OptionGroups} />
+        <FilterGroup height={'40px'} widthOfEachFilter={'120px'} OptionGroups={OptionGroups} />
         <div className="mx-1"></div>
         {/* Search */}
         <SearchBar

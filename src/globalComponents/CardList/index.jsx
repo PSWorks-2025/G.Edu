@@ -3,7 +3,9 @@ import RenderCard from '../RenderCard';
 
 import highlightText from '../../utils/highlightText';
 
-const CardList = ({ cardData = [], title, width, findText = '' }) => {
+import { ComponentTitle } from '../Typography';
+
+const CardList = ({ cardData = [], title, width, findText = '', upcoming }) => {
   const [showAll, setShowAll] = useState(false);
 
   const filteredCardData = cardData.filter(
@@ -18,7 +20,7 @@ const CardList = ({ cardData = [], title, width, findText = '' }) => {
   return (
     <div className="bg-[#fbfbfb] px-7 pb-7 pt-6 rounded-lg" style={{ width }}>
       <div className="flex flex-row justify-between">
-        <h2 className="NUNITO_SANS text-2xl">{title}</h2>
+        <ComponentTitle>{title}</ComponentTitle>
         {filteredCardData.length > initialVisible && (
           <button onClick={() => setShowAll(!showAll)} className="text-blue-500 hover:underline">
             {showAll ? 'See Less' : 'See More'}
@@ -38,6 +40,7 @@ const CardList = ({ cardData = [], title, width, findText = '' }) => {
               areas={card.areas}
               subAreas={card.sub_areas}
               detailContent={card.detail_content}
+              upcoming={upcoming}
             />
           ))}
         </>

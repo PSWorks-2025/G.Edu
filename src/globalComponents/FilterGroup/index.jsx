@@ -19,6 +19,7 @@ const FilterGroup = ({ height, widthOfEachFilter, OptionGroups }) => {
       backgroundColor: state.isDisabled ? '#f5f5f5' : state.isFocused ? '#202020' : '#fbfbfb',
       color: state.isDisabled ? '#f5f5f5' : state.isFocused ? '#fbfbfb' : '#202020',
       cursor: state.isDisabled ? 'not-allowed' : 'default',
+      boxShadow: '0 0 0 0.07rem #cfcfcf',
       '&:active' : {
         backgroundColor: state.isDisabled ? '#f5f5f5' : state.isFocused ? '#202020' : '#fbfbfb',
         color: state.isDisabled ? '#f5f5f5' : state.isFocused ? '#fbfbfb' : '#202020',

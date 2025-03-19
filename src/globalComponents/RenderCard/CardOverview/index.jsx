@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'; // For navigation
 import { LuFile } from 'react-icons/lu';
 import CardContext from '../../../utils/context/cardContext';
 
-const CardOverview = ({ id, align, direct }) => {
+const CardOverview = ({ id, align, direct, upcoming }) => {
   // Added link
   const navigate = useNavigate(); // Hook for navigation
   const { cardLookupTable } = useContext(CardContext);
@@ -56,6 +56,11 @@ const CardOverview = ({ id, align, direct }) => {
           <div className="bg-[#FFCDCE] w-max px-2 py-1 text-[#641723] text-sm rounded-lg text-center align-top">
             Due {alertText}
           </div>
+        </div>
+      )}
+      {upcoming && (
+        <div className="h-full">
+          <div className="bg-[#E5484D] w-3 h-3 rounded-full align-top"></div>
         </div>
       )}
     </div>
