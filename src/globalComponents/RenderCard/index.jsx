@@ -12,6 +12,7 @@ const RenderCard = ({
   areas,
   subAreas,
   detailContent,
+  type,
 }) => {
   const { cardLookupTable, setCardLookupTable } = useContext(CardContext);
 
@@ -20,9 +21,9 @@ const RenderCard = ({
   useEffect(() => {
     setCardLookupTable((prevTable) => ({
       ...prevTable,
-      [id]: { title, description, deadline, alertText, areas, subAreas, detailContent },
+      [id]: { title, description, deadline, alertText, areas, subAreas, detailContent, type },
     }));
-  }, [id, title, description, deadline, alertText, areas, subAreas, detailContent]);
+  }, [id, title, description, deadline, alertText, areas, subAreas, detailContent, type]);
 
   return <CardOverview id={id} />;
 };
@@ -36,6 +37,7 @@ RenderCard.propTypes = {
   areas: PropTypes.array,
   subAreas: PropTypes.array,
   detailContent: PropTypes.any,
+  type: PropTypes.string.isRequired,
 };
 
 export default RenderCard;

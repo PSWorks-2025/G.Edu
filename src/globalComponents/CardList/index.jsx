@@ -30,6 +30,7 @@ const CardList = ({ cardData = [], title, width }) => {
               areas={card.areas}
               subAreas={card.sub_areas}
               detailContent={card.detail_content}
+              type={card.type}
             />
           ))}
         </>
