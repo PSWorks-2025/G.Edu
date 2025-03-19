@@ -14,6 +14,7 @@ const RenderCard = ({
   detailContent,
   align,
   direct,
+  justifySelf,
 }) => {
   const { cardLookupTable, setCardLookupTable } = useContext(CardContext);
 
@@ -25,7 +26,7 @@ const RenderCard = ({
     }));
   }, [id, title, description, deadline, alertText, areas, subAreas, detailContent]);
 
-  return <CardOverview id={id} align={align} direct={direct} />;
+  return <CardOverview id={id} align={align} direct={direct} justifySelf={justifySelf} />;
 };
 
 RenderCard.propTypes = {
