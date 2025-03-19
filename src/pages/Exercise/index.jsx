@@ -15,7 +15,7 @@ const AssignmentExercise = () => {
       <div className="flex items-center mb-6">
         <button
           onClick={() => navigate('/assignment')}
-          className="mr-2 text-xl font-semibold flex items-center space-x-2"
+          className="mr-2 text-xl font-semibold flex items-center space-x-2 hover:bg-[#d9d9d9] p-1.5 rounded-lg transition-all"
         >
           <IoChevronBackOutline />
           <ComponentTitle>Lesson name</ComponentTitle>
