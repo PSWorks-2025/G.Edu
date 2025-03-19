@@ -15,8 +15,9 @@ const RenderCard = ({
 }) => {
   const { cardLookupTable, setCardLookupTable } = useContext(CardContext);
 
+  cardLookupTable;
+
   useEffect(() => {
-    console.log(id, cardLookupTable);
     setCardLookupTable((prevTable) => ({
       ...prevTable,
       [id]: { title, description, deadline, alertText, areas, subAreas, detailContent },
