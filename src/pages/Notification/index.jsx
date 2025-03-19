@@ -51,6 +51,8 @@ function Notification() {
 
   const [sortSelected, setSortSelected] = useState('Name');
 
+  sortSelected;
+
   const sortOptions = [
     {
       set: setSortSelected,

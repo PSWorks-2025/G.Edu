@@ -3,6 +3,8 @@ import DetailView from './DetailView';
 import ReviewDisplaySection from './ReviewDisplaySection';
 import { random } from 'lodash';
 
+import { PageTitle } from '../../globalComponents/Typography';
+
 const SmartReview = () => {
   const [learningContents, setLearningContents] = useState([]);
   const [studentData, setStudentData] = useState(null);
@@ -55,8 +57,8 @@ const SmartReview = () => {
     .filter(Boolean);
 
   return (
-    <div className="mt-16">
-      <h1 className="font-extrabold NUNITO_SANS text-4xl mb-6">Smart Review</h1>
+    <div className="mt-4">
+      <PageTitle>Smart Review</PageTitle>
 
       <div className="relative overflow-hidden">
         <div className="bg-[#fbfbfb] w-full px-7 py-7 rounded-lg">
