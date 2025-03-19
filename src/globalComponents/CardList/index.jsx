@@ -43,6 +43,7 @@ const CardList = ({ cardData = [], title, width, findText = '', unread }) => {
               subAreas={card.sub_areas}
               detailContent={card.detail_content}
               unread={unread}
+              type={card.type}
             />
           ))}
         </>

@@ -4,6 +4,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import MyLearningPlan from './pages/MyLearningPlan/';
 import Assignment from './pages/Assignment/';
+import AssignmentFlashCard from './pages/Flashcard';
+import AssignmentExercise from './pages/Exercise';
 import SmartReview from './pages/SmartReview/';
 import AITutor from './pages/AITutor/';
 import Notebook from './pages/Notebook/';
@@ -94,6 +96,8 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/my-learning-plan" element={<MyLearningPlan />} />
               <Route path="/assignment" element={<Assignment />} />
+              <Route path="/flashcard" element={<AssignmentFlashCard />} />
+              <Route path="/exercise" element={<AssignmentExercise />} />
               <Route path="/smart-review" element={<SmartReview />} />
               <Route path="/ai-tutor" element={<AITutor />} />
               <Route path="/notebook" element={<Notebook />} />

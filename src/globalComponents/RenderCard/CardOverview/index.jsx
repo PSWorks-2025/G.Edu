@@ -75,7 +75,7 @@ const styles = {
     // alignItems: 'center',
     backgroundColor: '#f5f5f5',
     padding: '1rem 1.25rem',
-    borderRadius: '0.75rem',
+    borderRadius: '0  .75rem',
     boxShadow: '0 2pt 4pt rgba(0,0,0,0.1)',
     maxWidth: '800px',
     margin: '1rem auto',

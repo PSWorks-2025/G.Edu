@@ -31,7 +31,7 @@ const typography = {
     fontWeight: 400,
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
-    // color: '#646464',
+    color: '#646464',
   },
   subtleText: {
     fontSize: '1rem',
@@ -52,7 +52,6 @@ const typography = {
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
   },
-  
 };
 
 const createTypographyComponent = (variant, defaultElement) => {

@@ -64,6 +64,7 @@
         "id": 1,
         "question": "What is the value of x if 2x + 5 = 15?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["3", "5", "7", "10"],
         "answer": "B"
       },
@@ -71,6 +72,7 @@
         "id": 2,
         "question": "Which of the following is a prime number?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["14", "21", "37", "40"],
         "answer": "C"
       },
@@ -78,6 +80,7 @@
         "id": 3,
         "question": "If a triangle has sides of length 3, 4, and 5, what type of triangle is it?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["Equilateral", "Isosceles", "Right", "Scalene"],
         "answer": "C"
       },
@@ -85,6 +88,7 @@
         "id": 4,
         "question": "Solve for y: 3y - 7 = 2y + 5",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["7", "10", "12", "5"],
         "answer": "A"
       },
@@ -92,6 +96,7 @@
         "id": 5,
         "question": "What is the area of a circle with radius 6?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["12\u03c0", "24\u03c0", "36\u03c0", "48\u03c0"],
         "answer": "C"
       }
@@ -113,6 +118,7 @@
         "id": 1,
         "question": "Solve for x: 4x - 3 = 13",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["2", "3", "4", "5"],
         "answer": "D"
       },
@@ -120,6 +126,7 @@
         "id": 2,
         "question": "What is the sum of the roots of the quadratic equation x\u00b2 - 5x + 6 = 0?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["2", "3", "5", "6"],
         "answer": "C"
       },
@@ -127,6 +134,7 @@
         "id": 3,
         "question": "If f(x) = 2x\u00b2 - 3x + 1, find f(2)",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["3", "5", "7", "9"],
         "answer": "B"
       },
@@ -134,6 +142,7 @@
         "id": 4,
         "question": "What is the vertex of the parabola y = x\u00b2 - 4x + 3?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["(2, -1)", "(1, -2)", "(3, 0)", "(4, 1)"],
         "answer": "A"
       },
@@ -141,6 +150,7 @@
         "id": 5,
         "question": "If log\u2082x = 3, what is the value of x?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["6", "8", "9", "12"],
         "answer": "B"
       }
@@ -213,6 +223,7 @@
         "id": 1,
         "question": "A survey of 100 students found that 60% prefer coffee over tea. How many students prefer coffee?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["40", "50", "60", "70"],
         "answer": "C"
       },
@@ -220,6 +231,7 @@
         "id": 2,
         "question": "The median of the data set {3, 7, 8, 12, 15} is:",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["7", "8", "10", "12"],
         "answer": "B"
       },
@@ -227,6 +239,7 @@
         "id": 3,
         "question": "If the mean of five numbers is 20 and four of the numbers are 18, 22, 19, and 21, what is the missing number?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["20", "22", "24", "26"],
         "answer": "C"
       },
@@ -234,6 +247,7 @@
         "id": 4,
         "question": "A store's revenue increased by 25% from $8000 last month. What is the new revenue?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["$9000", "$10000", "$11000", "$12000"],
         "answer": "B"
       },
@@ -241,6 +255,7 @@
         "id": 5,
         "question": "If a dataset has a standard deviation of 5, what happens if each value in the set is multiplied by 2?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["Remains 5", "Becomes 10", "Becomes 15", "Becomes 20"],
         "answer": "B"
       }
@@ -344,6 +359,7 @@
         "id": 1,
         "question": "Solve for x: 2x + 4 = 10",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["2", "3", "4", "5"],
         "answer": "B"
       },
@@ -351,6 +367,7 @@
         "id": 2,
         "question": "Factorize: x\u00b2 - 5x + 6",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["(x-2)(x-3)", "(x+2)(x+3)", "(x-1)(x-6)", "(x+1)(x-6)"],
         "answer": "A"
       },
@@ -358,6 +375,7 @@
         "id": 3,
         "question": "Find the slope of the line passing through (1, 2) and (4, 8).",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["1", "2", "3", "4"],
         "answer": "B"
       },
@@ -365,6 +383,7 @@
         "id": 4,
         "question": "Solve: 3x\u00b2 - 12 = 0",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["2", "-2", "\u00b12", "4"],
         "answer": "C"
       },
@@ -372,6 +391,7 @@
         "id": 5,
         "question": "What is the y-intercept of the equation y = 3x + 5?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["3", "5", "-3", "-5"],
         "answer": "B"
       }
@@ -411,6 +431,7 @@
         "id": 1,
         "question": "If 2^x = 32, what is the value of x?",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["3", "4", "5", "6"],
         "answer": "C"
       },
@@ -418,6 +439,7 @@
         "id": 2,
         "question": "Evaluate the determinant of the matrix [[3, 2], [1, 4]].",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["10", "12", "9", "8"],
         "answer": "A"
       },
@@ -425,6 +447,7 @@
         "id": 3,
         "question": "The sum of the infinite geometric series 8 + 4 + 2 + ... is:",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["12", "14", "16", "20"],
         "answer": "C"
       },
@@ -432,6 +455,7 @@
         "id": 4,
         "question": "If f(x) = x\u00b3 - 3x\u00b2 + 2x, find f(2).",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["0", "1", "2", "3"],
         "answer": "A"
       },
@@ -439,8 +463,16 @@
         "id": 5,
         "question": "Find the derivative of f(x) = 5x\u00b2 - 3x + 7.",
         "question_img": null,
+        "type": "MultipleChoice",
         "options": ["10x - 3", "5x - 3", "10x + 3", "5x + 3"],
         "answer": "A"
+      },
+      {
+        "id": 6,
+        "question": "Ken is gay",
+        "question_img": null,
+        "type": "TrueFalse",
+        "answer": "True"
       }
     ]
   },

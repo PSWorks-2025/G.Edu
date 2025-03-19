@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import CardThumbnail from './CardThumbnail.jsx';
 import CardContext from '../../../../utils/context/cardContext.jsx';
+import { useNavigate } from 'react-router-dom'; // For navigation
 
 const CardDetailComponent = ({ id }) => {
   const { cardLookupTable } = useContext(CardContext);
-  const { title, description, deadline, areas, subAreas, detailContent } =
+  const { title, description, deadline, areas, subAreas, detailContent, type } =
     cardLookupTable[id] || {};
-  console.log(cardLookupTable[id], id);
+  const navigate = useNavigate(); // Hook for navigation
   return (
     <div className="bg-[#f5f5f5] z-50 overflow-y-auto ">
       <div className="flex flex-col md:flex-row mb-6 h-57.25">
@@ -28,13 +29,17 @@ const CardDetailComponent = ({ id }) => {
               </p>
             )}
 
-            <p className="mb-4">{areas}</p>
-            <p className="mb-4">{Object.entries(subAreas)}</p>
+            {areas && <p className="mb-4">{areas}</p>}
+            {subAreas && <p className="mb-4">{Object.entries(subAreas)}</p>}
           </div>
 
           <button
             className="bg-black text-white px-6 py-3 w-fit rounded hover:bg-gray-800"
-            onClick={() => console.log(detailContent)}
+            onClick={() => {
+              if (type === 'Flashcard') navigate(`/flashcard?id=${id}`);
+              else if (type === 'Exercise') navigate(`/exercise?id=${id}`);
+              else window.location.href = detailContent.link;
+            }}
           >
             Learn Now
           </button>

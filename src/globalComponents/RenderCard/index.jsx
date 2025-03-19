@@ -17,11 +17,13 @@ const RenderCard = ({
   align,
   direct,
   unread,
+  type,
 }) => {
   const { cardLookupTable, setCardLookupTable } = useContext(CardContext);
 
+  cardLookupTable;
+
   useEffect(() => {
-    console.log(id, cardLookupTable);
     setCardLookupTable((prevTable) => ({
       ...prevTable,
       [id]: {
@@ -34,6 +36,7 @@ const RenderCard = ({
         areas,
         subAreas,
         detailContent,
+        type,
       },
     }));
   }, [
@@ -47,6 +50,7 @@ const RenderCard = ({
     areas,
     subAreas,
     detailContent,
+    type,
   ]);
 
   return <CardOverview id={id} align={align} direct={direct} unread={unread} />;
@@ -63,7 +67,8 @@ RenderCard.propTypes = {
   areas: PropTypes.array,
   subAreas: PropTypes.array,
   detailContent: PropTypes.any,
-  upcoming: PropTypes.bool,
+  unread: PropTypes.bool,
+  type: PropTypes.string.isRequired,
 };
 
 export default RenderCard;
