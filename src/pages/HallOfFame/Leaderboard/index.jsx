@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getClassRankingByID, getAllClassRanking } from './leaderboardData';
 import Tabs from '../../../globalComponents/Tabs';
+
 const Leaderboard = () => {
   const [selectedTab, setSelectedTab] = useState('my-class');
   const [rankingData, setRankingData] = useState([]);

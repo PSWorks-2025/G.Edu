@@ -1,23 +1,28 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './notification.css';
+
+import { PageTitle, ComponentTitle, ComponentSubTitle, RegularText, SmallText } from '../../globalComponents/Typography';
+
+import FilterGroup from '../../globalComponents/FilterGroup';
+import SearchBar from '../../globalComponents/SearchBar';
 
 function Notification() {
   const [notifications, setNotifications] = useState([]);
   const [filteredNotifications, setFilteredNotifications] = useState([]);
-  const [timeOpen, setTimeOpen] = useState(false);
-  const [timeSelected, setTimeSelected] = useState('Last 7 days');
-  const timeOptions = ['Last 7 days', 'Last 30 days', 'Last 3 months'];
-  const timeFilterRef = useRef(null);
 
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (timeFilterRef.current && !timeFilterRef.current.contains(e.target)) {
-        setTimeOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const [timeSelected, setTimeSelected] = useState('Last 7 days');
+  const [searchText, setSearchText] = useState('');
+
+  const timeOptions = [
+    {
+      set: setTimeSelected,
+      options: [
+        { value: 'Last 7 days', label: 'Last 7 days' },
+        { value: 'Last 30 days', label: 'Last 30 days' },
+        { value: 'Last 3 months', label: 'Last 3 months' },
+      ],
+    },
+  ];
 
   useEffect(() => {
     fetch('/notifications.json')
@@ -44,104 +49,46 @@ function Notification() {
     setFilteredNotifications(temp);
   }, [timeSelected, notifications]);
 
-  const toggleTimeDropdown = () => {
-    setTimeOpen((prev) => !prev);
-  };
-
-  const selectTimeOption = (option) => {
-    setTimeSelected(option);
-    setTimeOpen(false);
-  };
-
-  const [sortOpen, setSortOpen] = useState(false);
   const [sortSelected, setSortSelected] = useState('Name');
-  const sortOptions = ['Name', 'Time'];
-  const sortRef = useRef(null);
 
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (sortRef.current && !sortRef.current.contains(e.target)) {
-        setSortOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const toggleSortDropdown = () => {
-    setSortOpen((prev) => !prev);
-  };
-
-  const selectSortOption = (option) => {
-    setSortSelected(option);
-    setSortOpen(false);
-  };
+  const sortOptions = [
+    {
+      set: setSortSelected,
+      options: [
+        { value: 'Name', label: 'Name' },
+        { value: 'Time', label: 'Time' },
+      ],
+    },
+  ];
 
   return (
-    <div className="notification-page">
-      <div className="notification-container">
-        <h1 className="page-title">Notification</h1>
-        <div className="notification-header">
-          <div className="time-filter" ref={timeFilterRef}>
-            <button className="time-filter-btn" onClick={toggleTimeDropdown}>
-              {timeSelected}
-              <span className="arrow-down" />
-            </button>
-            {timeOpen && (
-              <div className="time-filter-menu">
-                {timeOptions.map((option) => (
-                  <div
-                    key={option}
-                    className={`time-filter-item ${option === timeSelected ? 'active' : ''}`}
-                    onClick={() => selectTimeOption(option)}
-                  >
-                    {option}
-                    {option === timeSelected && <span className="check-icon">✔</span>}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-          <div className="search-box">
-            <i className="search-icon" />
-            <input type="text" placeholder="Search" />
-          </div>
+    <div className='mt-4'>
+      <PageTitle>Notifications</PageTitle>
+      <div className="flex items-center mb-6 space-x-4 h-11">
+        <FilterGroup OptionGroups={timeOptions} widthOfEachFilter={'9rem'} height={'100%'} />
 
-          <div className="sort-dropdown" ref={sortRef}>
-            <button className="sort-btn" onClick={toggleSortDropdown}>
-              {sortSelected}
-              <span className="arrow-down" />
-            </button>
-            {sortOpen && (
-              <div className="sort-menu">
-                {sortOptions.map((option) => (
-                  <div
-                    key={option}
-                    className={`sort-item ${option === sortSelected ? 'active' : ''}`}
-                    onClick={() => selectSortOption(option)}
-                  >
-                    {option}
-                    {option === sortSelected && <span className="check-icon">✔</span>}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="notification-list">
-          {filteredNotifications.map((item) => (
-            <div className="notification-item" key={item.notification_id}>
-              <div className="item-content">
-                <div className="circle-indicator" />
-                <div className="item-text">
-                  <div className="item-title">{item.title}</div>
-                  <div className="item-desc">{item.message}</div>
-                  <div className="item-time">{new Date(item.timestamp).toLocaleString()}</div>
-                </div>
+        <SearchBar
+          searchText={searchText}
+          setSearchText={setSearchText}
+          width={'40%'}
+          height={'100%'}
+        />
+
+        <FilterGroup OptionGroups={sortOptions} widthOfEachFilter={'7rem'} height={'100%'} />
+      </div>
+      <div className="notification-list">
+        {filteredNotifications.map((item) => (
+          <div className="notification-item" key={item.notification_id}>
+            <div className="item-content">
+              <div className="circle-indicator" />
+              <div className="item-text">
+                <ComponentSubTitle className='mb-1'>{item.title}</ComponentSubTitle>
+                <RegularText className='mb-2'>{item.message}</RegularText>
+                <SmallText className='text-[#777777]'>{new Date(item.timestamp).toLocaleString()}</SmallText>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
