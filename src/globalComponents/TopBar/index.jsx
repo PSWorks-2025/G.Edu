@@ -1,7 +1,7 @@
 import React from 'react';
 import { primaryColors } from '../../utils/primaryColor/Colors';
 
-function TopBar({toggleNotebook}) {
+function TopBar({ toggleNotebook }) {
   return (
     <div
       style={{ backgroundColor: primaryColors.white }}
@@ -46,7 +46,7 @@ function TopBar({toggleNotebook}) {
             paddingRight: 8,
             borderRadius: 10,
           }}
-          onClick={()=>toggleNotebook()}
+          onClick={() => toggleNotebook()}
         >
           <ion-icon
             style={{ fontSize: 20, color: primaryColors.white }}

@@ -21,7 +21,7 @@ const CardOverview = ({ id, align, direct }) => {
       // className={`mt-6 bg-[#f5f5f5] w-/full px-4 py-2 ${deadline ? 'h-24' : 'h-16'} rounded-lg flex items-center cursor-pointer`}
       style={{ ...styles.card, margin: align ? '1rem 0' : '1rem auto' }}
     >
-      <div className="mt-2 w-7 h-full">
+      <div className="mx-2 w-7 h-full self-center">
         <div
           className="bg-[#fbfbfb] w-full h-7 rounded-full flex items-center justify-center"
           // style={styles.icon}
@@ -52,9 +52,9 @@ const CardOverview = ({ id, align, direct }) => {
         )}
       </div>
       {alertText && (
-        <div className="mt-2 h-full">
-          <div className="bg-[#FFCDCE] w-max px-2 py-1 text-[#641723] text-sm rounded-lg text-center">
-            {alertText}
+        <div className="h-full">
+          <div className="bg-[#FFCDCE] w-max px-2 py-1 text-[#641723] text-sm rounded-lg text-center align-top">
+            Due {alertText}
           </div>
         </div>
       )}
@@ -66,8 +66,8 @@ const styles = {
   card: {
     justifySelf: 'center',
     display: 'flex',
-    justifyContent: 'centrer',
-    alignItems: 'center',
+    // justifyContent: 'centrer',
+    // alignItems: 'center',
     backgroundColor: '#f5f5f5',
     padding: '1rem 1.25rem',
     borderRadius: '0.75rem',

@@ -1,7 +1,12 @@
 import React from 'react';
 import RenderCard from '../../../globalComponents/RenderCard';
 
-const NotebookNoteList = ({ filteredSortedNotes, handleNotebook,align=true,direct="notebook" }) => {
+const NotebookNoteList = ({
+  filteredSortedNotes,
+  handleNotebook,
+  align = true,
+  direct = 'notebook',
+}) => {
   return (
     <div className="flex flex-col">
       {filteredSortedNotes.map((item) => (
@@ -13,12 +18,12 @@ const NotebookNoteList = ({ filteredSortedNotes, handleNotebook,align=true,direc
           <RenderCard
             id={item.note_id}
             title={item.title}
-            description={item.description || "No description available"}
-            deadline={item.deadline || ""}
-            alertText={item.alertText || ""}
+            description={item.description || 'No description available'}
+            deadline={item.deadline || ''}
+            alertText={item.alertText || ''}
             areas={item.areas || []}
             subAreas={item.subAreas || []}
-            detailContent={item.detailContent || ""}
+            detailContent={item.detailContent || ''}
             align={align}
             direct={direct}
           />

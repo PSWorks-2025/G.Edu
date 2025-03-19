@@ -1,12 +1,7 @@
 import React from 'react';
 import FilterGroup from '../../../globalComponents/FilterGroup';
 import SearchBar from '../../../globalComponents/SearchBar';
-const NotebookSearchBar = ({
-  searchText,
-  setSearchText,
-  setDefaultOrder
-}) => {
-  
+const NotebookSearchBar = ({ searchText, setSearchText, setDefaultOrder }) => {
   const OptionGroups = [
     {
       label: 'Order By',
@@ -15,7 +10,7 @@ const NotebookSearchBar = ({
         { value: 'date_created', label: 'Date Created' },
       ],
       set: setDefaultOrder,
-    }
+    },
   ];
 
   return (
@@ -23,9 +18,14 @@ const NotebookSearchBar = ({
       <div className="flex flex-row items-center">
         {/* Filter Group */}
         <FilterGroup height={40} widthOfEachFilter={120} OptionGroups={OptionGroups} />
-        <div className='mx-1'></div>
+        <div className="mx-1"></div>
         {/* Search */}
-        <SearchBar width="50%" height="40px" searchText={searchText} setSearchText={setSearchText}/>
+        <SearchBar
+          width="50%"
+          height="40px"
+          searchText={searchText}
+          setSearchText={setSearchText}
+        />
       </div>
     </>
   );
