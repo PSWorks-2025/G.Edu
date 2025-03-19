@@ -1,22 +1,20 @@
 import React from 'react';
-import '../Assignment.css';
 
-import { useSearchParams } from 'react-router-dom';
-import { PageTitle, ComponentTitle } from '../../../globalComponents/Typography';
-import Exercise from '../../../globalComponents/FlashCardnExercise/Exercise';
+import { useSearchParams, useNavigate } from 'react-router-dom';
+import { ComponentTitle } from '../../globalComponents/Typography';
+import FlashCard from '../../globalComponents/FlashCardAndExercise/FlashCard';
 import { IoChevronBackOutline } from 'react-icons/io5';
 
-const AssignmentExercise = () => {
+const AssignmentFlashCard = () => {
   const [searchParams] = useSearchParams();
   const id = searchParams.get('id');
+  const navigate = useNavigate();
 
   return (
     <div className="mt-4">
-      <PageTitle>Assignment</PageTitle>
-
       <div className="flex items-center mb-6">
         <button
-          
+          onClick={() => navigate('/assignment')}
           className="mr-2 text-xl font-semibold flex items-center space-x-2"
         >
           <IoChevronBackOutline />
@@ -24,10 +22,9 @@ const AssignmentExercise = () => {
         </button>
       </div>
 
-      <Exercise id={id} />
-
+      <FlashCard id={id} />
     </div>
   );
 };
 
-export default AssignmentExercise;
+export default AssignmentFlashCard;

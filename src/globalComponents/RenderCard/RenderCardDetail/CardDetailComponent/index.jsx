@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import CardThumbnail from './CardThumbnail.jsx';
 import CardContext from '../../../../utils/context/cardContext.jsx';
 
@@ -6,7 +6,7 @@ const CardDetailComponent = ({ id }) => {
   const { cardLookupTable } = useContext(CardContext);
   const { title, description, deadline, areas, subAreas, detailContent } =
     cardLookupTable[id] || {};
-  console.log(cardLookupTable[id], id);
+
   return (
     <div className="bg-[#f5f5f5] z-50 overflow-y-auto ">
       <div className="flex flex-col md:flex-row mb-6 h-57.25">
