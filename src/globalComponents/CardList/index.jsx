@@ -5,7 +5,7 @@ import highlightText from '../../utils/highlightText';
 
 import { ComponentTitle } from '../Typography';
 
-const CardList = ({ cardData = [], title, width, findText = '', upcoming }) => {
+const CardList = ({ cardData = [], title, width, findText = '', unread }) => {
   const [showAll, setShowAll] = useState(false);
 
   const filteredCardData = cardData.filter(
@@ -40,7 +40,7 @@ const CardList = ({ cardData = [], title, width, findText = '', upcoming }) => {
               areas={card.areas}
               subAreas={card.sub_areas}
               detailContent={card.detail_content}
-              upcoming={upcoming}
+              unread={unread}
             />
           ))}
         </>

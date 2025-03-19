@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import DetailView from './DetailView';
 import ReviewDisplaySection from './ReviewDisplaySection';
+
+import CardList from '../../globalComponents/CardList';
+
 import { random } from 'lodash';
 
 import { PageTitle } from '../../globalComponents/Typography';
@@ -9,7 +12,7 @@ const SmartReview = () => {
   const [learningContents, setLearningContents] = useState([]);
   const [studentData, setStudentData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [selectedReview, setSelectedReview] = useState(null);
+  // const [selectedReview, setSelectedReview] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -38,7 +41,7 @@ const SmartReview = () => {
   const reviewSetItems = studentData.student_smart_review
     .map(({ learning_content_id, next_review_date, mastery_levels }) => {
       const content = learningContents.find(
-        ({ learning_content_id: id }) => id === learning_content_id,
+        ({ learning_content_id: id }) => id === learning_content_id
       );
       return (
         content && {
@@ -60,18 +63,8 @@ const SmartReview = () => {
     <div className="mt-4">
       <PageTitle>Smart Review</PageTitle>
 
-      <div className="relative overflow-hidden">
-        <div className="bg-[#fbfbfb] w-full px-7 py-7 rounded-lg">
-          <ReviewDisplaySection
-            title="Review Now"
-            items={reviewSetItems}
-            onItemClick={setSelectedReview}
-          />
-        </div>
-
-        {selectedReview && (
-          <DetailView review={selectedReview} onClose={() => setSelectedReview(null)} />
-        )}
+      <div className="mt-6">
+        <CardList title={'Review Now'} cardData={reviewSetItems} width={'100%'} />
       </div>
     </div>
   );

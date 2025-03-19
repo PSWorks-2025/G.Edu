@@ -237,7 +237,7 @@ const Home = () => {
           title={'Upcoming deadlines'}
           width={'100%'}
           cardData={Object.values(data)}
-          upcoming={true}
+          unread={true}
         />
       </div>
 
