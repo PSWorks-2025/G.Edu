@@ -10,7 +10,7 @@ const CardOverview = ({ id, align, direct, unread }) => {
   // Added link
   const navigate = useNavigate(); // Hook for navigation
   const { cardLookupTable } = useContext(CardContext);
-  const { title, description, deadline, alertText } = cardLookupTable[id] || {};
+  const { overviewTitle, overviewDescription, deadline, alertText } = cardLookupTable[id] || {};
 
   return (
     <div
@@ -34,10 +34,10 @@ const CardOverview = ({ id, align, direct, unread }) => {
         // style={styles.leftSection}
       >
         <div>
-          <h3 className="text-lg font-bold" dangerouslySetInnerHTML={{ __html: title }}></h3>
+          <h3 className="text-lg font-bold" dangerouslySetInnerHTML={{ __html: overviewTitle }}></h3>
           <p
             className="text-sm text-gray-500"
-            dangerouslySetInnerHTML={{ __html: description }}
+            dangerouslySetInnerHTML={{ __html: overviewDescription }}
           ></p>
         </div>
         {deadline && (

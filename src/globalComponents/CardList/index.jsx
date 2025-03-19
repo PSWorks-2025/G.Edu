@@ -33,8 +33,10 @@ const CardList = ({ cardData = [], title, width, findText = '', unread }) => {
             <RenderCard
               key={`${card.id}_${index}`}
               id={card.id}
-              title={highlightText(card.title, findText)}
-              description={highlightText(card.description, findText)}
+              title={card.title}
+              description={card.description}
+              overviewTitle={highlightText(card.title, findText)}
+              overviewDescription={highlightText(card.description, findText)}
               deadline={card.deadline}
               alertText={card.alertText}
               areas={card.areas}

@@ -7,6 +7,8 @@ const RenderCard = ({
   id,
   title,
   description,
+  overviewTitle,
+  overviewDescription,
   deadline,
   alertText,
   areas,
@@ -22,9 +24,30 @@ const RenderCard = ({
     console.log(id, cardLookupTable);
     setCardLookupTable((prevTable) => ({
       ...prevTable,
-      [id]: { title, description, deadline, alertText, areas, subAreas, detailContent },
+      [id]: {
+        title,
+        overviewTitle,
+        overviewDescription,
+        description,
+        deadline,
+        alertText,
+        areas,
+        subAreas,
+        detailContent,
+      },
     }));
-  }, [id, title, description, deadline, alertText, areas, subAreas, detailContent]);
+  }, [
+    id,
+    overviewTitle,
+    overviewDescription,
+    title,
+    description,
+    deadline,
+    alertText,
+    areas,
+    subAreas,
+    detailContent,
+  ]);
 
   return <CardOverview id={id} align={align} direct={direct} unread={unread} />;
 };
@@ -33,6 +56,8 @@ RenderCard.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  overviewTitle: PropTypes.string.isRequired,
+  overviewDescription: PropTypes.string.isRequired,
   deadline: PropTypes.string,
   alertText: PropTypes.string,
   areas: PropTypes.array,
