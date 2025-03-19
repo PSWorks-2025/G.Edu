@@ -54,15 +54,15 @@ const MyLearningPlan = () => {
         </div>
         <div className="flex justify-center mt-8 mb-2">
           <button
-            className="bg-black text-white px-8 py-3 rounded-lg font-medium"
+            className="bg-black text-white px-8 py-3 rounded-lg font-medium w-full max-w-60"
             onClick={handleSave}
           >
             Save
           </button>
         </div>
       </div>
-      <ComponentTitle>Material suggestion</ComponentTitle>
-      <div className="mt-4">
+      <ComponentTitle >Material suggestion</ComponentTitle>
+      <div className='mt-4'>
         <Tabs
           selectedTab={selectedTab}
           tabs={[
