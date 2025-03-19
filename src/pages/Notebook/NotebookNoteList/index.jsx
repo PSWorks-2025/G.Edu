@@ -6,9 +6,10 @@ const NotebookNoteList = ({
   handleNotebook,
   align = true,
   direct = 'notebook',
+  justifySelf=false
 }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white  pl-[24px] pr-[24px] pt-[10px] pb-[10px] w-[75%]">
       {filteredSortedNotes.map((item) => (
         <div
           key={item.note_id}
@@ -26,6 +27,7 @@ const NotebookNoteList = ({
             detailContent={item.detailContent || ''}
             align={align}
             direct={direct}
+            justifySelf={justifySelf}
           />
         </div>
       ))}
