@@ -72,7 +72,7 @@ const Notebook = () => {
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       />
-      <NotebookNoteList filteredSortedNotes={filteredSortedNotes} />
+      <NotebookNoteList filteredSortedNotes={filteredSortedNotes} findText={searchText}/>
     </div>
   );
 };

@@ -1,11 +1,13 @@
 import React from 'react';
 import RenderCard from '../../../globalComponents/RenderCard';
+import highlightText from '../../../utils/highlightText';
 
 const NotebookNoteList = ({
   filteredSortedNotes,
   handleNotebook,
   align = true,
   direct = 'notebook',
+  findText,
 }) => {
   return (
     <div className="flex flex-col">
@@ -19,6 +21,11 @@ const NotebookNoteList = ({
             id={item.note_id}
             title={item.title}
             description={item.description || 'No description available'}
+            overviewTitle={highlightText(item.title, findText)}
+            overviewDescription={highlightText(
+              item.description || 'No description available',
+              findText
+            )}
             deadline={item.deadline || ''}
             alertText={item.alertText || ''}
             areas={item.areas || []}
