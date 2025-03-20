@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { primaryColors } from '../../utils/primaryColor/Colors';
 import TopBar from '../TopBar';
+import { signOutUser } from '../../services/service';
+import { useNavigate } from 'react-router-dom';
 function SideNav({ activeTab, setActiveTab, enableTakeNote, toggleNotebook }) {
+  const navigate = useNavigate();
   const navItems = [
     { id: 'Home', label: 'Home', icon: 'home-outline', path: '/home' },
     {
@@ -54,6 +57,10 @@ function SideNav({ activeTab, setActiveTab, enableTakeNote, toggleNotebook }) {
       path: '/notification',
     },
   ];
+  const handleLogout = async ()=> {
+    await signOutUser();
+    navigate('/');
+  }
 
   return (
     <>
@@ -112,7 +119,7 @@ function SideNav({ activeTab, setActiveTab, enableTakeNote, toggleNotebook }) {
           </ul>
 
           {/* Log out button */}
-          <button className="flex items-center px-4 cursor-pointer absolute bottom-10">
+          <button className="flex items-center px-4 cursor-pointer absolute bottom-10" onClick={handleLogout}>
             <ion-icon
               style={{ fontSize: 20, color: primaryColors.gray }}
               name="log-out-outline"
