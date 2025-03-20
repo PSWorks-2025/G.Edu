@@ -39,9 +39,9 @@ function Login() {
   return (
     <div className="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold">Lorem ipsum dolor</h1>
+        <h1 className="text-4xl font-bold">G.Edu SAT Learning Platform</h1>
         <p className="text-gray-600">
-          Lorem ipsum dolor sit amet consectetur. Et lectus tempus viverra habitant nulla.
+          Global Learning, Global Strategies, Global Success
         </p>
       </div>
       <div
