@@ -64,7 +64,7 @@ function SideNav({ activeTab, setActiveTab, enableTakeNote, toggleNotebook }) {
             <p style={{ color: primaryColors.gray, fontSize: 20 }} className="ROBOTO_FONTS ml-10">
               G.Edu
             </p>
-          </div>
+          </div> 
 
           {/* Nav Items */}
           <ul className="mt-1">
