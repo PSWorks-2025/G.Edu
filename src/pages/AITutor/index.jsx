@@ -5,7 +5,7 @@ import ChatbotBox from '../../globalComponents/ChatbotBox';
 const AITutor = () => {
   return (
     <div className="page">
-      <h1>AI Tutor Page</h1>
+      {/* <h1>AI Tutor Page</h1> */}
       <ChatbotBox />
     </div>
   );
