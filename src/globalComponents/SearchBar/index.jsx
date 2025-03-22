@@ -15,12 +15,12 @@ const SearchBar = ({ searchText, setSearchText, width, height }) => {
       "
       style={{ width, height }}
     >
-      <IoSearch id="search-icon" className="text-lg min-w-5" />
+      <IoSearch id="search-icon" className="text-[14px] md:text-lg min-w-5" />
       <input
         id="search"
         type="text"
         placeholder="Search"
-        className="outline-0 w-full bg-transparent"
+        className="outline-0 w-full bg-transparent md:text-base text-sm"
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       />

@@ -60,13 +60,13 @@ const Notebook = () => {
 
   return (
     <div className="page">
-      <PageTitle>Notebook</PageTitle>
+      <PageTitle className='lg:text-[32px] md:text-[28px] sm:text-2xl text-[20px]'>Notebook</PageTitle>
       <NotebookSearchBar
         searchText={searchText}
         setSearchText={setSearchText}
         setDefaultOrder={setDefaultOrder}
       />
-      <div className="mt-2"></div>
+      <div className="mt-3"></div>
       <NotebookFilterBar
         filters={filters}
         selectedTab={selectedTab}

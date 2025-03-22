@@ -112,10 +112,10 @@ function App() {
           {enableTakeNote && (
             <div
               ref={popUpRef}
-              className="w-[640px] h-[311px] rounded-[14px] mt-2 absolute translate-x-[120%] translate-y-[25%] p-4 shadow-2xl z-2"
+              className="lg:w-[640px] lg:h-[311px] w-[300px] rounded-[14px] mt-2 absolute top-20 right-10 p-4 shadow-2xl z-2"
               style={{ backgroundColor: '#FFF' }}
             >
-              <div className="">
+              <div className="hide_scrollbar">
                 <Tabs tabs={filters} selectedTab={selectedTab} onTabChange={setSelectedTab} />
               </div>
 
@@ -136,7 +136,7 @@ function App() {
               <div className="flex justify-end mt-2">
                 <button
                   onClick={handleSave}
-                  className="relative w-[80px] h-[40px] rounded-lg bg-black text-white text-sm hover:bg-black-100 cursor-pointer"
+                  className="relative lg:w-[80px] w-[40px] lg:h-[40px] h-[20px] rounded-lg bg-black text-white lg:text-sm text-[10px]  hover:bg-black-100 cursor-pointer"
                 >
                   Save
                 </button>

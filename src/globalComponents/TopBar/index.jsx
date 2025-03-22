@@ -168,7 +168,10 @@ function TopBar({ toggleNotebook, navItems }) {
                 </div>
               </li>
               <li className="p-2 hover:bg-gray-200 cursor-pointer">
-                <div className="flex items-center">
+                <div onClick={()=>{
+                  toggleNotebook()
+                  setIsPopupOpen(false)
+                  }} className="flex items-center">
                   <ion-icon name="reader-outline" style={{ marginRight: 10 }}></ion-icon>
                   Notebook
                 </div>
