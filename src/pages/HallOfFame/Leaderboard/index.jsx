@@ -6,6 +6,7 @@ const Leaderboard = () => {
   const [selectedTab, setSelectedTab] = useState('my-class');
   const [rankingData, setRankingData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [statusVisibleIndex, setStatusVisibleIndex] = useState(null); // Track which student's status is visible
   const tabs = [
     { id: 'my-class', label: 'My Class' },
     { id: 'all-classes', label: 'All Classes' },
@@ -31,6 +32,10 @@ const Leaderboard = () => {
     fetchRanking();
   }, [selectedTab]);
 
+  const toggleStatus = (index) => {
+    setStatusVisibleIndex(statusVisibleIndex === index ? null : index); // Toggle the selected index
+  }
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -52,8 +57,10 @@ const Leaderboard = () => {
 
               {/* Student Info */}
               <div className="flex-1">
-                <p className="font-medium text-gray-800 text-lg">Name</p>
-                <div className="mt-1 text-sm text-gray-500">
+                <p onClick={() => toggleStatus(index)} className="font-medium text-gray-800 text-lg cursor-pointer">
+                  Name
+                </p>
+                <div className="mt-1 text-sm text-gray-500 sm:block hidden">
                   <div className="flex flex-wrap gap-x-4">
                     <div>
                       Study time: <span className="font-medium">{student.study_time} mins/day</span>
@@ -70,6 +77,25 @@ const Leaderboard = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Status Popup */}
+                {statusVisibleIndex === index && (
+                  <div className='absolute block sm:hidden bg-white p-3 shadow-lg rounded-2xl'>
+                    <div>
+                      Study time: <span className="font-medium">{student.study_time} mins/day</span>
+                    </div>
+                    <div>
+                      Accuracy: <span className="font-medium">{student.accuracy * 100}%</span>
+                    </div>
+                    <div>
+                      Streak: <span className="font-medium">{student.streak}</span>
+                    </div>
+                    <div>
+                      Deadline missed:{' '}
+                      <span className="font-medium">{student.deadline_missed}</span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
