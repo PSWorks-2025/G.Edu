@@ -137,10 +137,10 @@ function TopBar({ toggleNotebook, navItems, activeTab, setActiveTab }) {
                   </Link>
                 </li>
                 <li className="p-2 hover:bg-gray-200 cursor-pointer">
-                  <Link to="/logout" className="flex items-center">
+                  <div className="flex items-center">
                     <ion-icon name="log-out-outline" style={{ marginRight: 10 }}></ion-icon>
                     Logout
-                  </Link>
+                  </div>
                 </li>
               </ul>
             </div>

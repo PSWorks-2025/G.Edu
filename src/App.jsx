@@ -13,7 +13,6 @@ import LearningResources from './pages/LearningResources/';
 import HallOfFame from './pages/HallOfFame/';
 import Notification from './pages/Notification/';
 import SideNav from './globalComponents/SideNav/';
-import TopBar from './globalComponents/TopBar/';
 import CardDetail from './globalComponents/RenderCard/RenderCardDetail';
 import NotebookContent from './pages/Notebook/NoteContent';
 import Tabs from './globalComponents/Tabs';
