@@ -71,7 +71,7 @@ export default function StudyTimeHeader() {
     <Container fluid className="p-5 bg-white mt-6 rounded-xl">
       <Row className="flex items-center justify-between mb-4">
         <Col xs={12} md={6}>
-          <h1 className="text-xl font-medium">Student study time chart</h1>
+          <h1 className="lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] font-medium">Student study time chart</h1>
         </Col>
 
         <Col xs={12} md={6} className="flex items-center justify-end">
@@ -100,7 +100,7 @@ export default function StudyTimeHeader() {
         <Row className="mt-3">
           <Col xs={12}>
             <div className="mx-auto">
-              <Line data={data} options={options} height={100} />
+              <Line data={data} options={options} height={50} width={100}/>
             </div>
           </Col>
         </Row>

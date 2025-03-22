@@ -71,10 +71,10 @@ const Home = () => {
   return (
     <div className="mt-4">
       {/* {data ? <CardList cardData={Object.values(data)} /> : <div>Nope</div>} */}
-      <PageTitle>Dashboard</PageTitle>
+      <PageTitle className='lg:text-[32px] md:text-[28px] sm:text-2xl text-[20px]'>Dashboard</PageTitle>
 
       {/* Goal and Count Down */}
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between gap-10">
         {/* goal */}
         <div
           style={{
@@ -83,7 +83,7 @@ const Home = () => {
             borderRadius: 14,
             padding: 20,
           }}
-          className="flex flex-row justify-between w-10/21"
+          className="flex flex-row justify-between flex-1"
         >
           <div>
             <h2
@@ -135,7 +135,7 @@ const Home = () => {
             borderRadius: 14,
             padding: 20,
           }}
-          className="flex flex-row justify-between w-10/21"
+          className="flex flex-row justify-between flex-1"
         >
           {/* count */}
           <div>
@@ -214,10 +214,11 @@ const Home = () => {
               width: 60,
               height: 60,
               borderRadius: 100,
-              display: 'flex',
+              // display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
+            className='hidden md:flex'
           >
             <ion-icon
               style={{ color: primaryColors.green, fontSize: 30 }}

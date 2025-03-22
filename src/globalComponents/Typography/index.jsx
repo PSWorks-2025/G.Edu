@@ -3,51 +3,51 @@ import PropTypes from 'prop-types';
 
 const typography = {
   pageTitle: {
-    fontSize: '2rem', // 32px
+    // fontSize: '2rem', // 32px
     fontWeight: 700,
     lineHeight: '2.75',
     fontFamily: "'Nunito Sans', sans-serif",
   },
   componentTitle: {
-    fontSize: '1.25rem', // 20px
+    // fontSize: '1.25rem', // 20px
     fontWeight: 500,
     lineHeight: '1.4375rem',
     fontFamily: "'Roboto', sans-serif",
   },
   componentSubTitle: {
-    fontSize: '1rem',
+    // fontSize: '1rem',
     fontWeight: 500,
     lineHeight: '1.18755rem',
     fontFamily: "'Roboto', sans-serif",
   },
   importantText: {
-    fontSize: '1.75rem',
+    // fontSize: '1.75rem',
     fontWeight: 700,
     lineHeight: '2.0625rem',
     fontFamily: "'Roboto', sans-serif",
   },
   regularText: {
-    fontSize: '1rem',
+    // fontSize: '1rem',
     fontWeight: 400,
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
     color: '#646464',
   },
   subtleText: {
-    fontSize: '1rem',
+    // fontSize: '1rem',
     fontWeight: 400,
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
     // color: '#646464',
   },
   boldText: {
-    fontSize: '1rem',
+    // fontSize: '1rem',
     fontWeight: 700,
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
   },
   smallText: {
-    fontSize: '0.75rem',
+    // fontSize: '0.75rem',
     fontWeight: 400,
     lineHeight: '1.1875rem',
     fontFamily: "'Roboto', sans-serif",
