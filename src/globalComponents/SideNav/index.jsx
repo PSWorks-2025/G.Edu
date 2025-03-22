@@ -95,7 +95,7 @@ function SideNav({ activeTab, setActiveTab, enableTakeNote, toggleNotebook }) {
         </nav>
       </div>
      {/* TOP BAR!! */}
-      <TopBar enableTakeNote={enableTakeNote} toggleNotebook={toggleNotebook} navItems={navItems}/>
+      <TopBar activeTab={activeTab} setActiveTab={setActiveTab} toggleNotebook={toggleNotebook} navItems={navItems}/>
     </>
   );
 }

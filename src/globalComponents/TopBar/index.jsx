@@ -3,7 +3,7 @@ import { primaryColors } from '../../utils/primaryColor/Colors';
 import { Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-function TopBar({ toggleNotebook, navItems }) {
+function TopBar({ toggleNotebook, navItems, activeTab, setActiveTab }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -28,17 +28,28 @@ function TopBar({ toggleNotebook, navItems }) {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-[70px] left-0 w-full bg-white shadow-lg z-10">
-          <ul className="flex flex-col">
-            {navItems.map(item => (
-              <li key={item.id} className="p-4 hover:bg-gray-200">
-                <Link to={item.path} className="flex items-center">
-                  <ion-icon name={item.icon} style={{ marginRight: 10 }}></ion-icon>
-                  {item.label}
+        <div className="fixed inset-0 shadow-lg z-10 transition-transform transform translate-x-0">
+          <div className="absolute top-0 left-0 w-3/4 h-full bg-white shadow-lg p-5 overflow-y-auto">
+            <button className="absolute top-4 right-4" onClick={toggleMenu}>
+              <p className='text-[28px]'>&times;</p> 
+            </button>
+            <ul className="flex flex-col">
+              {navItems.map(item => (
+                <li key={item.id} className={`p-4 hover:bg-gray-200 ${activeTab === item.id ? 'bg-black text-white' : ''}`}>
+                  <Link to={item.path} className="flex items-center" onClick={() => { setActiveTab(item.id); toggleMenu(); }}>
+                    <ion-icon name={item.icon} style={{ marginRight: 10 }}></ion-icon>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li className={`p-4 hover:bg-gray-200 ${activeTab === 'logout' ? 'bg-black text-white' : ''}`}>
+                <Link to="/logout" className="flex items-center" onClick={toggleMenu}>
+                  <ion-icon name="log-out-outline" style={{ marginRight: 10 }}></ion-icon>
+                  Logout
                 </Link>
               </li>
-            ))}
-          </ul>
+            </ul>
+          </div>
         </div>
       )}
 
@@ -168,10 +179,7 @@ function TopBar({ toggleNotebook, navItems }) {
                 </div>
               </li>
               <li className="p-2 hover:bg-gray-200 cursor-pointer">
-                <div onClick={()=>{
-                  toggleNotebook()
-                  setIsPopupOpen(false)
-                  }} className="flex items-center">
+                <div className="flex items-center">
                   <ion-icon name="reader-outline" style={{ marginRight: 10 }}></ion-icon>
                   Notebook
                 </div>
